@@ -1,4 +1,70 @@
+<file name=ned/LightIoTNetwork.ned>
 
+network LightIoTNetwork
+{
+    parameters:
+        int numSensorNodes = default(5);
+        double s2gDelay @unit(s) = default(0s);
+        double g2cDelay @unit(s) = default(0s);
+
+    submodules:
+        sensor[numSensorNodes]: SensorNode;
+        gateway: Gateway;
+        cloud: Cloud;
+        fakeNode: FakeNode;
+
+    connections allowunconnected:
+        for i=0..numSensorNodes-1 {
+            sensor[i].out --> { delay = s2gDelay; } --> gateway.in++;
+        }
+        gateway.out --> { delay = g2cDelay; } --> cloud.in;
+        fakeNode.out --> { delay = s2gDelay; } --> gateway.in++;
+}
+
+</file>
+
+<file name=run_record.ini>
+
+# ============================
+#     100-node Scenarios
+# ============================
+[Config Secure100_record]
+extends = Secure50_record
+LightIoTNetwork.numSensorNodes = 100
+
+[Config NoSec100_record]
+extends = NoSec50_record
+LightIoTNetwork.numSensorNodes = 100
+
+[Config Attack100_record]
+extends = Attack50_record
+LightIoTNetwork.numSensorNodes = 100
+
+[Config AttackOnNoSec100_record]
+extends = AttackOnNoSec50_record
+LightIoTNetwork.numSensorNodes = 100
+
+# ============================
+#     Jittered Channel (50)
+# ============================
+[Config Secure50_jitter_record]
+extends = Secure50_record
+**.s2gDelay = uniform(0us,500us)
+**.g2cDelay = uniform(0us,500us)
+
+[Config NoSec50_jitter_record]
+extends = NoSec50_record
+**.s2gDelay = uniform(0us,500us)
+**.g2cDelay = uniform(0us,500us)
+
+[Config Attack50_jitter_record]
+extends = Attack50_record
+**.s2gDelay = uniform(0us,500us)
+**.g2cDelay = uniform(0us,500us)
+
+</file>
+
+<file name=run-all.sh>
 
 #!/usr/bin/env bash
 # run-all.sh — Build, run, aggregate, and plot OMNeT++ experiments
@@ -31,12 +97,13 @@ ALL_CONFIGS=(
   AttackOnNoSec50_record
   Attack50_window3s_record
   Secure50_hmacOnly Secure50_freshOnly Secure50_dupOnly
+  Secure100_record NoSec100_record Attack100_record AttackOnNoSec100_record Secure50_jitter_record NoSec50_jitter_record Attack50_jitter_record
 )
 
-SECURE_CONFIGS=(Secure5_record Secure20_record Secure50_record)
-NOSEC_CONFIGS=(NoSec5_record NoSec20_record NoSec50_record)
-ATTACK_CONFIGS=(Attack5_record Attack20_record Attack50_record)
-SENSITIVITY_CONFIGS=(AttackOnNoSec50_record Attack50_window3s_record)
+SECURE_CONFIGS=(Secure5_record Secure20_record Secure50_record Secure100_record)
+NOSEC_CONFIGS=(NoSec5_record NoSec20_record NoSec50_record NoSec100_record)
+ATTACK_CONFIGS=(Attack5_record Attack20_record Attack50_record Attack100_record)
+SENSITIVITY_CONFIGS=(AttackOnNoSec50_record Attack50_window3s_record AttackOnNoSec100_record)
 ABLATION_CONFIGS=(Secure50_hmacOnly Secure50_freshOnly Secure50_dupOnly)
 
 print_help() {
@@ -315,4 +382,4 @@ PY
   fi
 fi
 
-echo "== DONE =="
+echo "== DONE =="</file>
