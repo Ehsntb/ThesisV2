@@ -1,0 +1,63 @@
+file 6336 1755553759                                            
+version 3
+run NoSec20_record-0-20250819-01:19:19-4240
+attr configname NoSec20_record
+attr datetime 20250819-01:19:19
+attr datetimef 20250819-011919
+attr experiment NoSec20_record
+attr inifile run_record.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network ned.LightIoTNetwork
+attr processid 4240
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config network ned.LightIoTNetwork
+config output-scalar-file results/NoSec20_record-0.sca
+config output-vector-file results/NoSec20_record-0.vec
+config **.scalar-recording true
+config **.vector-recording true
+config **.result-recording-modes all
+config LightIoTNetwork.numSensorNodes 20
+config **.fakeNode.enabled false
+config **.gateway.securityEnabled false
+config **.gateway.procDelay 0s
+config **.gateway.costForward_mJ 5
+config **.gateway.costVerify_mJ 0
+config **.gateway.batteryInit_mJ 5000
+config sim-time-limit 10s
+config description "Secure Mode Simulation (includes all scenarios)"
+config network ned.LightIoTNetwork
+config ned-path .:ned
+config sim-time-limit 10s
+config record-eventlog true
+config cmdenv-express-mode false
+config network ned.LightIoTNetwork
+config sim-time-limit 10s
+config output-scalar-file results/secure_output.sca
+config output-vector-file results/secure_output.vec
+config network LightIoTNetwork
+config sim-time-limit 10s
+config output-scalar-file results/nosecure_output.sca
+config output-vector-file results/nosecure_output.vec
+config network LightIoTNetwork
+config sim-time-limit 10s
+config output-scalar-file results/attack_output.sca
+config output-vector-file results/attack_output.vec
+config output-scalar-file results/NoSec20_record-0.sca
+config output-vector-file results/NoSec20_record-0.vec
+config **.scalar-recording true
+config **.vector-recording true
+config output-scalar-file results/NoSec20_record-0.sca
+config output-vector-file results/NoSec20_record-0.vec
+config **.scalar-recording true
+config **.vector-recording true
+
+vector 0 LightIoTNetwork.cloud EndToEndDelay_s ETV
+0	2069 4266 3 564 0.556712975726 9.972052409825 188 0 0 0 0
+

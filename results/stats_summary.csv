@@ -1,0 +1,10 @@
+Scenario,Mode,AvgEnergyTotal(mJ),AvgDelay(s),DropRate(%)
+Secure (5 nodes),Secure,445.0,0.0123,0.0
+NoSecurity (5 nodes),NoSecurity,225.0,0.0091,0.0
+Attack (5 nodes),Replay,455.0,0.0139,2.7
+Secure (20 nodes),Secure,1870.0,0.0162,0.0
+NoSecurity (20 nodes),NoSecurity,930.0,0.0124,0.0
+Attack (20 nodes),Replay,1925.0,0.0179,3.2
+Secure (50 nodes),Secure,4850.0,0.0214,0.0
+NoSecurity (50 nodes),NoSecurity,2455.0,0.0173,0.0
+Attack (50 nodes),Replay,4985.0,0.0251,5.8

@@ -1,0 +1,2 @@
+CONFIG,Cloud_Received,Gateway_Received,Gateway_Forwarded,Gateway_Dropped,Gateway_Energy_mJ,Sensor_Energy_mJ
+SecureMax,468,Received,Forwarded,Dropped,320,4800

@@ -1,0 +1,64 @@
+file 3274 1755553758                                            
+version 3
+run Secure5_record-0-20250819-01:19:18-4232
+attr configname Secure5_record
+attr datetime 20250819-01:19:18
+attr datetimef 20250819-011918
+attr experiment Secure5_record
+attr inifile run_record.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network ned.LightIoTNetwork
+attr processid 4232
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config network ned.LightIoTNetwork
+config output-scalar-file results/Secure5_record-0.sca
+config output-vector-file results/Secure5_record-0.vec
+config **.scalar-recording true
+config **.vector-recording true
+config **.result-recording-modes all
+config LightIoTNetwork.numSensorNodes 5
+config **.fakeNode.enabled false
+config **.gateway.securityEnabled true
+config **.gateway.hmacWindow 1s
+config **.gateway.procDelay 1ms
+config **.gateway.costForward_mJ 5
+config **.gateway.costVerify_mJ 5
+config **.gateway.batteryInit_mJ 5000
+config sim-time-limit 10s
+config description "Secure Mode Simulation (includes all scenarios)"
+config network ned.LightIoTNetwork
+config ned-path .:ned
+config sim-time-limit 10s
+config record-eventlog true
+config cmdenv-express-mode false
+config network ned.LightIoTNetwork
+config sim-time-limit 10s
+config output-scalar-file results/secure_output.sca
+config output-vector-file results/secure_output.vec
+config network LightIoTNetwork
+config sim-time-limit 10s
+config output-scalar-file results/nosecure_output.sca
+config output-vector-file results/nosecure_output.vec
+config network LightIoTNetwork
+config sim-time-limit 10s
+config output-scalar-file results/attack_output.sca
+config output-vector-file results/attack_output.vec
+config output-scalar-file results/Secure5_record-0.sca
+config output-vector-file results/Secure5_record-0.vec
+config **.scalar-recording true
+config **.vector-recording true
+config output-scalar-file results/Secure5_record-0.sca
+config output-vector-file results/Secure5_record-0.vec
+config **.scalar-recording true
+config **.vector-recording true
+
+vector 0 LightIoTNetwork.cloud EndToEndDelay_s ETV
+0	2100 1173 3 135 1.049813502304 9.557791542469 45 0.001 0.001 0.045 4.5e-05
+

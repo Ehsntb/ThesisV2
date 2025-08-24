@@ -1,0 +1,2 @@
+Config,Nodes,Mode,Cloud_TotalReceived,GW_Received,GW_Forwarded,GW_Dropped,GW_Battery_mJ,Sensor_AvgBattery_mJ,Cloud_AvgDelay_s,Fake_AttacksSent
+AttackOnNoSec50_record,50,Attack-NoSec,,,,,,,,

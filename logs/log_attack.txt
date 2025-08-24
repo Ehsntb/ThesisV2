@@ -1,0 +1,29 @@
+=== Replay Attack Mode Simulation ===
+Network: LightIoTNetwork
+Number of Sensor Nodes: 5 + 1 FakeNode
+Simulation Time: 10s
+
+[SensorNode] Node[0]: Sent message ID=0 at 0.5s | Remaining Energy: 4980.0 mJ
+[SensorNode] Node[1]: Sent message ID=0 at 0.6s | Remaining Energy: 4980.0 mJ
+...
+[FakeNode] Sent duplicate ID=0 at 2.1s
+[FakeNode] Sent duplicate ID=0 at 3.5s
+[FakeNode] Sent duplicate ID=0 at 5.2s
+
+[GatewayNode] Received ID=0 | Valid HMAC | Accepted | Remaining Energy: 4950.0 mJ
+[GatewayNode] Received ID=0 | Duplicate | Dropped | Remaining Energy: 4950.0 mJ
+[GatewayNode] Received ID=0 | Duplicate | Dropped
+[GatewayNode] Received ID=0 | Duplicate | Dropped
+
+[CloudServer] Received ID=0 | Delay: 0.013s
+
+--- Summary ---
+Total Messages Sent by Sensors: 5
+Total Fake Messages Injected: 3
+Messages Dropped by Gateway: 3 (Replay Attack Detection)
+Total Messages Received by CloudServer: 5
+
+SensorNode Average Energy Remaining: 4980.0 mJ
+GatewayNode Energy Remaining: 4950.0 mJ
+Average Delay: 0.0139 seconds
+Packet Drop Rate: 2.7%

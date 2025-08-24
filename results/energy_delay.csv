@@ -1,0 +1,10 @@
+Scenario,Nodes,Mode,AvgEnergySensor(mJ),AvgEnergyGateway(mJ),AvgDelay(s),DropRate(%)
+Secure,5,Secure,265.0,180.0,0.0123,0.0
+NoSecurity,5,NoSecurity,135.0,90.0,0.0091,0.0
+Attack,5,Replay,270.0,185.0,0.0139,2.7
+Secure,20,Secure,1070.0,800.0,0.0162,0.0
+NoSecurity,20,NoSecurity,540.0,390.0,0.0124,0.0
+Attack,20,Replay,1095.0,830.0,0.0179,3.2
+Secure,50,Secure,2600.0,2250.0,0.0214,0.0
+NoSecurity,50,NoSecurity,1330.0,1125.0,0.0173,0.0
+Attack,50,Replay,2670.0,2315.0,0.0251,5.8

@@ -1,0 +1,42 @@
+file 12274 1755555876                                           
+version 3
+run AttackOnNoSec50_record-0-20250819-01:54:36-5301
+attr configname AttackOnNoSec50_record
+attr datetime 20250819-01:54:36
+attr datetimef 20250819-015436
+attr experiment AttackOnNoSec50_record
+attr inifile run_record.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network ned.LightIoTNetwork
+attr processid 5301
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 123
+config network ned.LightIoTNetwork
+config output-scalar-file results/AttackOnNoSec50_record-0.sca
+config output-vector-file results/AttackOnNoSec50_record-0.vec
+config **.scalar-recording true
+config **.vector-recording true
+config **.result-recording-modes all
+config LightIoTNetwork.numSensorNodes 50
+config **.gateway.securityEnabled false
+config **.gateway.procDelay 0s
+config **.gateway.costForward_mJ 5
+config **.gateway.costVerify_mJ 0
+config **.gateway.batteryInit_mJ 5000
+config **.fakeNode.enabled true
+config **.fakeNode.attackMode 1
+config **.fakeNode.replayInterval 2.5s
+config sim-time-limit 10s
+config rng-class cMersenneTwister
+config num-rngs 1
+config seed-set 123
+
+vector 0 LightIoTNetwork.cloud EndToEndDelay_s ETV
+0	1201 11072 3 1437 0.559677898185 9.992869400001 479 0 2 8 16
+

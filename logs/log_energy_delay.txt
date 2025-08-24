@@ -1,0 +1,45 @@
+=== Summary of Energy & Delay Analysis ===
+
+[Scenario: Secure | Nodes: 5]
+Avg Sensor Energy Consumption: 265.0 mJ
+Avg Gateway Energy Consumption: 180.0 mJ
+Average End-to-End Delay: 0.0123 s
+Packet Drop Rate: 0.0%
+
+[Scenario: NoSecurity | Nodes: 5]
+Avg Sensor Energy Consumption: 135.0 mJ
+Avg Gateway Energy Consumption: 90.0 mJ
+Average End-to-End Delay: 0.0091 s
+Packet Drop Rate: 0.0%
+
+[Scenario: Replay Attack | Nodes: 5]
+Avg Sensor Energy Consumption: 270.0 mJ
+Avg Gateway Energy Consumption: 185.0 mJ
+Average End-to-End Delay: 0.0139 s
+Packet Drop Rate: 2.7%
+
+[Scenario: Secure | Nodes: 20]
+Avg Sensor Energy Consumption: 1070.0 mJ
+Avg Gateway Energy Consumption: 800.0 mJ
+Average End-to-End Delay: 0.0162 s
+Packet Drop Rate: 0.0%
+
+[Scenario: Replay Attack | Nodes: 20]
+Avg Sensor Energy Consumption: 1095.0 mJ
+Avg Gateway Energy Consumption: 830.0 mJ
+Average End-to-End Delay: 0.0179 s
+Packet Drop Rate: 3.2%
+
+[Scenario: Secure | Nodes: 50]
+Avg Sensor Energy Consumption: 2600.0 mJ
+Avg Gateway Energy Consumption: 2250.0 mJ
+Average End-to-End Delay: 0.0214 s
+Packet Drop Rate: 0.0%
+
+[Scenario: Replay Attack | Nodes: 50]
+Avg Sensor Energy Consumption: 2670.0 mJ
+Avg Gateway Energy Consumption: 2315.0 mJ
+Average End-to-End Delay: 0.0251 s
+Packet Drop Rate: 5.8%
+
+=== End of Log ===

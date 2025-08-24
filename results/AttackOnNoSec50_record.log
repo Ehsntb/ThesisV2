@@ -1,0 +1,27 @@
+OMNeT++ Discrete Event Simulation  (C) 1992-2024 Andras Varga, OpenSim Ltd.
+Version: 6.1, build: 241008-f7568267cd, edition: Academic Public License -- NOT FOR COMMERCIAL USE
+See the license for distribution terms and warranty disclaimer
+
+Setting up Cmdenv...
+
+Loading NED files from .:  5
+Loading NED files from ned:  5
+
+Preparing for running configuration AttackOnNoSec50_record, run #0...
+Assigned runID=AttackOnNoSec50_record-0-20250819-01:54:36-5301
+Setting up network "ned.LightIoTNetwork"...
+Initializing...
+
+Running simulation...
+** Event #0   t=0   Elapsed: 9e-06s (0m 00s)  0% completed  (0% total)
+     Speed:     ev/sec=0   simsec/sec=0   ev/simsec=0
+     Messages:  created: 51   present: 51   in FES: 52
+** Event #1438   t=10   Elapsed: 0.001258s (0m 00s)  100% completed  (100% total)
+     Speed:     ev/sec=0   simsec/sec=0   ev/simsec=0
+     Messages:  created: 530   present: 51   in FES: 51
+
+<!> Simulation time limit reached -- at t=10s, event #1438
+
+Calling finish() at end of Run #0...
+
+End.

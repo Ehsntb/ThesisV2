@@ -1,0 +1,109 @@
+version 3
+run Attack5_record-0-20250819-01:19:19-4244
+attr configname Attack5_record
+attr datetime 20250819-01:19:19
+attr datetimef 20250819-011919
+attr experiment Attack5_record
+attr inifile run_record.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network ned.LightIoTNetwork
+attr processid 4244
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config network ned.LightIoTNetwork
+config output-scalar-file results/Attack5_record-0.sca
+config output-vector-file results/Attack5_record-0.vec
+config **.scalar-recording true
+config **.vector-recording true
+config **.result-recording-modes all
+config LightIoTNetwork.numSensorNodes 5
+config **.fakeNode.enabled true
+config **.fakeNode.attackMode 1
+config **.fakeNode.replayInterval 2.5s
+config **.gateway.securityEnabled true
+config **.gateway.hmacWindow 1s
+config **.gateway.procDelay 1ms
+config **.gateway.costForward_mJ 5
+config **.gateway.costVerify_mJ 5
+config **.gateway.batteryInit_mJ 5000
+config sim-time-limit 10s
+config description "Secure Mode Simulation (includes all scenarios)"
+config network ned.LightIoTNetwork
+config ned-path .:ned
+config sim-time-limit 10s
+config record-eventlog true
+config cmdenv-express-mode false
+config network ned.LightIoTNetwork
+config sim-time-limit 10s
+config output-scalar-file results/secure_output.sca
+config output-vector-file results/secure_output.vec
+config network LightIoTNetwork
+config sim-time-limit 10s
+config output-scalar-file results/nosecure_output.sca
+config output-vector-file results/nosecure_output.vec
+config network LightIoTNetwork
+config sim-time-limit 10s
+config output-scalar-file results/attack_output.sca
+config output-vector-file results/attack_output.vec
+config output-scalar-file results/Attack5_record-0.sca
+config output-vector-file results/Attack5_record-0.vec
+config **.scalar-recording true
+config **.vector-recording true
+config output-scalar-file results/Attack5_record-0.sca
+config output-vector-file results/Attack5_record-0.vec
+config **.scalar-recording true
+config **.vector-recording true
+
+vector 0 LightIoTNetwork.cloud EndToEndDelay_s ETV
+0	3	1.049813502304	0.001
+0	6	1.093844616389	0.001
+0	9	1.103763370378	0.001
+0	12	1.216189364972	0.001
+0	15	1.34526574409	0.001
+0	18	2.058790137781	0.001
+0	21	2.088494329736	0.001
+0	24	2.16329496384	0.001
+0	27	2.240902104251	0.001
+0	30	2.374444567108	0.001
+0	35	3.035666479426	0.001
+0	38	3.076011771731	0.001
+0	41	3.122801884891	0.001
+0	44	3.285787162253	0.001
+0	47	3.319256704602	0.001
+0	50	4.030543030634	0.001
+0	53	4.099490189155	0.001
+0	56	4.128399032238	0.001
+0	59	4.281320184584	0.001
+0	62	4.377601711288	0.001
+0	65	5.092976775927	0.001
+0	68	5.105269173461	0.001
+0	71	5.124394466518	0.001
+0	74	5.294929097335	0.001
+0	77	5.356158669921	0.001
+0	82	6.03860167826	0.001
+0	85	6.172484927227	0.001
+0	88	6.178096102573	0.001
+0	91	6.262408329661	0.001
+0	94	6.273584529315	0.001
+0	97	7.068236053571	0.001
+0	100	7.076528607051	0.001
+0	103	7.151744410045	0.001
+0	106	7.328932298229	0.001
+0	109	7.365015560179	0.001
+0	114	8.004598762536	0.001
+0	117	8.123867404949	0.001
+0	120	8.225746839096	0.001
+0	123	8.402949748442	0.001
+0	126	8.460739228758	0.001
+0	129	8.99932037054	0.001
+0	132	9.183699117716	0.001
+0	135	9.285928989596	0.001
+0	138	9.395245621002	0.001
+0	141	9.464834724856	0.001
+

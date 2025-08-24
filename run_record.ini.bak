@@ -1,0 +1,210 @@
+include omnetpp.ini
+[General]
+rng-class = "cMersenneTwister"
+num-rngs = 1
+seed-set = 123
+
+[Config Secure50_record]
+network = ned.LightIoTNetwork
+
+# --- Recording: per-object در OMNeT++ 6 ---
+output-scalar-file = results/${configname}-${runnumber}.sca
+output-vector-file = results/${configname}-${runnumber}.vec
+**.scalar-recording = true
+**.vector-recording = true
+**.result-recording-modes = all
+
+# --- پارامترهای سناریو (Secure, 50 nodes) ---
+LightIoTNetwork.numSensorNodes = 50
+**.fakeNode.enabled = false
+**.gateway.securityEnabled = true
+**.gateway.hmacWindow = 1s
+**.gateway.procDelay = 1ms
+**.gateway.costForward_mJ = 5
+**.gateway.costVerify_mJ  = 5
+**.gateway.batteryInit_mJ = 5000
+sim-time-limit = 10s
+
+[Config Secure5_record]
+network = ned.LightIoTNetwork
+output-scalar-file = results/${configname}-${runnumber}.sca
+output-vector-file = results/${configname}-${runnumber}.vec
+**.scalar-recording = true
+**.vector-recording = true
+**.result-recording-modes = all
+LightIoTNetwork.numSensorNodes = 5
+**.fakeNode.enabled = false
+**.gateway.securityEnabled = true
+**.gateway.hmacWindow = 1s
+**.gateway.procDelay = 1ms
+**.gateway.costForward_mJ = 5
+**.gateway.costVerify_mJ  = 5
+**.gateway.batteryInit_mJ = 5000
+sim-time-limit = 10s
+
+[Config Secure20_record]
+network = ned.LightIoTNetwork
+output-scalar-file = results/${configname}-${runnumber}.sca
+output-vector-file = results/${configname}-${runnumber}.vec
+**.scalar-recording = true
+**.vector-recording = true
+**.result-recording-modes = all
+LightIoTNetwork.numSensorNodes = 20
+**.fakeNode.enabled = false
+**.gateway.securityEnabled = true
+**.gateway.hmacWindow = 1s
+**.gateway.procDelay = 1ms
+**.gateway.costForward_mJ = 5
+**.gateway.costVerify_mJ  = 5
+**.gateway.batteryInit_mJ = 5000
+sim-time-limit = 10s
+
+[Config NoSec5_record]
+network = ned.LightIoTNetwork
+output-scalar-file = results/${configname}-${runnumber}.sca
+output-vector-file = results/${configname}-${runnumber}.vec
+**.scalar-recording = true
+**.vector-recording = true
+**.result-recording-modes = all
+LightIoTNetwork.numSensorNodes = 5
+**.fakeNode.enabled = false
+**.gateway.securityEnabled = false
+**.gateway.procDelay = 0s
+**.gateway.costForward_mJ = 5
+**.gateway.costVerify_mJ  = 0
+**.gateway.batteryInit_mJ = 5000
+sim-time-limit = 10s
+
+[Config NoSec20_record]
+network = ned.LightIoTNetwork
+output-scalar-file = results/${configname}-${runnumber}.sca
+output-vector-file = results/${configname}-${runnumber}.vec
+**.scalar-recording = true
+**.vector-recording = true
+**.result-recording-modes = all
+LightIoTNetwork.numSensorNodes = 20
+**.fakeNode.enabled = false
+**.gateway.securityEnabled = false
+**.gateway.procDelay = 0s
+**.gateway.costForward_mJ = 5
+**.gateway.costVerify_mJ  = 0
+**.gateway.batteryInit_mJ = 5000
+sim-time-limit = 10s
+
+[Config NoSec50_record]
+network = ned.LightIoTNetwork
+output-scalar-file = results/${configname}-${runnumber}.sca
+output-vector-file = results/${configname}-${runnumber}.vec
+**.scalar-recording = true
+**.vector-recording = true
+**.result-recording-modes = all
+LightIoTNetwork.numSensorNodes = 50
+**.fakeNode.enabled = false
+**.gateway.securityEnabled = false
+**.gateway.procDelay = 0s
+**.gateway.costForward_mJ = 5
+**.gateway.costVerify_mJ  = 0
+**.gateway.batteryInit_mJ = 5000
+sim-time-limit = 10s
+
+[Config Attack5_record]
+network = ned.LightIoTNetwork
+output-scalar-file = results/${configname}-${runnumber}.sca
+output-vector-file = results/${configname}-${runnumber}.vec
+**.scalar-recording = true
+**.vector-recording = true
+**.result-recording-modes = all
+LightIoTNetwork.numSensorNodes = 5
+**.fakeNode.enabled = true
+**.fakeNode.attackMode = 1        # replay
+**.fakeNode.replayInterval = 2.5s
+**.gateway.securityEnabled = true
+**.gateway.hmacWindow = 1s
+**.gateway.procDelay = 1ms
+**.gateway.costForward_mJ = 5
+**.gateway.costVerify_mJ  = 5
+**.gateway.batteryInit_mJ = 5000
+sim-time-limit = 10s
+
+[Config Attack20_record]
+network = ned.LightIoTNetwork
+output-scalar-file = results/${configname}-${runnumber}.sca
+output-vector-file = results/${configname}-${runnumber}.vec
+**.scalar-recording = true
+**.vector-recording = true
+**.result-recording-modes = all
+LightIoTNetwork.numSensorNodes = 20
+**.fakeNode.enabled = true
+**.fakeNode.attackMode = 1
+**.fakeNode.replayInterval = 2.5s
+**.gateway.securityEnabled = true
+**.gateway.hmacWindow = 1s
+**.gateway.procDelay = 1ms
+**.gateway.costForward_mJ = 5
+**.gateway.costVerify_mJ  = 5
+**.gateway.batteryInit_mJ = 5000
+sim-time-limit = 10s
+
+[Config Attack50_record]
+network = ned.LightIoTNetwork
+output-scalar-file = results/${configname}-${runnumber}.sca
+output-vector-file = results/${configname}-${runnumber}.vec
+**.scalar-recording = true
+**.vector-recording = true
+**.result-recording-modes = all
+LightIoTNetwork.numSensorNodes = 50
+**.gateway.securityEnabled = true
+**.gateway.hmacWindow = 3s      # پنجرهٔ بزرگ‌تر
+**.gateway.procDelay = 1ms
+**.gateway.costForward_mJ = 5
+**.gateway.costVerify_mJ  = 5
+**.gateway.batteryInit_mJ = 5000
+**.fakeNode.enabled = true
+**.fakeNode.attackMode = 1
+**.fakeNode.replayInterval = 2.5s
+sim-time-limit = 10s
+rng-class = "cMersenneTwister"
+num-rngs = 1
+seed-set = 123
+[Config AttackOnNoSec50_record]
+network = ned.LightIoTNetwork
+output-scalar-file = results/${configname}-${runnumber}.sca
+output-vector-file = results/${configname}-${runnumber}.vec
+**.scalar-recording = true
+**.vector-recording = true
+**.result-recording-modes = all
+LightIoTNetwork.numSensorNodes = 50
+**.gateway.securityEnabled = false
+**.gateway.hmacWindow = 3s
+**.gateway.procDelay = 0s
+**.gateway.costForward_mJ = 5
+**.gateway.costVerify_mJ  = 0
+**.gateway.batteryInit_mJ = 5000
+**.fakeNode.enabled = true
+**.fakeNode.attackMode = 1
+**.fakeNode.replayInterval = 2.5s
+sim-time-limit = 10s
+rng-class = "cMersenneTwister"
+num-rngs = 1
+seed-set = 123
+[Config Attack50_window3s_record]
+network = ned.LightIoTNetwork
+output-scalar-file = results/${configname}-${runnumber}.sca
+output-vector-file = results/${configname}-${runnumber}.vec
+**.scalar-recording = true
+**.vector-recording = true
+**.result-recording-modes = all
+LightIoTNetwork.numSensorNodes = 50
+**.gateway.securityEnabled = true
+**.gateway.hmacWindow = 3s
+**.gateway.procDelay = 1ms
+**.gateway.costForward_mJ = 5
+**.gateway.costVerify_mJ  = 5
+**.gateway.batteryInit_mJ = 5000
+**.fakeNode.enabled = true
+**.fakeNode.attackMode = 1
+**.fakeNode.replayInterval = 2.5s
+sim-time-limit = 10s
+rng-class = "cMersenneTwister"
+num-rngs = 1
+seed-set = 123

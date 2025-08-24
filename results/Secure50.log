@@ -1,0 +1,2006 @@
+OMNeT++ Discrete Event Simulation  (C) 1992-2024 Andras Varga, OpenSim Ltd.
+Version: 6.1, build: 241008-f7568267cd, edition: Academic Public License -- NOT FOR COMMERCIAL USE
+See the license for distribution terms and warranty disclaimer
+
+Setting up Cmdenv...
+
+Loading NED files from .:  5
+Loading NED files from ned:  5
+Loading NED files from /home/ubuntu/Desktop/theis/project_g_f/thesis-main:  5
+Loading NED files from /home/ubuntu/Desktop/theis/project_g_f/thesis-main/ned:  5
+
+Preparing for running configuration Secure50, run #0...
+Assigned runID=Secure50-0-20250819-00:51:51-3854
+Setting up network "ned.LightIoTNetwork"...
+Recording eventlog to file `results/Secure50-#0.elog'...
+Initializing...
+Initializing module LightIoTNetwork, stage 0
+Initializing module LightIoTNetwork.sensor[0], stage 0
+Initializing module LightIoTNetwork.sensor[1], stage 0
+Initializing module LightIoTNetwork.sensor[2], stage 0
+Initializing module LightIoTNetwork.sensor[3], stage 0
+Initializing module LightIoTNetwork.sensor[4], stage 0
+Initializing module LightIoTNetwork.sensor[5], stage 0
+Initializing module LightIoTNetwork.sensor[6], stage 0
+Initializing module LightIoTNetwork.sensor[7], stage 0
+Initializing module LightIoTNetwork.sensor[8], stage 0
+Initializing module LightIoTNetwork.sensor[9], stage 0
+Initializing module LightIoTNetwork.sensor[10], stage 0
+Initializing module LightIoTNetwork.sensor[11], stage 0
+Initializing module LightIoTNetwork.sensor[12], stage 0
+Initializing module LightIoTNetwork.sensor[13], stage 0
+Initializing module LightIoTNetwork.sensor[14], stage 0
+Initializing module LightIoTNetwork.sensor[15], stage 0
+Initializing module LightIoTNetwork.sensor[16], stage 0
+Initializing module LightIoTNetwork.sensor[17], stage 0
+Initializing module LightIoTNetwork.sensor[18], stage 0
+Initializing module LightIoTNetwork.sensor[19], stage 0
+Initializing module LightIoTNetwork.sensor[20], stage 0
+Initializing module LightIoTNetwork.sensor[21], stage 0
+Initializing module LightIoTNetwork.sensor[22], stage 0
+Initializing module LightIoTNetwork.sensor[23], stage 0
+Initializing module LightIoTNetwork.sensor[24], stage 0
+Initializing module LightIoTNetwork.sensor[25], stage 0
+Initializing module LightIoTNetwork.sensor[26], stage 0
+Initializing module LightIoTNetwork.sensor[27], stage 0
+Initializing module LightIoTNetwork.sensor[28], stage 0
+Initializing module LightIoTNetwork.sensor[29], stage 0
+Initializing module LightIoTNetwork.sensor[30], stage 0
+Initializing module LightIoTNetwork.sensor[31], stage 0
+Initializing module LightIoTNetwork.sensor[32], stage 0
+Initializing module LightIoTNetwork.sensor[33], stage 0
+Initializing module LightIoTNetwork.sensor[34], stage 0
+Initializing module LightIoTNetwork.sensor[35], stage 0
+Initializing module LightIoTNetwork.sensor[36], stage 0
+Initializing module LightIoTNetwork.sensor[37], stage 0
+Initializing module LightIoTNetwork.sensor[38], stage 0
+Initializing module LightIoTNetwork.sensor[39], stage 0
+Initializing module LightIoTNetwork.sensor[40], stage 0
+Initializing module LightIoTNetwork.sensor[41], stage 0
+Initializing module LightIoTNetwork.sensor[42], stage 0
+Initializing module LightIoTNetwork.sensor[43], stage 0
+Initializing module LightIoTNetwork.sensor[44], stage 0
+Initializing module LightIoTNetwork.sensor[45], stage 0
+Initializing module LightIoTNetwork.sensor[46], stage 0
+Initializing module LightIoTNetwork.sensor[47], stage 0
+Initializing module LightIoTNetwork.sensor[48], stage 0
+Initializing module LightIoTNetwork.sensor[49], stage 0
+Initializing module LightIoTNetwork.gateway, stage 0
+Initializing module LightIoTNetwork.cloud, stage 0
+Initializing module LightIoTNetwork.fakeNode, stage 0
+
+Running simulation...
+** Event #1  t=0.52021839912  5% completed  (5% total)   LightIoTNetwork.sensor[32] (SensorNode, id=34)
+** Event #2  t=0.52021839912  5% completed  (5% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #3  t=0.52121839912  5% completed  (5% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3300000 | Delay: 0.001s
+** Event #4  t=0.556712975726  5% completed  (5% total)   LightIoTNetwork.sensor[15] (SensorNode, id=17)
+** Event #5  t=0.556712975726  5% completed  (5% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #6  t=0.557712975726  5% completed  (5% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1600000 | Delay: 0.001s
+** Event #7  t=0.571036058711  5% completed  (5% total)   LightIoTNetwork.sensor[28] (SensorNode, id=30)
+** Event #8  t=0.571036058711  5% completed  (5% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #9  t=0.572036058711  5% completed  (5% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2900000 | Delay: 0.001s
+** Event #10  t=0.587129296968  5% completed  (5% total)   LightIoTNetwork.sensor[30] (SensorNode, id=32)
+** Event #11  t=0.587129296968  5% completed  (5% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #12  t=0.588129296968  5% completed  (5% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3100000 | Delay: 0.001s
+** Event #13  t=0.618274423759  6% completed  (6% total)   LightIoTNetwork.sensor[48] (SensorNode, id=50)
+** Event #14  t=0.618274423759  6% completed  (6% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #15  t=0.619274423759  6% completed  (6% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4900000 | Delay: 0.001s
+** Event #16  t=0.640350777423  6% completed  (6% total)   LightIoTNetwork.sensor[37] (SensorNode, id=39)
+** Event #17  t=0.640350777423  6% completed  (6% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #18  t=0.641350777423  6% completed  (6% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3800000 | Delay: 0.001s
+** Event #19  t=0.772656294517  7% completed  (7% total)   LightIoTNetwork.sensor[17] (SensorNode, id=19)
+** Event #20  t=0.772656294517  7% completed  (7% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #21  t=0.773656294517  7% completed  (7% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1800000 | Delay: 0.001s
+** Event #22  t=0.797534605255  7% completed  (7% total)   LightIoTNetwork.sensor[13] (SensorNode, id=15)
+** Event #23  t=0.797534605255  7% completed  (7% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #24  t=0.798534605255  7% completed  (7% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1400000 | Delay: 0.001s
+** Event #25  t=0.837396161631  8% completed  (8% total)   LightIoTNetwork.sensor[29] (SensorNode, id=31)
+** Event #26  t=0.837396161631  8% completed  (8% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #27  t=0.838396161631  8% completed  (8% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3000000 | Delay: 0.001s
+** Event #28  t=0.868241537362  8% completed  (8% total)   LightIoTNetwork.sensor[33] (SensorNode, id=35)
+** Event #29  t=0.868241537362  8% completed  (8% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #30  t=0.869241537362  8% completed  (8% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3400000 | Delay: 0.001s
+** Event #31  t=0.88344152132  8% completed  (8% total)   LightIoTNetwork.sensor[18] (SensorNode, id=20)
+** Event #32  t=0.88344152132  8% completed  (8% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #33  t=0.884381708223  8% completed  (8% total)   LightIoTNetwork.sensor[11] (SensorNode, id=13)
+** Event #34  t=0.884381708223  8% completed  (8% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #35  t=0.88444152132  8% completed  (8% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1900000 | Delay: 0.001s
+** Event #36  t=0.885381708223  8% completed  (8% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1200000 | Delay: 0.001s
+** Event #37  t=0.892784793163  8% completed  (8% total)   LightIoTNetwork.sensor[25] (SensorNode, id=27)
+** Event #38  t=0.892784793163  8% completed  (8% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #39  t=0.893784793163  8% completed  (8% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2600000 | Delay: 0.001s
+** Event #40  t=0.923654796788  9% completed  (9% total)   LightIoTNetwork.sensor[8] (SensorNode, id=10)
+** Event #41  t=0.923654796788  9% completed  (9% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #42  t=0.924654796788  9% completed  (9% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=900000 | Delay: 0.001s
+** Event #43  t=0.937587209977  9% completed  (9% total)   LightIoTNetwork.sensor[12] (SensorNode, id=14)
+** Event #44  t=0.937587209977  9% completed  (9% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #45  t=0.938587209977  9% completed  (9% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1300000 | Delay: 0.001s
+** Event #46  t=0.961479362799  9% completed  (9% total)   LightIoTNetwork.sensor[44] (SensorNode, id=46)
+** Event #47  t=0.961479362799  9% completed  (9% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #48  t=0.962479362799  9% completed  (9% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4500000 | Delay: 0.001s
+** Event #49  t=0.973608040018  9% completed  (9% total)   LightIoTNetwork.sensor[41] (SensorNode, id=43)
+** Event #50  t=0.973608040018  9% completed  (9% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #51  t=0.974608040018  9% completed  (9% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4200000 | Delay: 0.001s
+** Event #52  t=0.977665111655  9% completed  (9% total)   LightIoTNetwork.sensor[19] (SensorNode, id=21)
+** Event #53  t=0.977665111655  9% completed  (9% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #54  t=0.978665111655  9% completed  (9% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2000000 | Delay: 0.001s
+** Event #55  t=0.979977171402  9% completed  (9% total)   LightIoTNetwork.sensor[23] (SensorNode, id=25)
+** Event #56  t=0.979977171402  9% completed  (9% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #57  t=0.980977171402  9% completed  (9% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2400000 | Delay: 0.001s
+** Event #58  t=1.020477480488  10% completed  (10% total)   LightIoTNetwork.sensor[45] (SensorNode, id=47)
+** Event #59  t=1.020477480488  10% completed  (10% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #60  t=1.021477480488  10% completed  (10% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4600000 | Delay: 0.001s
+** Event #61  t=1.028894921532  10% completed  (10% total)   LightIoTNetwork.sensor[22] (SensorNode, id=24)
+** Event #62  t=1.028894921532  10% completed  (10% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #63  t=1.029894921532  10% completed  (10% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2300000 | Delay: 0.001s
+** Event #64  t=1.044883177383  10% completed  (10% total)   LightIoTNetwork.sensor[6] (SensorNode, id=8)
+** Event #65  t=1.044883177383  10% completed  (10% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #66  t=1.045883177383  10% completed  (10% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=700000 | Delay: 0.001s
+** Event #67  t=1.048813502304  10% completed  (10% total)   LightIoTNetwork.sensor[0] (SensorNode, id=2)
+** Event #68  t=1.048813502304  10% completed  (10% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #69  t=1.049813502304  10% completed  (10% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=100000 | Delay: 0.001s
+** Event #70  t=1.068044563755  10% completed  (10% total)   LightIoTNetwork.sensor[24] (SensorNode, id=26)
+** Event #71  t=1.068044563755  10% completed  (10% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #72  t=1.069044563755  10% completed  (10% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2500000 | Delay: 0.001s
+** Event #73  t=1.092844616389  10% completed  (10% total)   LightIoTNetwork.sensor[1] (SensorNode, id=3)
+** Event #74  t=1.092844616389  10% completed  (10% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #75  t=1.093844616389  10% completed  (10% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=200000 | Delay: 0.001s
+** Event #76  t=1.102763370378  11% completed  (11% total)   LightIoTNetwork.sensor[4] (SensorNode, id=6)
+** Event #77  t=1.102763370378  11% completed  (11% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #78  t=1.103763370378  11% completed  (11% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=500000 | Delay: 0.001s
+** Event #79  t=1.123563696397  11% completed  (11% total)   LightIoTNetwork.sensor[9] (SensorNode, id=11)
+** Event #80  t=1.123563696397  11% completed  (11% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #81  t=1.124563696397  11% completed  (11% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1000000 | Delay: 0.001s
+** Event #82  t=1.145894115092  11% completed  (11% total)   LightIoTNetwork.sensor[10] (SensorNode, id=12)
+** Event #83  t=1.145894115092  11% completed  (11% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #84  t=1.146894115092  11% completed  (11% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1100000 | Delay: 0.001s
+** Event #85  t=1.148171876557  11% completed  (11% total)   LightIoTNetwork.sensor[31] (SensorNode, id=33)
+** Event #86  t=1.148171876557  11% completed  (11% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #87  t=1.149171876557  11% completed  (11% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3200000 | Delay: 0.001s
+** Event #88  t=1.178879533662  11% completed  (11% total)   LightIoTNetwork.sensor[47] (SensorNode, id=49)
+** Event #89  t=1.178879533662  11% completed  (11% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #90  t=1.179879533662  11% completed  (11% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4800000 | Delay: 0.001s
+** Event #91  t=1.215189364972  12% completed  (12% total)   LightIoTNetwork.sensor[2] (SensorNode, id=4)
+** Event #92  t=1.215189364972  12% completed  (12% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #93  t=1.216189364972  12% completed  (12% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=300000 | Delay: 0.001s
+** Event #94  t=1.220632651588  12% completed  (12% total)   LightIoTNetwork.sensor[49] (SensorNode, id=51)
+** Event #95  t=1.220632651588  12% completed  (12% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #96  t=1.221632651588  12% completed  (12% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=5000000 | Delay: 0.001s
+** Event #97  t=1.278156756889  12% completed  (12% total)   LightIoTNetwork.sensor[36] (SensorNode, id=38)
+** Event #98  t=1.278156756889  12% completed  (12% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #99  t=1.279156756889  12% completed  (12% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3700000 | Delay: 0.001s
+** Event #100  t=1.280529175652  12% completed  (12% total)   LightIoTNetwork.sensor[46] (SensorNode, id=48)
+** Event #101  t=1.280529175652  12% completed  (12% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #102  t=1.281529175652  12% completed  (12% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4700000 | Delay: 0.001s
+** Event #103  t=1.291725033429  12% completed  (12% total)   LightIoTNetwork.sensor[20] (SensorNode, id=22)
+** Event #104  t=1.291725033429  12% completed  (12% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #105  t=1.292725033429  12% completed  (12% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2100000 | Delay: 0.001s
+** Event #106  t=1.299158563837  12% completed  (12% total)   LightIoTNetwork.sensor[42] (SensorNode, id=44)
+** Event #107  t=1.299158563837  12% completed  (12% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #108  t=1.300158563837  13% completed  (13% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4300000 | Delay: 0.001s
+** Event #109  t=1.300910752499  13% completed  (13% total)   LightIoTNetwork.sensor[43] (SensorNode, id=45)
+** Event #110  t=1.300910752499  13% completed  (13% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #111  t=1.301910752499  13% completed  (13% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4400000 | Delay: 0.001s
+** Event #112  t=1.312168726465  13% completed  (13% total)   LightIoTNetwork.sensor[21] (SensorNode, id=23)
+** Event #113  t=1.312168726465  13% completed  (13% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #114  t=1.313168726465  13% completed  (13% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2200000 | Delay: 0.001s
+** Event #115  t=1.33261984284  13% completed  (13% total)   LightIoTNetwork.sensor[34] (SensorNode, id=36)
+** Event #116  t=1.33261984284  13% completed  (13% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #117  t=1.33361984284  13% completed  (13% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3500000 | Delay: 0.001s
+** Event #118  t=1.336078768829  13% completed  (13% total)   LightIoTNetwork.sensor[27] (SensorNode, id=29)
+** Event #119  t=1.336078768829  13% completed  (13% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #120  t=1.337078768829  13% completed  (13% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2800000 | Delay: 0.001s
+** Event #121  t=1.34426574409  13% completed  (13% total)   LightIoTNetwork.sensor[3] (SensorNode, id=5)
+** Event #122  t=1.34426574409  13% completed  (13% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #123  t=1.34526574409  13% completed  (13% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=400000 | Delay: 0.001s
+** Event #124  t=1.347251737257  13% completed  (13% total)   LightIoTNetwork.sensor[7] (SensorNode, id=9)
+** Event #125  t=1.347251737257  13% completed  (13% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #126  t=1.348251737257  13% completed  (13% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=800000 | Delay: 0.001s
+** Event #127  t=1.357945619849  13% completed  (13% total)   LightIoTNetwork.sensor[5] (SensorNode, id=7)
+** Event #128  t=1.357945619849  13% completed  (13% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #129  t=1.358945619849  13% completed  (13% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=600000 | Delay: 0.001s
+** Event #130  t=1.370012145257  13% completed  (13% total)   LightIoTNetwork.sensor[38] (SensorNode, id=40)
+** Event #131  t=1.370012145257  13% completed  (13% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #132  t=1.370087251067  13% completed  (13% total)   LightIoTNetwork.sensor[39] (SensorNode, id=41)
+** Event #133  t=1.370087251067  13% completed  (13% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #134  t=1.371012145257  13% completed  (13% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3900000 | Delay: 0.001s
+** Event #135  t=1.371087251067  13% completed  (13% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4000000 | Delay: 0.001s
+** Event #136  t=1.391773001757  13% completed  (13% total)   LightIoTNetwork.sensor[14] (SensorNode, id=16)
+** Event #137  t=1.391773001757  13% completed  (13% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #138  t=1.392773001757  13% completed  (13% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1500000 | Delay: 0.001s
+** Event #139  t=1.425596633228  14% completed  (14% total)   LightIoTNetwork.sensor[26] (SensorNode, id=28)
+** Event #140  t=1.425596633228  14% completed  (14% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #141  t=1.426596633228  14% completed  (14% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2700000 | Delay: 0.001s
+** Event #142  t=1.457155154319  14% completed  (14% total)   LightIoTNetwork.sensor[35] (SensorNode, id=37)
+** Event #143  t=1.457155154319  14% completed  (14% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #144  t=1.458155154319  14% completed  (14% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3600000 | Delay: 0.001s
+** Event #145  t=1.463662764058  14% completed  (14% total)   LightIoTNetwork.sensor[16] (SensorNode, id=18)
+** Event #146  t=1.463662764058  14% completed  (14% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #147  t=1.464662764058  14% completed  (14% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1700000 | Delay: 0.001s
+** Event #148  t=1.478618342895  14% completed  (14% total)   LightIoTNetwork.sensor[40] (SensorNode, id=42)
+** Event #149  t=1.478618342895  14% completed  (14% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #150  t=1.479618342895  14% completed  (14% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4100000 | Delay: 0.001s
+** Event #151  t=1.499706715811  14% completed  (14% total)   LightIoTNetwork.sensor[28] (SensorNode, id=30)
+** Event #152  t=1.499706715811  14% completed  (14% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #153  t=1.500706715811  15% completed  (15% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2900001 | Delay: 0.001s
+** Event #154  t=1.548202602518  15% completed  (15% total)   LightIoTNetwork.sensor[32] (SensorNode, id=34)
+** Event #155  t=1.548202602518  15% completed  (15% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #156  t=1.549202602518  15% completed  (15% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3300001 | Delay: 0.001s
+** Event #157  t=1.573116933974  15% completed  (15% total)   LightIoTNetwork.sensor[15] (SensorNode, id=17)
+** Event #158  t=1.573116933974  15% completed  (15% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #159  t=1.574116933974  15% completed  (15% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1600001 | Delay: 0.001s
+** Event #160  t=1.594603942614  15% completed  (15% total)   LightIoTNetwork.sensor[30] (SensorNode, id=32)
+** Event #161  t=1.594603942614  15% completed  (15% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #162  t=1.595603942614  15% completed  (15% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3100001 | Delay: 0.001s
+** Event #163  t=1.69207390151  16% completed  (16% total)   LightIoTNetwork.sensor[37] (SensorNode, id=39)
+** Event #164  t=1.69207390151  16% completed  (16% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #165  t=1.69307390151  16% completed  (16% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3800001 | Delay: 0.001s
+** Event #166  t=1.707208207482  17% completed  (17% total)   LightIoTNetwork.sensor[48] (SensorNode, id=50)
+** Event #167  t=1.707208207482  17% completed  (17% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #168  t=1.708208207482  17% completed  (17% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4900001 | Delay: 0.001s
+** Event #169  t=1.71871612654  17% completed  (17% total)   LightIoTNetwork.sensor[13] (SensorNode, id=15)
+** Event #170  t=1.71871612654  17% completed  (17% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #171  t=1.71971612654  17% completed  (17% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1400001 | Delay: 0.001s
+** Event #172  t=1.777025960153  17% completed  (17% total)   LightIoTNetwork.sensor[17] (SensorNode, id=19)
+** Event #173  t=1.777025960153  17% completed  (17% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #174  t=1.778025960153  17% completed  (17% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1800001 | Delay: 0.001s
+** Event #175  t=1.820328549855  18% completed  (18% total)   LightIoTNetwork.sensor[29] (SensorNode, id=31)
+** Event #176  t=1.820328549855  18% completed  (18% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #177  t=1.821328549855  18% completed  (18% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3000001 | Delay: 0.001s
+** Event #178  t=1.821648177132  18% completed  (18% total)   LightIoTNetwork.sensor[11] (SensorNode, id=13)
+** Event #179  t=1.821648177132  18% completed  (18% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #180  t=1.822648177132  18% completed  (18% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1200001 | Delay: 0.001s
+** Event #181  t=1.836352643603  18% completed  (18% total)   LightIoTNetwork.sensor[18] (SensorNode, id=20)
+** Event #182  t=1.836352643603  18% completed  (18% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #183  t=1.837352643603  18% completed  (18% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1900001 | Delay: 0.001s
+** Event #184  t=1.862961621908  18% completed  (18% total)   LightIoTNetwork.sensor[33] (SensorNode, id=35)
+** Event #185  t=1.862961621908  18% completed  (18% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #186  t=1.863961621908  18% completed  (18% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3400001 | Delay: 0.001s
+** Event #187  t=1.883735131006  18% completed  (18% total)   LightIoTNetwork.sensor[23] (SensorNode, id=25)
+** Event #188  t=1.883735131006  18% completed  (18% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #189  t=1.884735131006  18% completed  (18% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2400001 | Delay: 0.001s
+** Event #190  t=1.904708746308  19% completed  (19% total)   LightIoTNetwork.sensor[19] (SensorNode, id=21)
+** Event #191  t=1.904708746308  19% completed  (19% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #192  t=1.904789434141  19% completed  (19% total)   LightIoTNetwork.sensor[44] (SensorNode, id=46)
+** Event #193  t=1.904789434141  19% completed  (19% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #194  t=1.905708746308  19% completed  (19% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2000001 | Delay: 0.001s
+** Event #195  t=1.905789434141  19% completed  (19% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4500001 | Delay: 0.001s
+** Event #196  t=1.928817277169  19% completed  (19% total)   LightIoTNetwork.sensor[12] (SensorNode, id=14)
+** Event #197  t=1.928817277169  19% completed  (19% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #198  t=1.929817277169  19% completed  (19% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1300001 | Delay: 0.001s
+** Event #199  t=1.947631530464  19% completed  (19% total)   LightIoTNetwork.sensor[25] (SensorNode, id=27)
+** Event #200  t=1.947631530464  19% completed  (19% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #201  t=1.948631530464  19% completed  (19% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2600001 | Delay: 0.001s
+** Event #202  t=1.971038432372  19% completed  (19% total)   LightIoTNetwork.sensor[8] (SensorNode, id=10)
+** Event #203  t=1.971038432372  19% completed  (19% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #204  t=1.972038432372  19% completed  (19% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=900001 | Delay: 0.001s
+** Event #205  t=1.97481815014  19% completed  (19% total)   LightIoTNetwork.sensor[6] (SensorNode, id=8)
+** Event #206  t=1.97481815014  19% completed  (19% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #207  t=1.97581815014  19% completed  (19% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=700001 | Delay: 0.001s
+** Event #208  t=1.985305681313  19% completed  (19% total)   LightIoTNetwork.sensor[45] (SensorNode, id=47)
+** Event #209  t=1.985305681313  19% completed  (19% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #210  t=1.986305681313  19% completed  (19% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4600001 | Delay: 0.001s
+** Event #211  t=1.987294829683  19% completed  (19% total)   LightIoTNetwork.sensor[41] (SensorNode, id=43)
+** Event #212  t=1.987294829683  19% completed  (19% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #213  t=1.988294829683  19% completed  (19% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4200001 | Delay: 0.001s
+** Event #214  t=2.012508840859  20% completed  (20% total)   LightIoTNetwork.sensor[24] (SensorNode, id=26)
+** Event #215  t=2.012508840859  20% completed  (20% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #216  t=2.013508840859  20% completed  (20% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2500001 | Delay: 0.001s
+** Event #217  t=2.052422021702  20% completed  (20% total)   LightIoTNetwork.sensor[22] (SensorNode, id=24)
+** Event #218  t=2.052422021702  20% completed  (20% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #219  t=2.053422021702  20% completed  (20% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2300001 | Delay: 0.001s
+** Event #220  t=2.071232646797  20% completed  (20% total)   LightIoTNetwork.sensor[0] (SensorNode, id=2)
+** Event #221  t=2.071232646797  20% completed  (20% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #222  t=2.072232646797  20% completed  (20% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=100001 | Delay: 0.001s
+** Event #223  t=2.080061165989  20% completed  (20% total)   LightIoTNetwork.sensor[4] (SensorNode, id=6)
+** Event #224  t=2.080061165989  20% completed  (20% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #225  t=2.081061165989  20% completed  (20% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=500001 | Delay: 0.001s
+** Event #226  t=2.116231416119  21% completed  (21% total)   LightIoTNetwork.sensor[1] (SensorNode, id=3)
+** Event #227  t=2.116231416119  21% completed  (21% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #228  t=2.117231416119  21% completed  (21% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=200001 | Delay: 0.001s
+** Event #229  t=2.168869531574  21% completed  (21% total)   LightIoTNetwork.sensor[47] (SensorNode, id=49)
+** Event #230  t=2.168869531574  21% completed  (21% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #231  t=2.169869531574  21% completed  (21% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4800001 | Delay: 0.001s
+** Event #232  t=2.184535936126  21% completed  (21% total)   LightIoTNetwork.sensor[31] (SensorNode, id=33)
+** Event #233  t=2.184535936126  21% completed  (21% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #234  t=2.185535936126  21% completed  (21% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3200001 | Delay: 0.001s
+** Event #235  t=2.187090945384  21% completed  (21% total)   LightIoTNetwork.sensor[2] (SensorNode, id=4)
+** Event #236  t=2.187090945384  21% completed  (21% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #237  t=2.188090945384  21% completed  (21% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=300001 | Delay: 0.001s
+** Event #238  t=2.212313311453  22% completed  (22% total)   LightIoTNetwork.sensor[9] (SensorNode, id=11)
+** Event #239  t=2.212313311453  22% completed  (22% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #240  t=2.212955845799  22% completed  (22% total)   LightIoTNetwork.sensor[43] (SensorNode, id=45)
+** Event #241  t=2.212955845799  22% completed  (22% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #242  t=2.213313311453  22% completed  (22% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1000001 | Delay: 0.001s
+** Event #243  t=2.213955845799  22% completed  (22% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4400001 | Delay: 0.001s
+** Event #244  t=2.219014634145  22% completed  (22% total)   LightIoTNetwork.sensor[42] (SensorNode, id=44)
+** Event #245  t=2.219014634145  22% completed  (22% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #246  t=2.220014634145  22% completed  (22% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4300001 | Delay: 0.001s
+** Event #247  t=2.226413809368  22% completed  (22% total)   LightIoTNetwork.sensor[10] (SensorNode, id=12)
+** Event #248  t=2.226413809368  22% completed  (22% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #249  t=2.227413809368  22% completed  (22% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1100001 | Delay: 0.001s
+** Event #250  t=2.243245343957  22% completed  (22% total)   LightIoTNetwork.sensor[49] (SensorNode, id=51)
+** Event #251  t=2.243245343957  22% completed  (22% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #252  t=2.244245343957  22% completed  (22% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=5000001 | Delay: 0.001s
+** Event #253  t=2.265563147422  22% completed  (22% total)   LightIoTNetwork.sensor[36] (SensorNode, id=38)
+** Event #254  t=2.265563147422  22% completed  (22% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #255  t=2.266563147422  22% completed  (22% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3700001 | Delay: 0.001s
+** Event #256  t=2.281433654483  22% completed  (22% total)   LightIoTNetwork.sensor[7] (SensorNode, id=9)
+** Event #257  t=2.281433654483  22% completed  (22% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #258  t=2.282433654483  22% completed  (22% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=800001 | Delay: 0.001s
+** Event #259  t=2.295872510737  22% completed  (22% total)   LightIoTNetwork.sensor[39] (SensorNode, id=41)
+** Event #260  t=2.295872510737  22% completed  (22% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #261  t=2.296872510737  22% completed  (22% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4000001 | Delay: 0.001s
+** Event #262  t=2.300022132182  23% completed  (23% total)   LightIoTNetwork.sensor[5] (SensorNode, id=7)
+** Event #263  t=2.300022132182  23% completed  (23% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #264  t=2.301022132182  23% completed  (23% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=600001 | Delay: 0.001s
+** Event #265  t=2.331251272513  23% completed  (23% total)   LightIoTNetwork.sensor[20] (SensorNode, id=22)
+** Event #266  t=2.331251272513  23% completed  (23% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #267  t=2.332251272513  23% completed  (23% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2100001 | Delay: 0.001s
+** Event #268  t=2.341642579297  23% completed  (23% total)   LightIoTNetwork.sensor[38] (SensorNode, id=40)
+** Event #269  t=2.341642579297  23% completed  (23% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #270  t=2.342642579297  23% completed  (23% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3900001 | Delay: 0.001s
+** Event #271  t=2.360998891294  23% completed  (23% total)   LightIoTNetwork.sensor[46] (SensorNode, id=48)
+** Event #272  t=2.360998891294  23% completed  (23% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #273  t=2.361998891294  23% completed  (23% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4700001 | Delay: 0.001s
+** Event #274  t=2.365973185096  23% completed  (23% total)   LightIoTNetwork.sensor[34] (SensorNode, id=36)
+** Event #275  t=2.365973185096  23% completed  (23% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #276  t=2.366706775269  23% completed  (23% total)   LightIoTNetwork.sensor[27] (SensorNode, id=29)
+** Event #277  t=2.366706775269  23% completed  (23% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #278  t=2.366973185096  23% completed  (23% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3500001 | Delay: 0.001s
+** Event #279  t=2.367706775269  23% completed  (23% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2800001 | Delay: 0.001s
+** Event #280  t=2.37839331883  23% completed  (23% total)   LightIoTNetwork.sensor[3] (SensorNode, id=5)
+** Event #281  t=2.37839331883  23% completed  (23% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #282  t=2.37939331883  23% completed  (23% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=400001 | Delay: 0.001s
+** Event #283  t=2.388682303159  23% completed  (23% total)   LightIoTNetwork.sensor[26] (SensorNode, id=28)
+** Event #284  t=2.388682303159  23% completed  (23% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #285  t=2.389682303159  23% completed  (23% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2700001 | Delay: 0.001s
+** Event #286  t=2.406130540185  24% completed  (24% total)   LightIoTNetwork.sensor[21] (SensorNode, id=23)
+** Event #287  t=2.406130540185  24% completed  (24% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #288  t=2.407130540185  24% completed  (24% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2200001 | Delay: 0.001s
+** Event #289  t=2.43640491874  24% completed  (24% total)   LightIoTNetwork.sensor[16] (SensorNode, id=18)
+** Event #290  t=2.43640491874  24% completed  (24% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #291  t=2.43740491874  24% completed  (24% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1700001 | Delay: 0.001s
+** Event #292  t=2.441910229531  24% completed  (24% total)   LightIoTNetwork.sensor[14] (SensorNode, id=16)
+** Event #293  t=2.441910229531  24% completed  (24% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #294  t=2.442910229531  24% completed  (24% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1500001 | Delay: 0.001s
+** Event #295  t=2.443627788406  24% completed  (24% total)   LightIoTNetwork.sensor[40] (SensorNode, id=42)
+** Event #296  t=2.443627788406  24% completed  (24% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #297  t=2.444627788406  24% completed  (24% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4100001 | Delay: 0.001s
+** Event #298  t=2.455887687625  24% completed  (24% total)   LightIoTNetwork.sensor[32] (SensorNode, id=34)
+** Event #299  t=2.455887687625  24% completed  (24% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #300  t=2.456887687625  24% completed  (24% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3300002 | Delay: 0.001s
+** Event #301  t=2.47872128766  24% completed  (24% total)   LightIoTNetwork.sensor[35] (SensorNode, id=37)
+** Event #302  t=2.47872128766  24% completed  (24% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #303  t=2.47972128766  24% completed  (24% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3600001 | Delay: 0.001s
+** Event #304  t=2.513746071001  25% completed  (25% total)   LightIoTNetwork.sensor[28] (SensorNode, id=30)
+** Event #305  t=2.513746071001  25% completed  (25% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #306  t=2.514746071001  25% completed  (25% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2900002 | Delay: 0.001s
+** Event #307  t=2.560837236653  25% completed  (25% total)   LightIoTNetwork.sensor[15] (SensorNode, id=17)
+** Event #308  t=2.560837236653  25% completed  (25% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #309  t=2.561837236653  25% completed  (25% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1600002 | Delay: 0.001s
+** Event #310  t=2.621458753245  26% completed  (26% total)   LightIoTNetwork.sensor[30] (SensorNode, id=32)
+** Event #311  t=2.621458753245  26% completed  (26% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #312  t=2.622458753245  26% completed  (26% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3100002 | Delay: 0.001s
+** Event #313  t=2.639125087903  26% completed  (26% total)   LightIoTNetwork.sensor[13] (SensorNode, id=15)
+** Event #314  t=2.639125087903  26% completed  (26% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #315  t=2.640125087903  26% completed  (26% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1400002 | Delay: 0.001s
+** Event #316  t=2.762103901571  27% completed  (27% total)   LightIoTNetwork.sensor[29] (SensorNode, id=31)
+** Event #317  t=2.762103901571  27% completed  (27% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #318  t=2.763103901571  27% completed  (27% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3000002 | Delay: 0.001s
+** Event #319  t=2.768614545837  27% completed  (27% total)   LightIoTNetwork.sensor[18] (SensorNode, id=20)
+** Event #320  t=2.768614545837  27% completed  (27% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #321  t=2.769614545837  27% completed  (27% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1900002 | Delay: 0.001s
+** Event #322  t=2.789748667879  27% completed  (27% total)   LightIoTNetwork.sensor[37] (SensorNode, id=39)
+** Event #323  t=2.789748667879  27% completed  (27% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #324  t=2.790748667879  27% completed  (27% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3800002 | Delay: 0.001s
+** Event #325  t=2.798998061334  27% completed  (27% total)   LightIoTNetwork.sensor[48] (SensorNode, id=50)
+** Event #326  t=2.798998061334  27% completed  (27% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #327  t=2.799998061334  27% completed  (27% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4900002 | Delay: 0.001s
+** Event #328  t=2.807584023941  28% completed  (28% total)   LightIoTNetwork.sensor[17] (SensorNode, id=19)
+** Event #329  t=2.807584023941  28% completed  (28% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #330  t=2.808584023941  28% completed  (28% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1800002 | Delay: 0.001s
+** Event #331  t=2.848659952544  28% completed  (28% total)   LightIoTNetwork.sensor[11] (SensorNode, id=13)
+** Event #332  t=2.848659952544  28% completed  (28% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #333  t=2.849659952544  28% completed  (28% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1200002 | Delay: 0.001s
+** Event #334  t=2.855447754404  28% completed  (28% total)   LightIoTNetwork.sensor[44] (SensorNode, id=46)
+** Event #335  t=2.855447754404  28% completed  (28% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #336  t=2.856447754404  28% completed  (28% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4500002 | Delay: 0.001s
+** Event #337  t=2.911690994771  29% completed  (29% total)   LightIoTNetwork.sensor[12] (SensorNode, id=14)
+** Event #338  t=2.911690994771  29% completed  (29% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #339  t=2.912690994771  29% completed  (29% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1300002 | Delay: 0.001s
+** Event #340  t=2.914356795418  29% completed  (29% total)   LightIoTNetwork.sensor[23] (SensorNode, id=25)
+** Event #341  t=2.914356795418  29% completed  (29% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #342  t=2.915356795418  29% completed  (29% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2400002 | Delay: 0.001s
+** Event #343  t=2.919088746979  29% completed  (29% total)   LightIoTNetwork.sensor[41] (SensorNode, id=43)
+** Event #344  t=2.919088746979  29% completed  (29% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #345  t=2.920088746979  29% completed  (29% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4200002 | Delay: 0.001s
+** Event #346  t=2.92107881275  29% completed  (29% total)   LightIoTNetwork.sensor[19] (SensorNode, id=21)
+** Event #347  t=2.92107881275  29% completed  (29% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #348  t=2.92207881275  29% completed  (29% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2000002 | Delay: 0.001s
+** Event #349  t=2.923703267751  29% completed  (29% total)   LightIoTNetwork.sensor[6] (SensorNode, id=8)
+** Event #350  t=2.923703267751  29% completed  (29% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #351  t=2.924703267751  29% completed  (29% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=700002 | Delay: 0.001s
+** Event #352  t=2.940893685026  29% completed  (29% total)   LightIoTNetwork.sensor[25] (SensorNode, id=27)
+** Event #353  t=2.940893685026  29% completed  (29% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #354  t=2.941893685026  29% completed  (29% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2600002 | Delay: 0.001s
+** Event #355  t=2.962021535029  29% completed  (29% total)   LightIoTNetwork.sensor[33] (SensorNode, id=35)
+** Event #356  t=2.962021535029  29% completed  (29% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #357  t=2.963021535029  29% completed  (29% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3400002 | Delay: 0.001s
+** Event #358  t=2.965977933397  29% completed  (29% total)   LightIoTNetwork.sensor[8] (SensorNode, id=10)
+** Event #359  t=2.965977933397  29% completed  (29% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #360  t=2.966977933397  29% completed  (29% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=900002 | Delay: 0.001s
+** Event #361  t=2.974497049535  29% completed  (29% total)   LightIoTNetwork.sensor[22] (SensorNode, id=24)
+** Event #362  t=2.974497049535  29% completed  (29% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #363  t=2.975497049535  29% completed  (29% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2300002 | Delay: 0.001s
+** Event #364  t=2.980110364361  29% completed  (29% total)   LightIoTNetwork.sensor[24] (SensorNode, id=26)
+** Event #365  t=2.980110364361  29% completed  (29% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #366  t=2.981110364361  29% completed  (29% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2500002 | Delay: 0.001s
+** Event #367  t=3.010007702513  30% completed  (30% total)   LightIoTNetwork.sensor[45] (SensorNode, id=47)
+** Event #368  t=3.010007702513  30% completed  (30% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #369  t=3.011007702513  30% completed  (30% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4600002 | Delay: 0.001s
+** Event #370  t=3.079671765072  30% completed  (30% total)   LightIoTNetwork.sensor[1] (SensorNode, id=3)
+** Event #371  t=3.079671765072  30% completed  (30% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #372  t=3.080671765072  30% completed  (30% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=200002 | Delay: 0.001s
+** Event #373  t=3.096506121476  30% completed  (30% total)   LightIoTNetwork.sensor[47] (SensorNode, id=49)
+** Event #374  t=3.096506121476  30% completed  (30% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #375  t=3.097506121476  30% completed  (30% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4800002 | Delay: 0.001s
+** Event #376  t=3.106183111249  31% completed  (31% total)   LightIoTNetwork.sensor[0] (SensorNode, id=2)
+** Event #377  t=3.106183111249  31% completed  (31% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #378  t=3.107183111249  31% completed  (31% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=100002 | Delay: 0.001s
+** Event #379  t=3.111327084387  31% completed  (31% total)   LightIoTNetwork.sensor[4] (SensorNode, id=6)
+** Event #380  t=3.111327084387  31% completed  (31% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #381  t=3.112327084387  31% completed  (31% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=500002 | Delay: 0.001s
+** Event #382  t=3.126407416724  31% completed  (31% total)   LightIoTNetwork.sensor[2] (SensorNode, id=4)
+** Event #383  t=3.126407416724  31% completed  (31% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #384  t=3.127407416724  31% completed  (31% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=300002 | Delay: 0.001s
+** Event #385  t=3.145959672332  31% completed  (31% total)   LightIoTNetwork.sensor[49] (SensorNode, id=51)
+** Event #386  t=3.145959672332  31% completed  (31% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #387  t=3.146959672332  31% completed  (31% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=5000002 | Delay: 0.001s
+** Event #388  t=3.184983401652  31% completed  (31% total)   LightIoTNetwork.sensor[36] (SensorNode, id=38)
+** Event #389  t=3.184983401652  31% completed  (31% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #390  t=3.185983401652  31% completed  (31% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3700002 | Delay: 0.001s
+** Event #391  t=3.186700878944  31% completed  (31% total)   LightIoTNetwork.sensor[43] (SensorNode, id=45)
+** Event #392  t=3.186700878944  31% completed  (31% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #393  t=3.187700878944  31% completed  (31% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4400002 | Delay: 0.001s
+** Event #394  t=3.240205032471  32% completed  (32% total)   LightIoTNetwork.sensor[31] (SensorNode, id=33)
+** Event #395  t=3.240205032471  32% completed  (32% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #396  t=3.241205032471  32% completed  (32% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3200002 | Delay: 0.001s
+** Event #397  t=3.250470952737  32% completed  (32% total)   LightIoTNetwork.sensor[20] (SensorNode, id=22)
+** Event #398  t=3.250470952737  32% completed  (32% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #399  t=3.251470952737  32% completed  (32% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2100002 | Delay: 0.001s
+** Event #400  t=3.251520007755  32% completed  (32% total)   LightIoTNetwork.sensor[42] (SensorNode, id=44)
+** Event #401  t=3.251520007755  32% completed  (32% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #402  t=3.252520007755  32% completed  (32% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4300002 | Delay: 0.001s
+** Event #403  t=3.29061245555  32% completed  (32% total)   LightIoTNetwork.sensor[10] (SensorNode, id=12)
+** Event #404  t=3.29061245555  32% completed  (32% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #405  t=3.29161245555  32% completed  (32% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1100002 | Delay: 0.001s
+** Event #406  t=3.302227521733  33% completed  (33% total)   LightIoTNetwork.sensor[9] (SensorNode, id=11)
+** Event #407  t=3.302227521733  33% completed  (33% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #408  t=3.303227521733  33% completed  (33% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1000002 | Delay: 0.001s
+** Event #409  t=3.306002873135  33% completed  (33% total)   LightIoTNetwork.sensor[7] (SensorNode, id=9)
+** Event #410  t=3.306002873135  33% completed  (33% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #411  t=3.307002873135  33% completed  (33% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=800002 | Delay: 0.001s
+** Event #412  t=3.317273478769  33% completed  (33% total)   LightIoTNetwork.sensor[21] (SensorNode, id=23)
+** Event #413  t=3.317273478769  33% completed  (33% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #414  t=3.318273478769  33% completed  (33% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2200002 | Delay: 0.001s
+** Event #415  t=3.334754058392  33% completed  (33% total)   LightIoTNetwork.sensor[5] (SensorNode, id=7)
+** Event #416  t=3.334754058392  33% completed  (33% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #417  t=3.335754058392  33% completed  (33% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=600002 | Delay: 0.001s
+** Event #418  t=3.359885222092  33% completed  (33% total)   LightIoTNetwork.sensor[32] (SensorNode, id=34)
+** Event #419  t=3.359885222092  33% completed  (33% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #420  t=3.360437014932  33% completed  (33% total)   LightIoTNetwork.sensor[27] (SensorNode, id=29)
+** Event #421  t=3.360437014932  33% completed  (33% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #422  t=3.360885222092  33% completed  (33% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3300003 | Delay: 0.001s
+** Event #423  t=3.361437014932  33% completed  (33% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2800002 | Delay: 0.001s
+** Event #424  t=3.363461492071  33% completed  (33% total)   LightIoTNetwork.sensor[39] (SensorNode, id=41)
+** Event #425  t=3.363461492071  33% completed  (33% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #426  t=3.364461492071  33% completed  (33% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4000002 | Delay: 0.001s
+** Event #427  t=3.380318193184  33% completed  (33% total)   LightIoTNetwork.sensor[3] (SensorNode, id=5)
+** Event #428  t=3.380318193184  33% completed  (33% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #429  t=3.381318193184  33% completed  (33% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=400002 | Delay: 0.001s
+** Event #430  t=3.386558845453  33% completed  (33% total)   LightIoTNetwork.sensor[35] (SensorNode, id=37)
+** Event #431  t=3.386558845453  33% completed  (33% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #432  t=3.387558845453  33% completed  (33% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3600002 | Delay: 0.001s
+** Event #433  t=3.432142072311  34% completed  (34% total)   LightIoTNetwork.sensor[14] (SensorNode, id=16)
+** Event #434  t=3.432142072311  34% completed  (34% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #435  t=3.433142072311  34% completed  (34% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1500002 | Delay: 0.001s
+** Event #436  t=3.436031579087  34% completed  (34% total)   LightIoTNetwork.sensor[38] (SensorNode, id=40)
+** Event #437  t=3.436031579087  34% completed  (34% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #438  t=3.437031579087  34% completed  (34% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3900002 | Delay: 0.001s
+** Event #439  t=3.441611878807  34% completed  (34% total)   LightIoTNetwork.sensor[34] (SensorNode, id=36)
+** Event #440  t=3.441611878807  34% completed  (34% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #441  t=3.442611878807  34% completed  (34% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3500002 | Delay: 0.001s
+** Event #442  t=3.456290784338  34% completed  (34% total)   LightIoTNetwork.sensor[46] (SensorNode, id=48)
+** Event #443  t=3.456290784338  34% completed  (34% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #444  t=3.457290784338  34% completed  (34% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4700002 | Delay: 0.001s
+** Event #445  t=3.457374022343  34% completed  (34% total)   LightIoTNetwork.sensor[16] (SensorNode, id=18)
+** Event #446  t=3.457374022343  34% completed  (34% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #447  t=3.458374022343  34% completed  (34% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1700002 | Delay: 0.001s
+** Event #448  t=3.484034521319  34% completed  (34% total)   LightIoTNetwork.sensor[26] (SensorNode, id=28)
+** Event #449  t=3.484034521319  34% completed  (34% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #450  t=3.485034521319  34% completed  (34% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2700002 | Delay: 0.001s
+** Event #451  t=3.491480504675  34% completed  (34% total)   LightIoTNetwork.sensor[40] (SensorNode, id=42)
+** Event #452  t=3.491480504675  34% completed  (34% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #453  t=3.492480504675  34% completed  (34% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4100002 | Delay: 0.001s
+** Event #454  t=3.502088255295  35% completed  (35% total)   LightIoTNetwork.sensor[28] (SensorNode, id=30)
+** Event #455  t=3.502088255295  35% completed  (35% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #456  t=3.503088255295  35% completed  (35% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2900003 | Delay: 0.001s
+** Event #457  t=3.517398628547  35% completed  (35% total)   LightIoTNetwork.sensor[15] (SensorNode, id=17)
+** Event #458  t=3.517398628547  35% completed  (35% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #459  t=3.518398628547  35% completed  (35% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1600003 | Delay: 0.001s
+** Event #460  t=3.563164400821  35% completed  (35% total)   LightIoTNetwork.sensor[13] (SensorNode, id=15)
+** Event #461  t=3.563164400821  35% completed  (35% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #462  t=3.564164400821  35% completed  (35% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1400003 | Delay: 0.001s
+** Event #463  t=3.717376099341  37% completed  (37% total)   LightIoTNetwork.sensor[30] (SensorNode, id=32)
+** Event #464  t=3.717376099341  37% completed  (37% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #465  t=3.718376099341  37% completed  (37% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3100003 | Delay: 0.001s
+** Event #466  t=3.722743604192  37% completed  (37% total)   LightIoTNetwork.sensor[48] (SensorNode, id=50)
+** Event #467  t=3.722743604192  37% completed  (37% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #468  t=3.723743604192  37% completed  (37% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4900003 | Delay: 0.001s
+** Event #469  t=3.727842585696  37% completed  (37% total)   LightIoTNetwork.sensor[18] (SensorNode, id=20)
+** Event #470  t=3.727842585696  37% completed  (37% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #471  t=3.728842585696  37% completed  (37% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1900003 | Delay: 0.001s
+** Event #472  t=3.733992795367  37% completed  (37% total)   LightIoTNetwork.sensor[29] (SensorNode, id=31)
+** Event #473  t=3.733992795367  37% completed  (37% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #474  t=3.734992795367  37% completed  (37% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3000003 | Delay: 0.001s
+** Event #475  t=3.785927375127  37% completed  (37% total)   LightIoTNetwork.sensor[37] (SensorNode, id=39)
+** Event #476  t=3.785927375127  37% completed  (37% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #477  t=3.786927375127  37% completed  (37% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3800003 | Delay: 0.001s
+** Event #478  t=3.812256587204  38% completed  (38% total)   LightIoTNetwork.sensor[11] (SensorNode, id=13)
+** Event #479  t=3.812256587204  38% completed  (38% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #480  t=3.813256587204  38% completed  (38% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1200003 | Delay: 0.001s
+** Event #481  t=3.831918247183  38% completed  (38% total)   LightIoTNetwork.sensor[41] (SensorNode, id=43)
+** Event #482  t=3.831918247183  38% completed  (38% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #483  t=3.832918247183  38% completed  (38% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4200003 | Delay: 0.001s
+** Event #484  t=3.845316261192  38% completed  (38% total)   LightIoTNetwork.sensor[17] (SensorNode, id=19)
+** Event #485  t=3.845316261192  38% completed  (38% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #486  t=3.846316261192  38% completed  (38% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1800003 | Delay: 0.001s
+** Event #487  t=3.864443239383  38% completed  (38% total)   LightIoTNetwork.sensor[19] (SensorNode, id=21)
+** Event #488  t=3.864443239383  38% completed  (38% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #489  t=3.865443239383  38% completed  (38% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2000003 | Delay: 0.001s
+** Event #490  t=3.894543592445  38% completed  (38% total)   LightIoTNetwork.sensor[12] (SensorNode, id=14)
+** Event #491  t=3.894543592445  38% completed  (38% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #492  t=3.895543592445  38% completed  (38% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1300003 | Delay: 0.001s
+** Event #493  t=3.927574947756  39% completed  (39% total)   LightIoTNetwork.sensor[22] (SensorNode, id=24)
+** Event #494  t=3.927574947756  39% completed  (39% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #495  t=3.928574947756  39% completed  (39% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2300003 | Delay: 0.001s
+** Event #496  t=3.931542933034  39% completed  (39% total)   LightIoTNetwork.sensor[44] (SensorNode, id=46)
+** Event #497  t=3.931542933034  39% completed  (39% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #498  t=3.932542933034  39% completed  (39% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4500003 | Delay: 0.001s
+** Event #499  t=3.953931458155  39% completed  (39% total)   LightIoTNetwork.sensor[25] (SensorNode, id=27)
+** Event #500  t=3.953931458155  39% completed  (39% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #501  t=3.954931458155  39% completed  (39% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2600003 | Delay: 0.001s
+** Event #502  t=3.962197691621  39% completed  (39% total)   LightIoTNetwork.sensor[6] (SensorNode, id=8)
+** Event #503  t=3.962197691621  39% completed  (39% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #504  t=3.963197691621  39% completed  (39% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=700003 | Delay: 0.001s
+** Event #505  t=3.975341824721  39% completed  (39% total)   LightIoTNetwork.sensor[33] (SensorNode, id=35)
+** Event #506  t=3.975341824721  39% completed  (39% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #507  t=3.976341824721  39% completed  (39% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3400003 | Delay: 0.001s
+** Event #508  t=3.981904156553  39% completed  (39% total)   LightIoTNetwork.sensor[24] (SensorNode, id=26)
+** Event #509  t=3.981904156553  39% completed  (39% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #510  t=3.982904156553  39% completed  (39% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2500003 | Delay: 0.001s
+** Event #511  t=3.998003889992  39% completed  (39% total)   LightIoTNetwork.sensor[23] (SensorNode, id=25)
+** Event #512  t=3.998003889992  39% completed  (39% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #513  t=3.999003889992  39% completed  (39% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2400003 | Delay: 0.001s
+** Event #514  t=4.014657313098  40% completed  (40% total)   LightIoTNetwork.sensor[45] (SensorNode, id=47)
+** Event #515  t=4.014657313098  40% completed  (40% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #516  t=4.015294222674  40% completed  (40% total)   LightIoTNetwork.sensor[47] (SensorNode, id=49)
+** Event #517  t=4.015294222674  40% completed  (40% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #518  t=4.015657313098  40% completed  (40% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4600003 | Delay: 0.001s
+** Event #519  t=4.016294222674  40% completed  (40% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4800003 | Delay: 0.001s
+** Event #520  t=4.038998446194  40% completed  (40% total)   LightIoTNetwork.sensor[8] (SensorNode, id=10)
+** Event #521  t=4.038998446194  40% completed  (40% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #522  t=4.039998446194  40% completed  (40% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=900003 | Delay: 0.001s
+** Event #523  t=4.043029914052  40% completed  (40% total)   LightIoTNetwork.sensor[2] (SensorNode, id=4)
+** Event #524  t=4.043029914052  40% completed  (40% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #525  t=4.044029914052  40% completed  (40% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=300003 | Delay: 0.001s
+** Event #526  t=4.126516383421  41% completed  (41% total)   LightIoTNetwork.sensor[4] (SensorNode, id=6)
+** Event #527  t=4.126516383421  41% completed  (41% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #528  t=4.127516383421  41% completed  (41% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=500003 | Delay: 0.001s
+** Event #529  t=4.140527114458  41% completed  (41% total)   LightIoTNetwork.sensor[36] (SensorNode, id=38)
+** Event #530  t=4.140527114458  41% completed  (41% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #531  t=4.141527114458  41% completed  (41% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3700003 | Delay: 0.001s
+** Event #532  t=4.14207637282  41% completed  (41% total)   LightIoTNetwork.sensor[31] (SensorNode, id=33)
+** Event #533  t=4.14207637282  41% completed  (41% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #534  t=4.14307637282  41% completed  (41% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3200003 | Delay: 0.001s
+** Event #535  t=4.150414669933  41% completed  (41% total)   LightIoTNetwork.sensor[43] (SensorNode, id=45)
+** Event #536  t=4.150414669933  41% completed  (41% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #537  t=4.151414669933  41% completed  (41% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4400003 | Delay: 0.001s
+** Event #538  t=4.163016356388  41% completed  (41% total)   LightIoTNetwork.sensor[1] (SensorNode, id=3)
+** Event #539  t=4.163016356388  41% completed  (41% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #540  t=4.164016356388  41% completed  (41% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=200003 | Delay: 0.001s
+** Event #541  t=4.190414633649  41% completed  (41% total)   LightIoTNetwork.sensor[0] (SensorNode, id=2)
+** Event #542  t=4.190414633649  41% completed  (41% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #543  t=4.191414633649  41% completed  (41% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=100003 | Delay: 0.001s
+** Event #544  t=4.216972027951  42% completed  (42% total)   LightIoTNetwork.sensor[10] (SensorNode, id=12)
+** Event #545  t=4.216972027951  42% completed  (42% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #546  t=4.217972027951  42% completed  (42% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1100003 | Delay: 0.001s
+** Event #547  t=4.231818911899  42% completed  (42% total)   LightIoTNetwork.sensor[49] (SensorNode, id=51)
+** Event #548  t=4.231818911899  42% completed  (42% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #549  t=4.232818911899  42% completed  (42% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=5000003 | Delay: 0.001s
+** Event #550  t=4.283953027987  42% completed  (42% total)   LightIoTNetwork.sensor[20] (SensorNode, id=22)
+** Event #551  t=4.283953027987  42% completed  (42% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #552  t=4.284953027987  42% completed  (42% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2100003 | Delay: 0.001s
+** Event #553  t=4.292635276587  42% completed  (42% total)   LightIoTNetwork.sensor[5] (SensorNode, id=7)
+** Event #554  t=4.292635276587  42% completed  (42% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #555  t=4.293635276587  42% completed  (42% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=600003 | Delay: 0.001s
+** Event #556  t=4.297075287625  42% completed  (42% total)   LightIoTNetwork.sensor[27] (SensorNode, id=29)
+** Event #557  t=4.297075287625  42% completed  (42% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #558  t=4.298075287625  42% completed  (42% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2800003 | Delay: 0.001s
+** Event #559  t=4.312831254955  43% completed  (43% total)   LightIoTNetwork.sensor[32] (SensorNode, id=34)
+** Event #560  t=4.312831254955  43% completed  (43% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #561  t=4.313831254955  43% completed  (43% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3300004 | Delay: 0.001s
+** Event #562  t=4.319988423585  43% completed  (43% total)   LightIoTNetwork.sensor[42] (SensorNode, id=44)
+** Event #563  t=4.319988423585  43% completed  (43% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #564  t=4.320988423585  43% completed  (43% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4300003 | Delay: 0.001s
+** Event #565  t=4.331662349448  43% completed  (43% total)   LightIoTNetwork.sensor[9] (SensorNode, id=11)
+** Event #566  t=4.331662349448  43% completed  (43% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #567  t=4.332662349448  43% completed  (43% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1000003 | Delay: 0.001s
+** Event #568  t=4.33616358242  43% completed  (43% total)   LightIoTNetwork.sensor[14] (SensorNode, id=16)
+** Event #569  t=4.33616358242  43% completed  (43% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #570  t=4.33716358242  43% completed  (43% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1500003 | Delay: 0.001s
+** Event #571  t=4.343025642401  43% completed  (43% total)   LightIoTNetwork.sensor[39] (SensorNode, id=41)
+** Event #572  t=4.343025642401  43% completed  (43% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #573  t=4.344025642401  43% completed  (43% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4000003 | Delay: 0.001s
+** Event #574  t=4.349268312705  43% completed  (43% total)   LightIoTNetwork.sensor[7] (SensorNode, id=9)
+** Event #575  t=4.349268312705  43% completed  (43% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #576  t=4.350268312705  43% completed  (43% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=800003 | Delay: 0.001s
+** Event #577  t=4.35831311876  43% completed  (43% total)   LightIoTNetwork.sensor[16] (SensorNode, id=18)
+** Event #578  t=4.35831311876  43% completed  (43% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #579  t=4.35931311876  43% completed  (43% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1700003 | Delay: 0.001s
+** Event #580  t=4.369019671204  43% completed  (43% total)   LightIoTNetwork.sensor[38] (SensorNode, id=40)
+** Event #581  t=4.369019671204  43% completed  (43% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #582  t=4.370019671204  43% completed  (43% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3900003 | Delay: 0.001s
+** Event #583  t=4.385550703202  43% completed  (43% total)   LightIoTNetwork.sensor[21] (SensorNode, id=23)
+** Event #584  t=4.385550703202  43% completed  (43% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #585  t=4.386550703202  43% completed  (43% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2200003 | Delay: 0.001s
+** Event #586  t=4.397123142285  43% completed  (43% total)   LightIoTNetwork.sensor[35] (SensorNode, id=37)
+** Event #587  t=4.397123142285  43% completed  (43% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #588  t=4.397620779788  43% completed  (43% total)   LightIoTNetwork.sensor[3] (SensorNode, id=5)
+** Event #589  t=4.397620779788  43% completed  (43% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #590  t=4.398123142285  43% completed  (43% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3600003 | Delay: 0.001s
+** Event #591  t=4.398620779788  43% completed  (43% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=400003 | Delay: 0.001s
+** Event #592  t=4.413322873972  44% completed  (44% total)   LightIoTNetwork.sensor[26] (SensorNode, id=28)
+** Event #593  t=4.413322873972  44% completed  (44% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #594  t=4.414322873972  44% completed  (44% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2700003 | Delay: 0.001s
+** Event #595  t=4.430252403486  44% completed  (44% total)   LightIoTNetwork.sensor[46] (SensorNode, id=48)
+** Event #596  t=4.430252403486  44% completed  (44% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #597  t=4.431252403486  44% completed  (44% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4700003 | Delay: 0.001s
+** Event #598  t=4.471400222276  44% completed  (44% total)   LightIoTNetwork.sensor[15] (SensorNode, id=17)
+** Event #599  t=4.471400222276  44% completed  (44% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #600  t=4.472400222276  44% completed  (44% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1600004 | Delay: 0.001s
+** Event #601  t=4.507399884472  45% completed  (45% total)   LightIoTNetwork.sensor[34] (SensorNode, id=36)
+** Event #602  t=4.507399884472  45% completed  (45% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #603  t=4.508399884472  45% completed  (45% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3500003 | Delay: 0.001s
+** Event #604  t=4.51601193617  45% completed  (45% total)   LightIoTNetwork.sensor[28] (SensorNode, id=30)
+** Event #605  t=4.51601193617  45% completed  (45% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #606  t=4.51701193617  45% completed  (45% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2900004 | Delay: 0.001s
+** Event #607  t=4.527043812536  45% completed  (45% total)   LightIoTNetwork.sensor[40] (SensorNode, id=42)
+** Event #608  t=4.527043812536  45% completed  (45% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #609  t=4.528043812536  45% completed  (45% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4100003 | Delay: 0.001s
+** Event #610  t=4.60391185698  46% completed  (46% total)   LightIoTNetwork.sensor[13] (SensorNode, id=15)
+** Event #611  t=4.60391185698  46% completed  (46% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #612  t=4.60491185698  46% completed  (46% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1400004 | Delay: 0.001s
+** Event #613  t=4.68043889068  46% completed  (46% total)   LightIoTNetwork.sensor[48] (SensorNode, id=50)
+** Event #614  t=4.68043889068  46% completed  (46% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #615  t=4.68143889068  46% completed  (46% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4900004 | Delay: 0.001s
+** Event #616  t=4.720650408138  47% completed  (47% total)   LightIoTNetwork.sensor[29] (SensorNode, id=31)
+** Event #617  t=4.720650408138  47% completed  (47% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #618  t=4.721650408138  47% completed  (47% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3000004 | Delay: 0.001s
+** Event #619  t=4.735678003077  47% completed  (47% total)   LightIoTNetwork.sensor[37] (SensorNode, id=39)
+** Event #620  t=4.735678003077  47% completed  (47% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #621  t=4.736678003077  47% completed  (47% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3800004 | Delay: 0.001s
+** Event #622  t=4.764414903429  47% completed  (47% total)   LightIoTNetwork.sensor[30] (SensorNode, id=32)
+** Event #623  t=4.764414903429  47% completed  (47% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #624  t=4.765414903429  47% completed  (47% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3100004 | Delay: 0.001s
+** Event #625  t=4.820280294679  48% completed  (48% total)   LightIoTNetwork.sensor[18] (SensorNode, id=20)
+** Event #626  t=4.820280294679  48% completed  (48% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #627  t=4.821280294679  48% completed  (48% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1900004 | Delay: 0.001s
+** Event #628  t=4.824535916838  48% completed  (48% total)   LightIoTNetwork.sensor[17] (SensorNode, id=19)
+** Event #629  t=4.824535916838  48% completed  (48% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #630  t=4.825535916838  48% completed  (48% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1800004 | Delay: 0.001s
+** Event #631  t=4.847149714361  48% completed  (48% total)   LightIoTNetwork.sensor[41] (SensorNode, id=43)
+** Event #632  t=4.847149714361  48% completed  (48% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #633  t=4.848149714361  48% completed  (48% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4200004 | Delay: 0.001s
+** Event #634  t=4.863477925491  48% completed  (48% total)   LightIoTNetwork.sensor[11] (SensorNode, id=13)
+** Event #635  t=4.863477925491  48% completed  (48% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #636  t=4.864477925491  48% completed  (48% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1200004 | Delay: 0.001s
+** Event #637  t=4.882851624675  48% completed  (48% total)   LightIoTNetwork.sensor[19] (SensorNode, id=21)
+** Event #638  t=4.882851624675  48% completed  (48% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #639  t=4.883851624675  48% completed  (48% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2000004 | Delay: 0.001s
+** Event #640  t=4.898547784286  48% completed  (48% total)   LightIoTNetwork.sensor[25] (SensorNode, id=27)
+** Event #641  t=4.898547784286  48% completed  (48% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #642  t=4.899547784286  48% completed  (48% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2600004 | Delay: 0.001s
+** Event #643  t=4.942025328055  49% completed  (49% total)   LightIoTNetwork.sensor[22] (SensorNode, id=24)
+** Event #644  t=4.942025328055  49% completed  (49% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #645  t=4.943025328055  49% completed  (49% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2300004 | Delay: 0.001s
+** Event #646  t=4.959327149065  49% completed  (49% total)   LightIoTNetwork.sensor[44] (SensorNode, id=46)
+** Event #647  t=4.959327149065  49% completed  (49% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #648  t=4.960327149065  49% completed  (49% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4500004 | Delay: 0.001s
+** Event #649  t=4.973751270305  49% completed  (49% total)   LightIoTNetwork.sensor[12] (SensorNode, id=14)
+** Event #650  t=4.973751270305  49% completed  (49% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #651  t=4.974751270305  49% completed  (49% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1300004 | Delay: 0.001s
+** Event #652  t=4.987428965698  49% completed  (49% total)   LightIoTNetwork.sensor[23] (SensorNode, id=25)
+** Event #653  t=4.987428965698  49% completed  (49% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #654  t=4.988428965698  49% completed  (49% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2400004 | Delay: 0.001s
+** Event #655  t=5.00449685948  50% completed  (50% total)   LightIoTNetwork.sensor[45] (SensorNode, id=47)
+** Event #656  t=5.00449685948  50% completed  (50% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #657  t=5.00549685948  50% completed  (50% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4600004 | Delay: 0.001s
+** Event #658  t=5.01791527113  50% completed  (50% total)   LightIoTNetwork.sensor[24] (SensorNode, id=26)
+** Event #659  t=5.01791527113  50% completed  (50% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #660  t=5.01891527113  50% completed  (50% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2500004 | Delay: 0.001s
+** Event #661  t=5.040508577786  50% completed  (50% total)   LightIoTNetwork.sensor[6] (SensorNode, id=8)
+** Event #662  t=5.040508577786  50% completed  (50% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #663  t=5.041508577786  50% completed  (50% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=700004 | Delay: 0.001s
+** Event #664  t=5.049756765412  50% completed  (50% total)   LightIoTNetwork.sensor[4] (SensorNode, id=6)
+** Event #665  t=5.049756765412  50% completed  (50% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #666  t=5.050756765412  50% completed  (50% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=500004 | Delay: 0.001s
+** Event #667  t=5.06589162657  50% completed  (50% total)   LightIoTNetwork.sensor[33] (SensorNode, id=35)
+** Event #668  t=5.06589162657  50% completed  (50% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #669  t=5.06689162657  50% completed  (50% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3400004 | Delay: 0.001s
+** Event #670  t=5.082925769548  50% completed  (50% total)   LightIoTNetwork.sensor[2] (SensorNode, id=4)
+** Event #671  t=5.082925769548  50% completed  (50% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #672  t=5.083925769548  50% completed  (50% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=300004 | Delay: 0.001s
+** Event #673  t=5.084575955896  50% completed  (50% total)   LightIoTNetwork.sensor[47] (SensorNode, id=49)
+** Event #674  t=5.084575955896  50% completed  (50% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #675  t=5.085575955896  50% completed  (50% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4800004 | Delay: 0.001s
+** Event #676  t=5.10001450479  51% completed  (51% total)   LightIoTNetwork.sensor[36] (SensorNode, id=38)
+** Event #677  t=5.10001450479  51% completed  (51% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #678  t=5.10101450479  51% completed  (51% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3700004 | Delay: 0.001s
+** Event #679  t=5.134712630976  51% completed  (51% total)   LightIoTNetwork.sensor[8] (SensorNode, id=10)
+** Event #680  t=5.134712630976  51% completed  (51% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #681  t=5.135712630976  51% completed  (51% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=900004 | Delay: 0.001s
+** Event #682  t=5.145380384754  51% completed  (51% total)   LightIoTNetwork.sensor[1] (SensorNode, id=3)
+** Event #683  t=5.145380384754  51% completed  (51% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #684  t=5.146380384754  51% completed  (51% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=200004 | Delay: 0.001s
+** Event #685  t=5.169715781417  51% completed  (51% total)   LightIoTNetwork.sensor[0] (SensorNode, id=2)
+** Event #686  t=5.169715781417  51% completed  (51% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #687  t=5.170715781417  51% completed  (51% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=100004 | Delay: 0.001s
+** Event #688  t=5.195481113344  51% completed  (51% total)   LightIoTNetwork.sensor[31] (SensorNode, id=33)
+** Event #689  t=5.195481113344  51% completed  (51% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #690  t=5.196481113344  51% completed  (51% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3200004 | Delay: 0.001s
+** Event #691  t=5.213174233865  52% completed  (52% total)   LightIoTNetwork.sensor[43] (SensorNode, id=45)
+** Event #692  t=5.213174233865  52% completed  (52% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #693  t=5.214174233865  52% completed  (52% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4400004 | Delay: 0.001s
+** Event #694  t=5.233912282997  52% completed  (52% total)   LightIoTNetwork.sensor[20] (SensorNode, id=22)
+** Event #695  t=5.233912282997  52% completed  (52% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #696  t=5.234912282997  52% completed  (52% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2100004 | Delay: 0.001s
+** Event #697  t=5.25205984339  52% completed  (52% total)   LightIoTNetwork.sensor[10] (SensorNode, id=12)
+** Event #698  t=5.25205984339  52% completed  (52% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #699  t=5.25305984339  52% completed  (52% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1100004 | Delay: 0.001s
+** Event #700  t=5.259718954051  52% completed  (52% total)   LightIoTNetwork.sensor[27] (SensorNode, id=29)
+** Event #701  t=5.259718954051  52% completed  (52% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #702  t=5.260718954051  52% completed  (52% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2800004 | Delay: 0.001s
+** Event #703  t=5.308039552067  53% completed  (53% total)   LightIoTNetwork.sensor[49] (SensorNode, id=51)
+** Event #704  t=5.308039552067  53% completed  (53% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #705  t=5.308889851765  53% completed  (53% total)   LightIoTNetwork.sensor[5] (SensorNode, id=7)
+** Event #706  t=5.308889851765  53% completed  (53% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #707  t=5.309039552067  53% completed  (53% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=5000004 | Delay: 0.001s
+** Event #708  t=5.309889851765  53% completed  (53% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=600004 | Delay: 0.001s
+** Event #709  t=5.343229746911  53% completed  (53% total)   LightIoTNetwork.sensor[35] (SensorNode, id=37)
+** Event #710  t=5.343229746911  53% completed  (53% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #711  t=5.344229746911  53% completed  (53% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3600004 | Delay: 0.001s
+** Event #712  t=5.353856599098  53% completed  (53% total)   LightIoTNetwork.sensor[14] (SensorNode, id=16)
+** Event #713  t=5.353856599098  53% completed  (53% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #714  t=5.354856599098  53% completed  (53% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1500004 | Delay: 0.001s
+** Event #715  t=5.358577995375  53% completed  (53% total)   LightIoTNetwork.sensor[16] (SensorNode, id=18)
+** Event #716  t=5.358577995375  53% completed  (53% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #717  t=5.359577995375  53% completed  (53% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1700004 | Delay: 0.001s
+** Event #718  t=5.370168667751  53% completed  (53% total)   LightIoTNetwork.sensor[9] (SensorNode, id=11)
+** Event #719  t=5.370168667751  53% completed  (53% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #720  t=5.371168667751  53% completed  (53% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1000004 | Delay: 0.001s
+** Event #721  t=5.375660921541  53% completed  (53% total)   LightIoTNetwork.sensor[38] (SensorNode, id=40)
+** Event #722  t=5.375660921541  53% completed  (53% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #723  t=5.376660921541  53% completed  (53% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3900004 | Delay: 0.001s
+** Event #724  t=5.381201995536  53% completed  (53% total)   LightIoTNetwork.sensor[7] (SensorNode, id=9)
+** Event #725  t=5.381201995536  53% completed  (53% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #726  t=5.382201995536  53% completed  (53% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=800004 | Delay: 0.001s
+** Event #727  t=5.388076498686  53% completed  (53% total)   LightIoTNetwork.sensor[39] (SensorNode, id=41)
+** Event #728  t=5.388076498686  53% completed  (53% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #729  t=5.389076498686  53% completed  (53% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4000004 | Delay: 0.001s
+** Event #730  t=5.389178326865  53% completed  (53% total)   LightIoTNetwork.sensor[32] (SensorNode, id=34)
+** Event #731  t=5.389178326865  53% completed  (53% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #732  t=5.390178326865  53% completed  (53% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3300005 | Delay: 0.001s
+** Event #733  t=5.392296732403  53% completed  (53% total)   LightIoTNetwork.sensor[26] (SensorNode, id=28)
+** Event #734  t=5.392296732403  53% completed  (53% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #735  t=5.393296732403  53% completed  (53% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2700004 | Delay: 0.001s
+** Event #736  t=5.413071667309  54% completed  (54% total)   LightIoTNetwork.sensor[42] (SensorNode, id=44)
+** Event #737  t=5.413071667309  54% completed  (54% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #738  t=5.414071667309  54% completed  (54% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4300004 | Delay: 0.001s
+** Event #739  t=5.415023412276  54% completed  (54% total)   LightIoTNetwork.sensor[46] (SensorNode, id=48)
+** Event #740  t=5.415023412276  54% completed  (54% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #741  t=5.416023412276  54% completed  (54% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4700004 | Delay: 0.001s
+** Event #742  t=5.426418819092  54% completed  (54% total)   LightIoTNetwork.sensor[3] (SensorNode, id=5)
+** Event #743  t=5.426418819092  54% completed  (54% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #744  t=5.427418819092  54% completed  (54% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=400004 | Delay: 0.001s
+** Event #745  t=5.430882452661  54% completed  (54% total)   LightIoTNetwork.sensor[40] (SensorNode, id=42)
+** Event #746  t=5.430882452661  54% completed  (54% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #747  t=5.431882452661  54% completed  (54% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4100004 | Delay: 0.001s
+** Event #748  t=5.476767431154  54% completed  (54% total)   LightIoTNetwork.sensor[21] (SensorNode, id=23)
+** Event #749  t=5.476767431154  54% completed  (54% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #750  t=5.477767431154  54% completed  (54% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2200004 | Delay: 0.001s
+** Event #751  t=5.495161934477  54% completed  (54% total)   LightIoTNetwork.sensor[15] (SensorNode, id=17)
+** Event #752  t=5.495161934477  54% completed  (54% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #753  t=5.496161934477  54% completed  (54% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1600005 | Delay: 0.001s
+** Event #754  t=5.51098544048  55% completed  (55% total)   LightIoTNetwork.sensor[28] (SensorNode, id=30)
+** Event #755  t=5.51098544048  55% completed  (55% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #756  t=5.51198544048  55% completed  (55% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2900005 | Delay: 0.001s
+** Event #757  t=5.528678527847  55% completed  (55% total)   LightIoTNetwork.sensor[34] (SensorNode, id=36)
+** Event #758  t=5.528678527847  55% completed  (55% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #759  t=5.529678527847  55% completed  (55% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3500004 | Delay: 0.001s
+** Event #760  t=5.597938294661  55% completed  (55% total)   LightIoTNetwork.sensor[13] (SensorNode, id=15)
+** Event #761  t=5.597938294661  55% completed  (55% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #762  t=5.598938294661  55% completed  (55% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1400005 | Delay: 0.001s
+** Event #763  t=5.640753853926  56% completed  (56% total)   LightIoTNetwork.sensor[48] (SensorNode, id=50)
+** Event #764  t=5.640753853926  56% completed  (56% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #765  t=5.641753853926  56% completed  (56% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4900005 | Delay: 0.001s
+** Event #766  t=5.722013104195  57% completed  (57% total)   LightIoTNetwork.sensor[30] (SensorNode, id=32)
+** Event #767  t=5.722013104195  57% completed  (57% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #768  t=5.723013104195  57% completed  (57% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3100005 | Delay: 0.001s
+** Event #769  t=5.763865314844  57% completed  (57% total)   LightIoTNetwork.sensor[29] (SensorNode, id=31)
+** Event #770  t=5.763865314844  57% completed  (57% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #771  t=5.764865314844  57% completed  (57% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3000005 | Delay: 0.001s
+** Event #772  t=5.767712710752  57% completed  (57% total)   LightIoTNetwork.sensor[37] (SensorNode, id=39)
+** Event #773  t=5.767712710752  57% completed  (57% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #774  t=5.768712710752  57% completed  (57% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3800005 | Delay: 0.001s
+** Event #775  t=5.778295816667  57% completed  (57% total)   LightIoTNetwork.sensor[18] (SensorNode, id=20)
+** Event #776  t=5.778295816667  57% completed  (57% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #777  t=5.779295816667  57% completed  (57% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1900005 | Delay: 0.001s
+** Event #778  t=5.801228362042  58% completed  (58% total)   LightIoTNetwork.sensor[17] (SensorNode, id=19)
+** Event #779  t=5.801228362042  58% completed  (58% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #780  t=5.802228362042  58% completed  (58% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1800005 | Delay: 0.001s
+** Event #781  t=5.868605364393  58% completed  (58% total)   LightIoTNetwork.sensor[19] (SensorNode, id=21)
+** Event #782  t=5.868605364393  58% completed  (58% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #783  t=5.869120141771  58% completed  (58% total)   LightIoTNetwork.sensor[22] (SensorNode, id=24)
+** Event #784  t=5.869120141771  58% completed  (58% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #785  t=5.869605364393  58% completed  (58% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2000005 | Delay: 0.001s
+** Event #786  t=5.870120141771  58% completed  (58% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2300005 | Delay: 0.001s
+** Event #787  t=5.870752799743  58% completed  (58% total)   LightIoTNetwork.sensor[41] (SensorNode, id=43)
+** Event #788  t=5.870752799743  58% completed  (58% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #789  t=5.871752799743  58% completed  (58% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4200005 | Delay: 0.001s
+** Event #790  t=5.879899821058  58% completed  (58% total)   LightIoTNetwork.sensor[44] (SensorNode, id=46)
+** Event #791  t=5.879899821058  58% completed  (58% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #792  t=5.880899821058  58% completed  (58% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4500005 | Delay: 0.001s
+** Event #793  t=5.90590374302  59% completed  (59% total)   LightIoTNetwork.sensor[23] (SensorNode, id=25)
+** Event #794  t=5.90590374302  59% completed  (59% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #795  t=5.90690374302  59% completed  (59% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2400005 | Delay: 0.001s
+** Event #796  t=5.913311892702  59% completed  (59% total)   LightIoTNetwork.sensor[11] (SensorNode, id=13)
+** Event #797  t=5.913311892702  59% completed  (59% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #798  t=5.914311892702  59% completed  (59% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1200005 | Delay: 0.001s
+** Event #799  t=5.933407735871  59% completed  (59% total)   LightIoTNetwork.sensor[12] (SensorNode, id=14)
+** Event #800  t=5.933407735871  59% completed  (59% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #801  t=5.934407735871  59% completed  (59% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1300005 | Delay: 0.001s
+** Event #802  t=5.974238222512  59% completed  (59% total)   LightIoTNetwork.sensor[25] (SensorNode, id=27)
+** Event #803  t=5.974238222512  59% completed  (59% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #804  t=5.975238222512  59% completed  (59% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2600005 | Delay: 0.001s
+** Event #805  t=5.988724604017  59% completed  (59% total)   LightIoTNetwork.sensor[24] (SensorNode, id=26)
+** Event #806  t=5.988724604017  59% completed  (59% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #807  t=5.989650788299  59% completed  (59% total)   LightIoTNetwork.sensor[2] (SensorNode, id=4)
+** Event #808  t=5.989650788299  59% completed  (59% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #809  t=5.989724604017  59% completed  (59% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2500005 | Delay: 0.001s
+** Event #810  t=5.990650788299  59% completed  (59% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=300005 | Delay: 0.001s
+** Event #811  t=6.018489841791  60% completed  (60% total)   LightIoTNetwork.sensor[45] (SensorNode, id=47)
+** Event #812  t=6.018489841791  60% completed  (60% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #813  t=6.019489841791  60% completed  (60% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4600005 | Delay: 0.001s
+** Event #814  t=6.058683130378  60% completed  (60% total)   LightIoTNetwork.sensor[6] (SensorNode, id=8)
+** Event #815  t=6.058683130378  60% completed  (60% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #816  t=6.059683130378  60% completed  (60% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=700005 | Delay: 0.001s
+** Event #817  t=6.060120016429  60% completed  (60% total)   LightIoTNetwork.sensor[4] (SensorNode, id=6)
+** Event #818  t=6.060120016429  60% completed  (60% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #819  t=6.061120016429  60% completed  (60% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=500005 | Delay: 0.001s
+** Event #820  t=6.080756677733  60% completed  (60% total)   LightIoTNetwork.sensor[33] (SensorNode, id=35)
+** Event #821  t=6.080756677733  60% completed  (60% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #822  t=6.081756677733  60% completed  (60% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3400005 | Delay: 0.001s
+** Event #823  t=6.109579833503  61% completed  (61% total)   LightIoTNetwork.sensor[1] (SensorNode, id=3)
+** Event #824  t=6.109579833503  61% completed  (61% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #825  t=6.110579833503  61% completed  (61% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=200005 | Delay: 0.001s
+** Event #826  t=6.115216118982  61% completed  (61% total)   LightIoTNetwork.sensor[47] (SensorNode, id=49)
+** Event #827  t=6.115216118982  61% completed  (61% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #828  t=6.116216118982  61% completed  (61% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4800005 | Delay: 0.001s
+** Event #829  t=6.139733649883  61% completed  (61% total)   LightIoTNetwork.sensor[31] (SensorNode, id=33)
+** Event #830  t=6.139733649883  61% completed  (61% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #831  t=6.140733649883  61% completed  (61% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3200005 | Delay: 0.001s
+** Event #832  t=6.155999468314  61% completed  (61% total)   LightIoTNetwork.sensor[0] (SensorNode, id=2)
+** Event #833  t=6.155999468314  61% completed  (61% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #834  t=6.156999468314  61% completed  (61% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=100005 | Delay: 0.001s
+** Event #835  t=6.162165063574  61% completed  (61% total)   LightIoTNetwork.sensor[20] (SensorNode, id=22)
+** Event #836  t=6.162165063574  61% completed  (61% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #837  t=6.163165063574  61% completed  (61% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2100005 | Delay: 0.001s
+** Event #838  t=6.165133285848  61% completed  (61% total)   LightIoTNetwork.sensor[8] (SensorNode, id=10)
+** Event #839  t=6.165133285848  61% completed  (61% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #840  t=6.166133285848  61% completed  (61% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=900005 | Delay: 0.001s
+** Event #841  t=6.179170939373  61% completed  (61% total)   LightIoTNetwork.sensor[27] (SensorNode, id=29)
+** Event #842  t=6.179170939373  61% completed  (61% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #843  t=6.180170939373  61% completed  (61% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2800005 | Delay: 0.001s
+** Event #844  t=6.193806857988  61% completed  (61% total)   LightIoTNetwork.sensor[36] (SensorNode, id=38)
+** Event #845  t=6.193806857988  61% completed  (61% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #846  t=6.194806857988  61% completed  (61% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3700005 | Delay: 0.001s
+** Event #847  t=6.22557221772  62% completed  (62% total)   LightIoTNetwork.sensor[10] (SensorNode, id=12)
+** Event #848  t=6.22557221772  62% completed  (62% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #849  t=6.22657221772  62% completed  (62% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1100005 | Delay: 0.001s
+** Event #850  t=6.292483553523  62% completed  (62% total)   LightIoTNetwork.sensor[43] (SensorNode, id=45)
+** Event #851  t=6.292483553523  62% completed  (62% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #852  t=6.293483553523  62% completed  (62% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4400005 | Delay: 0.001s
+** Event #853  t=6.295212535933  62% completed  (62% total)   LightIoTNetwork.sensor[49] (SensorNode, id=51)
+** Event #854  t=6.295212535933  62% completed  (62% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #855  t=6.296212535933  62% completed  (62% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=5000005 | Delay: 0.001s
+** Event #856  t=6.305924784811  63% completed  (63% total)   LightIoTNetwork.sensor[14] (SensorNode, id=16)
+** Event #857  t=6.305924784811  63% completed  (63% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #858  t=6.306924784811  63% completed  (63% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1500005 | Delay: 0.001s
+** Event #859  t=6.308121876  63% completed  (63% total)   LightIoTNetwork.sensor[39] (SensorNode, id=41)
+** Event #860  t=6.308121876  63% completed  (63% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #861  t=6.309092143829  63% completed  (63% total)   LightIoTNetwork.sensor[32] (SensorNode, id=34)
+** Event #862  t=6.309092143829  63% completed  (63% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #863  t=6.309121876  63% completed  (63% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4000005 | Delay: 0.001s
+** Event #864  t=6.310092143829  63% completed  (63% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3300006 | Delay: 0.001s
+** Event #865  t=6.370787230273  63% completed  (63% total)   LightIoTNetwork.sensor[7] (SensorNode, id=9)
+** Event #866  t=6.370787230273  63% completed  (63% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #867  t=6.371787230273  63% completed  (63% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=800005 | Delay: 0.001s
+** Event #868  t=6.37757317121  63% completed  (63% total)   LightIoTNetwork.sensor[9] (SensorNode, id=11)
+** Event #869  t=6.37757317121  63% completed  (63% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #870  t=6.37857317121  63% completed  (63% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1000005 | Delay: 0.001s
+** Event #871  t=6.383533999416  63% completed  (63% total)   LightIoTNetwork.sensor[42] (SensorNode, id=44)
+** Event #872  t=6.383533999416  63% completed  (63% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #873  t=6.384533999416  63% completed  (63% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4300005 | Delay: 0.001s
+** Event #874  t=6.405698298848  64% completed  (64% total)   LightIoTNetwork.sensor[5] (SensorNode, id=7)
+** Event #875  t=6.405698298848  64% completed  (64% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #876  t=6.406698298848  64% completed  (64% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=600005 | Delay: 0.001s
+** Event #877  t=6.416438638653  64% completed  (64% total)   LightIoTNetwork.sensor[38] (SensorNode, id=40)
+** Event #878  t=6.416438638653  64% completed  (64% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #879  t=6.417438638653  64% completed  (64% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3900005 | Delay: 0.001s
+** Event #880  t=6.419816793734  64% completed  (64% total)   LightIoTNetwork.sensor[16] (SensorNode, id=18)
+** Event #881  t=6.419816793734  64% completed  (64% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #882  t=6.420268653426  64% completed  (64% total)   LightIoTNetwork.sensor[3] (SensorNode, id=5)
+** Event #883  t=6.420268653426  64% completed  (64% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #884  t=6.420816793734  64% completed  (64% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1700005 | Delay: 0.001s
+** Event #885  t=6.421268653426  64% completed  (64% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=400005 | Delay: 0.001s
+** Event #886  t=6.421614418551  64% completed  (64% total)   LightIoTNetwork.sensor[35] (SensorNode, id=37)
+** Event #887  t=6.421614418551  64% completed  (64% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #888  t=6.422614418551  64% completed  (64% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3600005 | Delay: 0.001s
+** Event #889  t=6.425051595411  64% completed  (64% total)   LightIoTNetwork.sensor[15] (SensorNode, id=17)
+** Event #890  t=6.425051595411  64% completed  (64% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #891  t=6.426051595411  64% completed  (64% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1600006 | Delay: 0.001s
+** Event #892  t=6.457871671952  64% completed  (64% total)   LightIoTNetwork.sensor[46] (SensorNode, id=48)
+** Event #893  t=6.457871671952  64% completed  (64% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #894  t=6.458871671952  64% completed  (64% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4700005 | Delay: 0.001s
+** Event #895  t=6.476193254999  64% completed  (64% total)   LightIoTNetwork.sensor[26] (SensorNode, id=28)
+** Event #896  t=6.476193254999  64% completed  (64% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #897  t=6.477193254999  64% completed  (64% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2700005 | Delay: 0.001s
+** Event #898  t=6.505450171557  65% completed  (65% total)   LightIoTNetwork.sensor[13] (SensorNode, id=15)
+** Event #899  t=6.505450171557  65% completed  (65% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #900  t=6.506450171557  65% completed  (65% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1400006 | Delay: 0.001s
+** Event #901  t=6.530651853233  65% completed  (65% total)   LightIoTNetwork.sensor[40] (SensorNode, id=42)
+** Event #902  t=6.530651853233  65% completed  (65% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #903  t=6.531651853233  65% completed  (65% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4100005 | Delay: 0.001s
+** Event #904  t=6.544995457121  65% completed  (65% total)   LightIoTNetwork.sensor[21] (SensorNode, id=23)
+** Event #905  t=6.544995457121  65% completed  (65% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #906  t=6.545995457121  65% completed  (65% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2200005 | Delay: 0.001s
+** Event #907  t=6.573252440197  65% completed  (65% total)   LightIoTNetwork.sensor[48] (SensorNode, id=50)
+** Event #908  t=6.573252440197  65% completed  (65% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #909  t=6.574252440197  65% completed  (65% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4900006 | Delay: 0.001s
+** Event #910  t=6.591914989332  65% completed  (65% total)   LightIoTNetwork.sensor[28] (SensorNode, id=30)
+** Event #911  t=6.591914989332  65% completed  (65% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #912  t=6.592914989332  65% completed  (65% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2900006 | Delay: 0.001s
+** Event #913  t=6.602303739963  66% completed  (66% total)   LightIoTNetwork.sensor[34] (SensorNode, id=36)
+** Event #914  t=6.602303739963  66% completed  (66% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #915  t=6.603303739963  66% completed  (66% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3500005 | Delay: 0.001s
+** Event #916  t=6.701082214341  67% completed  (67% total)   LightIoTNetwork.sensor[37] (SensorNode, id=39)
+** Event #917  t=6.701082214341  67% completed  (67% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #918  t=6.702082214341  67% completed  (67% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3800006 | Delay: 0.001s
+** Event #919  t=6.703059813147  67% completed  (67% total)   LightIoTNetwork.sensor[18] (SensorNode, id=20)
+** Event #920  t=6.703059813147  67% completed  (67% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #921  t=6.704059813147  67% completed  (67% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1900006 | Delay: 0.001s
+** Event #922  t=6.723676194251  67% completed  (67% total)   LightIoTNetwork.sensor[30] (SensorNode, id=32)
+** Event #923  t=6.723676194251  67% completed  (67% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #924  t=6.724676194251  67% completed  (67% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3100006 | Delay: 0.001s
+** Event #925  t=6.786977228337  67% completed  (67% total)   LightIoTNetwork.sensor[29] (SensorNode, id=31)
+** Event #926  t=6.786977228337  67% completed  (67% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #927  t=6.787977228337  67% completed  (67% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3000006 | Delay: 0.001s
+** Event #928  t=6.841306409334  68% completed  (68% total)   LightIoTNetwork.sensor[11] (SensorNode, id=13)
+** Event #929  t=6.841306409334  68% completed  (68% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #930  t=6.842306409334  68% completed  (68% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1200006 | Delay: 0.001s
+** Event #931  t=6.857038565678  68% completed  (68% total)   LightIoTNetwork.sensor[17] (SensorNode, id=19)
+** Event #932  t=6.857038565678  68% completed  (68% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #933  t=6.858038565678  68% completed  (68% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1800006 | Delay: 0.001s
+** Event #934  t=6.862179165939  68% completed  (68% total)   LightIoTNetwork.sensor[44] (SensorNode, id=46)
+** Event #935  t=6.862179165939  68% completed  (68% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #936  t=6.863179165939  68% completed  (68% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4500006 | Delay: 0.001s
+** Event #937  t=6.880882699788  68% completed  (68% total)   LightIoTNetwork.sensor[25] (SensorNode, id=27)
+** Event #938  t=6.880882699788  68% completed  (68% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #939  t=6.881882699788  68% completed  (68% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2600006 | Delay: 0.001s
+** Event #940  t=6.902558002063  69% completed  (69% total)   LightIoTNetwork.sensor[24] (SensorNode, id=26)
+** Event #941  t=6.902558002063  69% completed  (69% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #942  t=6.903558002063  69% completed  (69% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2500006 | Delay: 0.001s
+** Event #943  t=6.914844395406  69% completed  (69% total)   LightIoTNetwork.sensor[12] (SensorNode, id=14)
+** Event #944  t=6.914844395406  69% completed  (69% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #945  t=6.915844395406  69% completed  (69% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1300006 | Delay: 0.001s
+** Event #946  t=6.919723891885  69% completed  (69% total)   LightIoTNetwork.sensor[23] (SensorNode, id=25)
+** Event #947  t=6.919723891885  69% completed  (69% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #948  t=6.920723891885  69% completed  (69% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2400006 | Delay: 0.001s
+** Event #949  t=6.932216591806  69% completed  (69% total)   LightIoTNetwork.sensor[41] (SensorNode, id=43)
+** Event #950  t=6.932216591806  69% completed  (69% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #951  t=6.933216591806  69% completed  (69% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4200006 | Delay: 0.001s
+** Event #952  t=6.938207009853  69% completed  (69% total)   LightIoTNetwork.sensor[19] (SensorNode, id=21)
+** Event #953  t=6.938207009853  69% completed  (69% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #954  t=6.939207009853  69% completed  (69% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2000006 | Delay: 0.001s
+** Event #955  t=6.94210680034  69% completed  (69% total)   LightIoTNetwork.sensor[22] (SensorNode, id=24)
+** Event #956  t=6.94210680034  69% completed  (69% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #957  t=6.94310680034  69% completed  (69% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2300006 | Delay: 0.001s
+** Event #958  t=7.02533374154  70% completed  (70% total)   LightIoTNetwork.sensor[47] (SensorNode, id=49)
+** Event #959  t=7.02533374154  70% completed  (70% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #960  t=7.02633374154  70% completed  (70% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4800006 | Delay: 0.001s
+** Event #961  t=7.03334128093  70% completed  (70% total)   LightIoTNetwork.sensor[6] (SensorNode, id=8)
+** Event #962  t=7.03334128093  70% completed  (70% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #963  t=7.03434128093  70% completed  (70% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=700006 | Delay: 0.001s
+** Event #964  t=7.050828552478  70% completed  (70% total)   LightIoTNetwork.sensor[4] (SensorNode, id=6)
+** Event #965  t=7.050828552478  70% completed  (70% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #966  t=7.051828552478  70% completed  (70% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=500006 | Delay: 0.001s
+** Event #967  t=7.057975596283  70% completed  (70% total)   LightIoTNetwork.sensor[45] (SensorNode, id=47)
+** Event #968  t=7.057975596283  70% completed  (70% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #969  t=7.058975596283  70% completed  (70% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4600006 | Delay: 0.001s
+** Event #970  t=7.064771751267  70% completed  (70% total)   LightIoTNetwork.sensor[33] (SensorNode, id=35)
+** Event #971  t=7.064771751267  70% completed  (70% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #972  t=7.065771751267  70% completed  (70% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3400006 | Delay: 0.001s
+** Event #973  t=7.068458879739  70% completed  (70% total)   LightIoTNetwork.sensor[8] (SensorNode, id=10)
+** Event #974  t=7.068458879739  70% completed  (70% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #975  t=7.069458879739  70% completed  (70% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=900006 | Delay: 0.001s
+** Event #976  t=7.086165779644  70% completed  (70% total)   LightIoTNetwork.sensor[2] (SensorNode, id=4)
+** Event #977  t=7.086165779644  70% completed  (70% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #978  t=7.087165779644  70% completed  (70% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=300006 | Delay: 0.001s
+** Event #979  t=7.127915034023  71% completed  (71% total)   LightIoTNetwork.sensor[10] (SensorNode, id=12)
+** Event #980  t=7.127915034023  71% completed  (71% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #981  t=7.128915034023  71% completed  (71% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1100006 | Delay: 0.001s
+** Event #982  t=7.129098688253  71% completed  (71% total)   LightIoTNetwork.sensor[0] (SensorNode, id=2)
+** Event #983  t=7.129098688253  71% completed  (71% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #984  t=7.130098688253  71% completed  (71% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=100006 | Delay: 0.001s
+** Event #985  t=7.139955326309  71% completed  (71% total)   LightIoTNetwork.sensor[36] (SensorNode, id=38)
+** Event #986  t=7.139955326309  71% completed  (71% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #987  t=7.140955326309  71% completed  (71% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3700006 | Delay: 0.001s
+** Event #988  t=7.153990954532  71% completed  (71% total)   LightIoTNetwork.sensor[1] (SensorNode, id=3)
+** Event #989  t=7.153990954532  71% completed  (71% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #990  t=7.154990954532  71% completed  (71% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=200006 | Delay: 0.001s
+** Event #991  t=7.213010115083  72% completed  (72% total)   LightIoTNetwork.sensor[31] (SensorNode, id=33)
+** Event #992  t=7.213010115083  72% completed  (72% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #993  t=7.214010115083  72% completed  (72% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3200006 | Delay: 0.001s
+** Event #994  t=7.250331607973  72% completed  (72% total)   LightIoTNetwork.sensor[27] (SensorNode, id=29)
+** Event #995  t=7.250331607973  72% completed  (72% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #996  t=7.251331607973  72% completed  (72% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2800006 | Delay: 0.001s
+** Event #997  t=7.257269365993  72% completed  (72% total)   LightIoTNetwork.sensor[20] (SensorNode, id=22)
+** Event #998  t=7.257269365993  72% completed  (72% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #999  t=7.258269365993  72% completed  (72% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2100006 | Delay: 0.001s
+** Event #1000  t=7.267208147748  72% completed  (72% total)   LightIoTNetwork.sensor[49] (SensorNode, id=51)
+** Event #1001  t=7.267208147748  72% completed  (72% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1002  t=7.268208147748  72% completed  (72% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=5000006 | Delay: 0.001s
+** Event #1003  t=7.305113165778  73% completed  (73% total)   LightIoTNetwork.sensor[7] (SensorNode, id=9)
+** Event #1004  t=7.305113165778  73% completed  (73% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1005  t=7.306113165778  73% completed  (73% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=800006 | Delay: 0.001s
+** Event #1006  t=7.327306235862  73% completed  (73% total)   LightIoTNetwork.sensor[38] (SensorNode, id=40)
+** Event #1007  t=7.327306235862  73% completed  (73% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1008  t=7.328306235862  73% completed  (73% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3900006 | Delay: 0.001s
+** Event #1009  t=7.328755954235  73% completed  (73% total)   LightIoTNetwork.sensor[15] (SensorNode, id=17)
+** Event #1010  t=7.328755954235  73% completed  (73% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1011  t=7.329755954235  73% completed  (73% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1600007 | Delay: 0.001s
+** Event #1012  t=7.345453934417  73% completed  (73% total)   LightIoTNetwork.sensor[9] (SensorNode, id=11)
+** Event #1013  t=7.345453934417  73% completed  (73% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1014  t=7.345465893112  73% completed  (73% total)   LightIoTNetwork.sensor[43] (SensorNode, id=45)
+** Event #1015  t=7.345465893112  73% completed  (73% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1016  t=7.346453934417  73% completed  (73% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1000006 | Delay: 0.001s
+** Event #1017  t=7.346465893112  73% completed  (73% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4400006 | Delay: 0.001s
+** Event #1018  t=7.354119988345  73% completed  (73% total)   LightIoTNetwork.sensor[39] (SensorNode, id=41)
+** Event #1019  t=7.354119988345  73% completed  (73% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1020  t=7.355119988345  73% completed  (73% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4000006 | Delay: 0.001s
+** Event #1021  t=7.357512472151  73% completed  (73% total)   LightIoTNetwork.sensor[35] (SensorNode, id=37)
+** Event #1022  t=7.357512472151  73% completed  (73% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1023  t=7.358512472151  73% completed  (73% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3600006 | Delay: 0.001s
+** Event #1024  t=7.359091993374  73% completed  (73% total)   LightIoTNetwork.sensor[32] (SensorNode, id=34)
+** Event #1025  t=7.359091993374  73% completed  (73% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1026  t=7.360091993374  73% completed  (73% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3300007 | Delay: 0.001s
+** Event #1027  t=7.36026795851  73% completed  (73% total)   LightIoTNetwork.sensor[3] (SensorNode, id=5)
+** Event #1028  t=7.36026795851  73% completed  (73% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1029  t=7.36126795851  73% completed  (73% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=400006 | Delay: 0.001s
+** Event #1030  t=7.387613817025  73% completed  (73% total)   LightIoTNetwork.sensor[16] (SensorNode, id=18)
+** Event #1031  t=7.387613817025  73% completed  (73% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1032  t=7.38774132002  73% completed  (73% total)   LightIoTNetwork.sensor[42] (SensorNode, id=44)
+** Event #1033  t=7.38774132002  73% completed  (73% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1034  t=7.388613817025  73% completed  (73% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1700006 | Delay: 0.001s
+** Event #1035  t=7.38874132002  73% completed  (73% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4300006 | Delay: 0.001s
+** Event #1036  t=7.392068990506  73% completed  (73% total)   LightIoTNetwork.sensor[46] (SensorNode, id=48)
+** Event #1037  t=7.392068990506  73% completed  (73% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1038  t=7.393068990506  73% completed  (73% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4700006 | Delay: 0.001s
+** Event #1039  t=7.394749488961  73% completed  (73% total)   LightIoTNetwork.sensor[14] (SensorNode, id=16)
+** Event #1040  t=7.394749488961  73% completed  (73% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1041  t=7.395749488961  73% completed  (73% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1500006 | Delay: 0.001s
+** Event #1042  t=7.403608087263  74% completed  (74% total)   LightIoTNetwork.sensor[5] (SensorNode, id=7)
+** Event #1043  t=7.403608087263  74% completed  (74% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1044  t=7.404608087263  74% completed  (74% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=600006 | Delay: 0.001s
+** Event #1045  t=7.475436789775  74% completed  (74% total)   LightIoTNetwork.sensor[40] (SensorNode, id=42)
+** Event #1046  t=7.475436789775  74% completed  (74% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1047  t=7.476436789775  74% completed  (74% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4100006 | Delay: 0.001s
+** Event #1048  t=7.498140366793  74% completed  (74% total)   LightIoTNetwork.sensor[13] (SensorNode, id=15)
+** Event #1049  t=7.498140366793  74% completed  (74% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1050  t=7.499140366793  74% completed  (74% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1400007 | Delay: 0.001s
+** Event #1051  t=7.534932795492  75% completed  (75% total)   LightIoTNetwork.sensor[26] (SensorNode, id=28)
+** Event #1052  t=7.534932795492  75% completed  (75% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1053  t=7.535932795492  75% completed  (75% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2700006 | Delay: 0.001s
+** Event #1054  t=7.542322775907  75% completed  (75% total)   LightIoTNetwork.sensor[48] (SensorNode, id=50)
+** Event #1055  t=7.542322775907  75% completed  (75% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1056  t=7.543322775907  75% completed  (75% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4900007 | Delay: 0.001s
+** Event #1057  t=7.619910049532  76% completed  (76% total)   LightIoTNetwork.sensor[21] (SensorNode, id=23)
+** Event #1058  t=7.619910049532  76% completed  (76% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1059  t=7.620910049532  76% completed  (76% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2200006 | Delay: 0.001s
+** Event #1060  t=7.68073893953  76% completed  (76% total)   LightIoTNetwork.sensor[28] (SensorNode, id=30)
+** Event #1061  t=7.68073893953  76% completed  (76% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1062  t=7.68173893953  76% completed  (76% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2900007 | Delay: 0.001s
+** Event #1063  t=7.687919998495  76% completed  (76% total)   LightIoTNetwork.sensor[34] (SensorNode, id=36)
+** Event #1064  t=7.687919998495  76% completed  (76% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1065  t=7.688919998495  76% completed  (76% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3500006 | Delay: 0.001s
+** Event #1066  t=7.693345013122  76% completed  (76% total)   LightIoTNetwork.sensor[29] (SensorNode, id=31)
+** Event #1067  t=7.693345013122  76% completed  (76% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1068  t=7.694345013122  76% completed  (76% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3000007 | Delay: 0.001s
+** Event #1069  t=7.722732787859  77% completed  (77% total)   LightIoTNetwork.sensor[37] (SensorNode, id=39)
+** Event #1070  t=7.722732787859  77% completed  (77% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1071  t=7.723732787859  77% completed  (77% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3800007 | Delay: 0.001s
+** Event #1072  t=7.743007276813  77% completed  (77% total)   LightIoTNetwork.sensor[30] (SensorNode, id=32)
+** Event #1073  t=7.743007276813  77% completed  (77% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1074  t=7.743942693015  77% completed  (77% total)   LightIoTNetwork.sensor[18] (SensorNode, id=20)
+** Event #1075  t=7.743942693015  77% completed  (77% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1076  t=7.744007276813  77% completed  (77% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3100007 | Delay: 0.001s
+** Event #1077  t=7.744942693015  77% completed  (77% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1900007 | Delay: 0.001s
+** Event #1078  t=7.789977396978  77% completed  (77% total)   LightIoTNetwork.sensor[17] (SensorNode, id=19)
+** Event #1079  t=7.789977396978  77% completed  (77% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1080  t=7.790977396978  77% completed  (77% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1800007 | Delay: 0.001s
+** Event #1081  t=7.812632013812  78% completed  (78% total)   LightIoTNetwork.sensor[24] (SensorNode, id=26)
+** Event #1082  t=7.812632013812  78% completed  (78% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1083  t=7.813632013812  78% completed  (78% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2500007 | Delay: 0.001s
+** Event #1084  t=7.862184424698  78% completed  (78% total)   LightIoTNetwork.sensor[44] (SensorNode, id=46)
+** Event #1085  t=7.862184424698  78% completed  (78% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1086  t=7.863184424698  78% completed  (78% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4500007 | Delay: 0.001s
+** Event #1087  t=7.879795154788  78% completed  (78% total)   LightIoTNetwork.sensor[41] (SensorNode, id=43)
+** Event #1088  t=7.879795154788  78% completed  (78% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1089  t=7.880795154788  78% completed  (78% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4200007 | Delay: 0.001s
+** Event #1090  t=7.898035258941  78% completed  (78% total)   LightIoTNetwork.sensor[11] (SensorNode, id=13)
+** Event #1091  t=7.898035258941  78% completed  (78% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1092  t=7.899035258941  78% completed  (78% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1200007 | Delay: 0.001s
+** Event #1093  t=7.90517838113  79% completed  (79% total)   LightIoTNetwork.sensor[25] (SensorNode, id=27)
+** Event #1094  t=7.90517838113  79% completed  (79% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1095  t=7.90617838113  79% completed  (79% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2600007 | Delay: 0.001s
+** Event #1096  t=7.930290112458  79% completed  (79% total)   LightIoTNetwork.sensor[12] (SensorNode, id=14)
+** Event #1097  t=7.930290112458  79% completed  (79% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1098  t=7.931290112458  79% completed  (79% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1300007 | Delay: 0.001s
+** Event #1099  t=7.959543507406  79% completed  (79% total)   LightIoTNetwork.sensor[23] (SensorNode, id=25)
+** Event #1100  t=7.959543507406  79% completed  (79% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1101  t=7.960543507406  79% completed  (79% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2400007 | Delay: 0.001s
+** Event #1102  t=7.978786248341  79% completed  (79% total)   LightIoTNetwork.sensor[47] (SensorNode, id=49)
+** Event #1103  t=7.978786248341  79% completed  (79% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1104  t=7.979786248341  79% completed  (79% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4800007 | Delay: 0.001s
+** Event #1105  t=8.028949600691  80% completed  (80% total)   LightIoTNetwork.sensor[22] (SensorNode, id=24)
+** Event #1106  t=8.028949600691  80% completed  (80% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1107  t=8.029949600691  80% completed  (80% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2300007 | Delay: 0.001s
+** Event #1108  t=8.036686288984  80% completed  (80% total)   LightIoTNetwork.sensor[19] (SensorNode, id=21)
+** Event #1109  t=8.036686288984  80% completed  (80% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1110  t=8.037686288984  80% completed  (80% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2000007 | Delay: 0.001s
+** Event #1111  t=8.056134471437  80% completed  (80% total)   LightIoTNetwork.sensor[6] (SensorNode, id=8)
+** Event #1112  t=8.056134471437  80% completed  (80% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1113  t=8.057134471437  80% completed  (80% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=700007 | Delay: 0.001s
+** Event #1114  t=8.06510215574  80% completed  (80% total)   LightIoTNetwork.sensor[45] (SensorNode, id=47)
+** Event #1115  t=8.06510215574  80% completed  (80% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1116  t=8.06610215574  80% completed  (80% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4600007 | Delay: 0.001s
+** Event #1117  t=8.086440875288  80% completed  (80% total)   LightIoTNetwork.sensor[8] (SensorNode, id=10)
+** Event #1118  t=8.086440875288  80% completed  (80% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1119  t=8.086646676109  80% completed  (80% total)   LightIoTNetwork.sensor[4] (SensorNode, id=6)
+** Event #1120  t=8.086646676109  80% completed  (80% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1121  t=8.087440875288  80% completed  (80% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=900007 | Delay: 0.001s
+** Event #1122  t=8.087646676109  80% completed  (80% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=500007 | Delay: 0.001s
+** Event #1123  t=8.102344325417  81% completed  (81% total)   LightIoTNetwork.sensor[36] (SensorNode, id=38)
+** Event #1124  t=8.102344325417  81% completed  (81% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1125  t=8.103344325417  81% completed  (81% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3700007 | Delay: 0.001s
+** Event #1126  t=8.136334629032  81% completed  (81% total)   LightIoTNetwork.sensor[2] (SensorNode, id=4)
+** Event #1127  t=8.136334629032  81% completed  (81% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1128  t=8.137334629032  81% completed  (81% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=300007 | Delay: 0.001s
+** Event #1129  t=8.137628039763  81% completed  (81% total)   LightIoTNetwork.sensor[33] (SensorNode, id=35)
+** Event #1130  t=8.137628039763  81% completed  (81% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1131  t=8.138628039763  81% completed  (81% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3400007 | Delay: 0.001s
+** Event #1132  t=8.164839441747  81% completed  (81% total)   LightIoTNetwork.sensor[1] (SensorNode, id=3)
+** Event #1133  t=8.164839441747  81% completed  (81% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1134  t=8.165839441747  81% completed  (81% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=200007 | Delay: 0.001s
+** Event #1135  t=8.173939439281  81% completed  (81% total)   LightIoTNetwork.sensor[10] (SensorNode, id=12)
+** Event #1136  t=8.173939439281  81% completed  (81% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1137  t=8.174939439281  81% completed  (81% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1100007 | Delay: 0.001s
+** Event #1138  t=8.19265432856  81% completed  (81% total)   LightIoTNetwork.sensor[31] (SensorNode, id=33)
+** Event #1139  t=8.19265432856  81% completed  (81% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1140  t=8.19280970837  81% completed  (81% total)   LightIoTNetwork.sensor[27] (SensorNode, id=29)
+** Event #1141  t=8.19280970837  81% completed  (81% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1142  t=8.19365432856  81% completed  (81% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3200007 | Delay: 0.001s
+** Event #1143  t=8.19380970837  81% completed  (81% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2800007 | Delay: 0.001s
+** Event #1144  t=8.199238116807  81% completed  (81% total)   LightIoTNetwork.sensor[20] (SensorNode, id=22)
+** Event #1145  t=8.199238116807  81% completed  (81% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1146  t=8.200238116807  82% completed  (82% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2100007 | Delay: 0.001s
+** Event #1147  t=8.211696792441  82% completed  (82% total)   LightIoTNetwork.sensor[49] (SensorNode, id=51)
+** Event #1148  t=8.211696792441  82% completed  (82% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1149  t=8.212696792441  82% completed  (82% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=5000007 | Delay: 0.001s
+** Event #1150  t=8.221996641393  82% completed  (82% total)   LightIoTNetwork.sensor[0] (SensorNode, id=2)
+** Event #1151  t=8.221996641393  82% completed  (82% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1152  t=8.222996641393  82% completed  (82% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=100007 | Delay: 0.001s
+** Event #1153  t=8.242351766861  82% completed  (82% total)   LightIoTNetwork.sensor[7] (SensorNode, id=9)
+** Event #1154  t=8.242351766861  82% completed  (82% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1155  t=8.243351766861  82% completed  (82% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=800007 | Delay: 0.001s
+** Event #1156  t=8.271056109435  82% completed  (82% total)   LightIoTNetwork.sensor[38] (SensorNode, id=40)
+** Event #1157  t=8.271056109435  82% completed  (82% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1158  t=8.272056109435  82% completed  (82% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3900007 | Delay: 0.001s
+** Event #1159  t=8.305750884348  83% completed  (83% total)   LightIoTNetwork.sensor[3] (SensorNode, id=5)
+** Event #1160  t=8.305750884348  83% completed  (83% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1161  t=8.306355321454  83% completed  (83% total)   LightIoTNetwork.sensor[14] (SensorNode, id=16)
+** Event #1162  t=8.306355321454  83% completed  (83% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1163  t=8.306750884348  83% completed  (83% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=400007 | Delay: 0.001s
+** Event #1164  t=8.307355321454  83% completed  (83% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1500007 | Delay: 0.001s
+** Event #1165  t=8.309128103917  83% completed  (83% total)   LightIoTNetwork.sensor[46] (SensorNode, id=48)
+** Event #1166  t=8.309128103917  83% completed  (83% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1167  t=8.310128103917  83% completed  (83% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4700007 | Delay: 0.001s
+** Event #1168  t=8.314891754183  83% completed  (83% total)   LightIoTNetwork.sensor[5] (SensorNode, id=7)
+** Event #1169  t=8.314891754183  83% completed  (83% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1170  t=8.315891754183  83% completed  (83% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=600007 | Delay: 0.001s
+** Event #1171  t=8.338612616573  83% completed  (83% total)   LightIoTNetwork.sensor[42] (SensorNode, id=44)
+** Event #1172  t=8.338612616573  83% completed  (83% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1173  t=8.339612616573  83% completed  (83% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4300007 | Delay: 0.001s
+** Event #1174  t=8.344541795971  83% completed  (83% total)   LightIoTNetwork.sensor[39] (SensorNode, id=41)
+** Event #1175  t=8.344541795971  83% completed  (83% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1176  t=8.345541795971  83% completed  (83% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4000007 | Delay: 0.001s
+** Event #1177  t=8.355604232522  83% completed  (83% total)   LightIoTNetwork.sensor[35] (SensorNode, id=37)
+** Event #1178  t=8.355604232522  83% completed  (83% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1179  t=8.356604232522  83% completed  (83% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3600007 | Delay: 0.001s
+** Event #1180  t=8.359368640789  83% completed  (83% total)   LightIoTNetwork.sensor[9] (SensorNode, id=11)
+** Event #1181  t=8.359368640789  83% completed  (83% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1182  t=8.360368640789  83% completed  (83% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1000007 | Delay: 0.001s
+** Event #1183  t=8.393376052426  83% completed  (83% total)   LightIoTNetwork.sensor[43] (SensorNode, id=45)
+** Event #1184  t=8.393376052426  83% completed  (83% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1185  t=8.394376052426  83% completed  (83% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4400007 | Delay: 0.001s
+** Event #1186  t=8.417630431942  84% completed  (84% total)   LightIoTNetwork.sensor[15] (SensorNode, id=17)
+** Event #1187  t=8.417630431942  84% completed  (84% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1188  t=8.418630431942  84% completed  (84% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1600008 | Delay: 0.001s
+** Event #1189  t=8.423722755862  84% completed  (84% total)   LightIoTNetwork.sensor[16] (SensorNode, id=18)
+** Event #1190  t=8.423722755862  84% completed  (84% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1191  t=8.424722755862  84% completed  (84% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1700007 | Delay: 0.001s
+** Event #1192  t=8.453139330353  84% completed  (84% total)   LightIoTNetwork.sensor[32] (SensorNode, id=34)
+** Event #1193  t=8.453139330353  84% completed  (84% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1194  t=8.454139330353  84% completed  (84% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3300008 | Delay: 0.001s
+** Event #1195  t=8.462320115557  84% completed  (84% total)   LightIoTNetwork.sensor[40] (SensorNode, id=42)
+** Event #1196  t=8.462320115557  84% completed  (84% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1197  t=8.463320115557  84% completed  (84% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4100007 | Delay: 0.001s
+** Event #1198  t=8.495707907992  84% completed  (84% total)   LightIoTNetwork.sensor[13] (SensorNode, id=15)
+** Event #1199  t=8.495707907992  84% completed  (84% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1200  t=8.496707907992  84% completed  (84% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1400008 | Delay: 0.001s
+** Event #1201  t=8.497291970857  84% completed  (84% total)   LightIoTNetwork.sensor[26] (SensorNode, id=28)
+** Event #1202  t=8.497291970857  84% completed  (84% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1203  t=8.498291970857  84% completed  (84% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2700007 | Delay: 0.001s
+** Event #1204  t=8.618523687636  86% completed  (86% total)   LightIoTNetwork.sensor[48] (SensorNode, id=50)
+** Event #1205  t=8.618523687636  86% completed  (86% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1206  t=8.619523687636  86% completed  (86% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4900008 | Delay: 0.001s
+** Event #1207  t=8.64887843877  86% completed  (86% total)   LightIoTNetwork.sensor[18] (SensorNode, id=20)
+** Event #1208  t=8.64887843877  86% completed  (86% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1209  t=8.64987843877  86% completed  (86% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1900008 | Delay: 0.001s
+** Event #1210  t=8.658653523354  86% completed  (86% total)   LightIoTNetwork.sensor[37] (SensorNode, id=39)
+** Event #1211  t=8.658653523354  86% completed  (86% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1212  t=8.659178746678  86% completed  (86% total)   LightIoTNetwork.sensor[21] (SensorNode, id=23)
+** Event #1213  t=8.659178746678  86% completed  (86% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1214  t=8.659653523354  86% completed  (86% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3800008 | Delay: 0.001s
+** Event #1215  t=8.660178746678  86% completed  (86% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2200007 | Delay: 0.001s
+** Event #1216  t=8.663470365945  86% completed  (86% total)   LightIoTNetwork.sensor[34] (SensorNode, id=36)
+** Event #1217  t=8.663470365945  86% completed  (86% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1218  t=8.664470365945  86% completed  (86% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3500007 | Delay: 0.001s
+** Event #1219  t=8.716876596958  87% completed  (87% total)   LightIoTNetwork.sensor[29] (SensorNode, id=31)
+** Event #1220  t=8.716876596958  87% completed  (87% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1221  t=8.717876596958  87% completed  (87% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3000008 | Delay: 0.001s
+** Event #1222  t=8.726081939974  87% completed  (87% total)   LightIoTNetwork.sensor[24] (SensorNode, id=26)
+** Event #1223  t=8.726081939974  87% completed  (87% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1224  t=8.727081939974  87% completed  (87% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2500008 | Delay: 0.001s
+** Event #1225  t=8.751507032197  87% completed  (87% total)   LightIoTNetwork.sensor[30] (SensorNode, id=32)
+** Event #1226  t=8.751507032197  87% completed  (87% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1227  t=8.752507032197  87% completed  (87% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3100008 | Delay: 0.001s
+** Event #1228  t=8.77601981759  87% completed  (87% total)   LightIoTNetwork.sensor[28] (SensorNode, id=30)
+** Event #1229  t=8.77601981759  87% completed  (87% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1230  t=8.77701981759  87% completed  (87% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2900008 | Delay: 0.001s
+** Event #1231  t=8.860900113592  88% completed  (88% total)   LightIoTNetwork.sensor[17] (SensorNode, id=19)
+** Event #1232  t=8.860900113592  88% completed  (88% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1233  t=8.861900113592  88% completed  (88% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1800008 | Delay: 0.001s
+** Event #1234  t=8.893754524227  88% completed  (88% total)   LightIoTNetwork.sensor[11] (SensorNode, id=13)
+** Event #1235  t=8.893754524227  88% completed  (88% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1236  t=8.894754524227  88% completed  (88% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1200008 | Delay: 0.001s
+** Event #1237  t=8.895917749032  88% completed  (88% total)   LightIoTNetwork.sensor[25] (SensorNode, id=27)
+** Event #1238  t=8.895917749032  88% completed  (88% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1239  t=8.896917749032  88% completed  (88% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2600008 | Delay: 0.001s
+** Event #1240  t=8.910951333167  89% completed  (89% total)   LightIoTNetwork.sensor[44] (SensorNode, id=46)
+** Event #1241  t=8.910951333167  89% completed  (89% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1242  t=8.911951333167  89% completed  (89% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4500008 | Delay: 0.001s
+** Event #1243  t=8.915673709939  89% completed  (89% total)   LightIoTNetwork.sensor[41] (SensorNode, id=43)
+** Event #1244  t=8.915673709939  89% completed  (89% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1245  t=8.916673709939  89% completed  (89% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4200008 | Delay: 0.001s
+** Event #1246  t=8.965706427721  89% completed  (89% total)   LightIoTNetwork.sensor[12] (SensorNode, id=14)
+** Event #1247  t=8.965706427721  89% completed  (89% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1248  t=8.966706427721  89% completed  (89% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1300008 | Delay: 0.001s
+** Event #1249  t=8.966859349142  89% completed  (89% total)   LightIoTNetwork.sensor[23] (SensorNode, id=25)
+** Event #1250  t=8.966859349142  89% completed  (89% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1251  t=8.967859349142  89% completed  (89% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2400008 | Delay: 0.001s
+** Event #1252  t=9.000195260532  90% completed  (90% total)   LightIoTNetwork.sensor[47] (SensorNode, id=49)
+** Event #1253  t=9.000195260532  90% completed  (90% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1254  t=9.001195260532  90% completed  (90% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4800008 | Delay: 0.001s
+** Event #1255  t=9.029820271488  90% completed  (90% total)   LightIoTNetwork.sensor[8] (SensorNode, id=10)
+** Event #1256  t=9.029820271488  90% completed  (90% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1257  t=9.030820271488  90% completed  (90% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=900008 | Delay: 0.001s
+** Event #1258  t=9.059001593246  90% completed  (90% total)   LightIoTNetwork.sensor[45] (SensorNode, id=47)
+** Event #1259  t=9.059001593246  90% completed  (90% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1260  t=9.060001593246  90% completed  (90% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4600008 | Delay: 0.001s
+** Event #1261  t=9.077849600789  90% completed  (90% total)   LightIoTNetwork.sensor[4] (SensorNode, id=6)
+** Event #1262  t=9.077849600789  90% completed  (90% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1263  t=9.07806964023  90% completed  (90% total)   LightIoTNetwork.sensor[10] (SensorNode, id=12)
+** Event #1264  t=9.07806964023  90% completed  (90% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1265  t=9.078849600789  90% completed  (90% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=500008 | Delay: 0.001s
+** Event #1266  t=9.07906964023  90% completed  (90% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1100008 | Delay: 0.001s
+** Event #1267  t=9.079625675547  90% completed  (90% total)   LightIoTNetwork.sensor[19] (SensorNode, id=21)
+** Event #1268  t=9.079625675547  90% completed  (90% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1269  t=9.080625675547  90% completed  (90% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2000008 | Delay: 0.001s
+** Event #1270  t=9.090292515372  90% completed  (90% total)   LightIoTNetwork.sensor[33] (SensorNode, id=35)
+** Event #1271  t=9.090292515372  90% completed  (90% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1272  t=9.091292515372  90% completed  (90% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3400008 | Delay: 0.001s
+** Event #1273  t=9.092283525922  90% completed  (90% total)   LightIoTNetwork.sensor[1] (SensorNode, id=3)
+** Event #1274  t=9.092283525922  90% completed  (90% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1275  t=9.093283525922  90% completed  (90% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=200008 | Delay: 0.001s
+** Event #1276  t=9.108283858746  91% completed  (91% total)   LightIoTNetwork.sensor[22] (SensorNode, id=24)
+** Event #1277  t=9.108283858746  91% completed  (91% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1278  t=9.109283858746  91% completed  (91% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2300008 | Delay: 0.001s
+** Event #1279  t=9.13495996613  91% completed  (91% total)   LightIoTNetwork.sensor[36] (SensorNode, id=38)
+** Event #1280  t=9.13495996613  91% completed  (91% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1281  t=9.13595996613  91% completed  (91% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3700008 | Delay: 0.001s
+** Event #1282  t=9.138498193165  91% completed  (91% total)   LightIoTNetwork.sensor[31] (SensorNode, id=33)
+** Event #1283  t=9.138498193165  91% completed  (91% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1284  t=9.139498193165  91% completed  (91% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3200008 | Delay: 0.001s
+** Event #1285  t=9.154202260636  91% completed  (91% total)   LightIoTNetwork.sensor[6] (SensorNode, id=8)
+** Event #1286  t=9.154202260636  91% completed  (91% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1287  t=9.155202260636  91% completed  (91% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=700008 | Delay: 0.001s
+** Event #1288  t=9.175700221397  91% completed  (91% total)   LightIoTNetwork.sensor[49] (SensorNode, id=51)
+** Event #1289  t=9.175700221397  91% completed  (91% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1290  t=9.176700221397  91% completed  (91% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=5000008 | Delay: 0.001s
+** Event #1291  t=9.217618246797  92% completed  (92% total)   LightIoTNetwork.sensor[2] (SensorNode, id=4)
+** Event #1292  t=9.217618246797  92% completed  (92% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1293  t=9.218618246797  92% completed  (92% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=300008 | Delay: 0.001s
+** Event #1294  t=9.219044545106  92% completed  (92% total)   LightIoTNetwork.sensor[7] (SensorNode, id=9)
+** Event #1295  t=9.219044545106  92% completed  (92% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1296  t=9.220044545106  92% completed  (92% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=800008 | Delay: 0.001s
+** Event #1297  t=9.244485438755  92% completed  (92% total)   LightIoTNetwork.sensor[27] (SensorNode, id=29)
+** Event #1298  t=9.244485438755  92% completed  (92% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1299  t=9.244552866044  92% completed  (92% total)   LightIoTNetwork.sensor[39] (SensorNode, id=41)
+** Event #1300  t=9.244552866044  92% completed  (92% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1301  t=9.245485438755  92% completed  (92% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2800008 | Delay: 0.001s
+** Event #1302  t=9.245552866044  92% completed  (92% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4000008 | Delay: 0.001s
+** Event #1303  t=9.271291915979  92% completed  (92% total)   LightIoTNetwork.sensor[14] (SensorNode, id=16)
+** Event #1304  t=9.271291915979  92% completed  (92% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1305  t=9.272291915979  92% completed  (92% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1500008 | Delay: 0.001s
+** Event #1306  t=9.275555197616  92% completed  (92% total)   LightIoTNetwork.sensor[20] (SensorNode, id=22)
+** Event #1307  t=9.275555197616  92% completed  (92% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1308  t=9.276555197616  92% completed  (92% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2100008 | Delay: 0.001s
+** Event #1309  t=9.300213029376  93% completed  (93% total)   LightIoTNetwork.sensor[38] (SensorNode, id=40)
+** Event #1310  t=9.300213029376  93% completed  (93% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1311  t=9.301213029376  93% completed  (93% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3900008 | Delay: 0.001s
+** Event #1312  t=9.302881636844  93% completed  (93% total)   LightIoTNetwork.sensor[0] (SensorNode, id=2)
+** Event #1313  t=9.302881636844  93% completed  (93% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1314  t=9.303881636844  93% completed  (93% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=100008 | Delay: 0.001s
+** Event #1315  t=9.318833992629  93% completed  (93% total)   LightIoTNetwork.sensor[5] (SensorNode, id=7)
+** Event #1316  t=9.318833992629  93% completed  (93% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1317  t=9.319833992629  93% completed  (93% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=600008 | Delay: 0.001s
+** Event #1318  t=9.32174068489  93% completed  (93% total)   LightIoTNetwork.sensor[9] (SensorNode, id=11)
+** Event #1319  t=9.32174068489  93% completed  (93% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1320  t=9.32274068489  93% completed  (93% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1000008 | Delay: 0.001s
+** Event #1321  t=9.323414307832  93% completed  (93% total)   LightIoTNetwork.sensor[3] (SensorNode, id=5)
+** Event #1322  t=9.323414307832  93% completed  (93% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1323  t=9.324414307832  93% completed  (93% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=400008 | Delay: 0.001s
+** Event #1324  t=9.348084459081  93% completed  (93% total)   LightIoTNetwork.sensor[43] (SensorNode, id=45)
+** Event #1325  t=9.348084459081  93% completed  (93% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1326  t=9.349084459081  93% completed  (93% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4400008 | Delay: 0.001s
+** Event #1327  t=9.364408986362  93% completed  (93% total)   LightIoTNetwork.sensor[42] (SensorNode, id=44)
+** Event #1328  t=9.364408986362  93% completed  (93% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1329  t=9.365408986362  93% completed  (93% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4300008 | Delay: 0.001s
+** Event #1330  t=9.375337795447  93% completed  (93% total)   LightIoTNetwork.sensor[46] (SensorNode, id=48)
+** Event #1331  t=9.375337795447  93% completed  (93% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1332  t=9.376337795447  93% completed  (93% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4700008 | Delay: 0.001s
+** Event #1333  t=9.399447304197  93% completed  (93% total)   LightIoTNetwork.sensor[40] (SensorNode, id=42)
+** Event #1334  t=9.399447304197  93% completed  (93% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1335  t=9.400447304197  94% completed  (94% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4100008 | Delay: 0.001s
+** Event #1336  t=9.402720739414  94% completed  (94% total)   LightIoTNetwork.sensor[15] (SensorNode, id=17)
+** Event #1337  t=9.402720739414  94% completed  (94% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1338  t=9.403720739414  94% completed  (94% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1600009 | Delay: 0.001s
+** Event #1339  t=9.430134364032  94% completed  (94% total)   LightIoTNetwork.sensor[35] (SensorNode, id=37)
+** Event #1340  t=9.430134364032  94% completed  (94% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1341  t=9.431134364032  94% completed  (94% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3600008 | Delay: 0.001s
+** Event #1342  t=9.483332121931  94% completed  (94% total)   LightIoTNetwork.sensor[16] (SensorNode, id=18)
+** Event #1343  t=9.483332121931  94% completed  (94% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1344  t=9.484332121931  94% completed  (94% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1700008 | Delay: 0.001s
+** Event #1345  t=9.530206863209  95% completed  (95% total)   LightIoTNetwork.sensor[32] (SensorNode, id=34)
+** Event #1346  t=9.530206863209  95% completed  (95% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1347  t=9.531206863209  95% completed  (95% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3300009 | Delay: 0.001s
+** Event #1348  t=9.531683798971  95% completed  (95% total)   LightIoTNetwork.sensor[13] (SensorNode, id=15)
+** Event #1349  t=9.531683798971  95% completed  (95% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1350  t=9.532683798971  95% completed  (95% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1400009 | Delay: 0.001s
+** Event #1351  t=9.587850302503  95% completed  (95% total)   LightIoTNetwork.sensor[26] (SensorNode, id=28)
+** Event #1352  t=9.587850302503  95% completed  (95% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1353  t=9.588850302503  95% completed  (95% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2700008 | Delay: 0.001s
+** Event #1354  t=9.602280282229  96% completed  (96% total)   LightIoTNetwork.sensor[21] (SensorNode, id=23)
+** Event #1355  t=9.602280282229  96% completed  (96% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1356  t=9.603280282229  96% completed  (96% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2200008 | Delay: 0.001s
+** Event #1357  t=9.609749642107  96% completed  (96% total)   LightIoTNetwork.sensor[48] (SensorNode, id=50)
+** Event #1358  t=9.609749642107  96% completed  (96% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1359  t=9.610749642107  96% completed  (96% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4900009 | Delay: 0.001s
+** Event #1360  t=9.655335246865  96% completed  (96% total)   LightIoTNetwork.sensor[37] (SensorNode, id=39)
+** Event #1361  t=9.655335246865  96% completed  (96% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1362  t=9.656335246865  96% completed  (96% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3800009 | Delay: 0.001s
+** Event #1363  t=9.671970305779  96% completed  (96% total)   LightIoTNetwork.sensor[24] (SensorNode, id=26)
+** Event #1364  t=9.671970305779  96% completed  (96% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1365  t=9.672970305779  96% completed  (96% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2500009 | Delay: 0.001s
+** Event #1366  t=9.686376093327  96% completed  (96% total)   LightIoTNetwork.sensor[18] (SensorNode, id=20)
+** Event #1367  t=9.686376093327  96% completed  (96% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1368  t=9.687376093327  96% completed  (96% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1900009 | Delay: 0.001s
+** Event #1369  t=9.721218250226  97% completed  (97% total)   LightIoTNetwork.sensor[34] (SensorNode, id=36)
+** Event #1370  t=9.721218250226  97% completed  (97% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1371  t=9.722218250226  97% completed  (97% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3500008 | Delay: 0.001s
+** Event #1372  t=9.797678192705  97% completed  (97% total)   LightIoTNetwork.sensor[30] (SensorNode, id=32)
+** Event #1373  t=9.797678192705  97% completed  (97% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1374  t=9.798678192705  97% completed  (97% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3100009 | Delay: 0.001s
+** Event #1375  t=9.806350715878  98% completed  (98% total)   LightIoTNetwork.sensor[29] (SensorNode, id=31)
+** Event #1376  t=9.806350715878  98% completed  (98% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1377  t=9.807350715878  98% completed  (98% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=3000009 | Delay: 0.001s
+** Event #1378  t=9.811688442668  98% completed  (98% total)   LightIoTNetwork.sensor[17] (SensorNode, id=19)
+** Event #1379  t=9.811688442668  98% completed  (98% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1380  t=9.812688442668  98% completed  (98% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1800009 | Delay: 0.001s
+** Event #1381  t=9.83858014401  98% completed  (98% total)   LightIoTNetwork.sensor[25] (SensorNode, id=27)
+** Event #1382  t=9.83858014401  98% completed  (98% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1383  t=9.83958014401  98% completed  (98% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2600009 | Delay: 0.001s
+** Event #1384  t=9.852079338487  98% completed  (98% total)   LightIoTNetwork.sensor[28] (SensorNode, id=30)
+** Event #1385  t=9.852079338487  98% completed  (98% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1386  t=9.853079338487  98% completed  (98% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2900009 | Delay: 0.001s
+** Event #1387  t=9.856493003715  98% completed  (98% total)   LightIoTNetwork.sensor[11] (SensorNode, id=13)
+** Event #1388  t=9.856493003715  98% completed  (98% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1389  t=9.857493003715  98% completed  (98% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1200009 | Delay: 0.001s
+** Event #1390  t=9.871991891832  98% completed  (98% total)   LightIoTNetwork.sensor[23] (SensorNode, id=25)
+** Event #1391  t=9.871991891832  98% completed  (98% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1392  t=9.872991891832  98% completed  (98% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=2400009 | Delay: 0.001s
+** Event #1393  t=9.919313852208  99% completed  (99% total)   LightIoTNetwork.sensor[41] (SensorNode, id=43)
+** Event #1394  t=9.919313852208  99% completed  (99% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1395  t=9.920313852208  99% completed  (99% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4200009 | Delay: 0.001s
+** Event #1396  t=9.960056742886  99% completed  (99% total)   LightIoTNetwork.sensor[12] (SensorNode, id=14)
+** Event #1397  t=9.960056742886  99% completed  (99% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1398  t=9.961056742886  99% completed  (99% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=1300009 | Delay: 0.001s
+** Event #1399  t=9.971314287232  99% completed  (99% total)   LightIoTNetwork.sensor[8] (SensorNode, id=10)
+** Event #1400  t=9.971314287232  99% completed  (99% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1401  t=9.972314287232  99% completed  (99% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=900009 | Delay: 0.001s
+** Event #1402  t=9.989740453941  99% completed  (99% total)   LightIoTNetwork.sensor[45] (SensorNode, id=47)
+** Event #1403  t=9.989740453941  99% completed  (99% total)   LightIoTNetwork.gateway (GatewayNode, id=52)
+** Event #1404  t=9.990740453941  99% completed  (99% total)   LightIoTNetwork.cloud (CloudServer, id=53)
+[INFO]	[CloudServer] Received message ID=4600009 | Delay: 0.001s
+** Event #1405  t=10  100% completed  (100% total)   
+
+<!> Simulation time limit reached -- at t=10s, event #1405
+
+Calling finish() at end of Run #0...
+[INFO]	[SensorNode] Energy Remaining: 4820 mJ (96.4%)
+[INFO]	[SensorNode] Energy Remaining: 4820 mJ (96.4%)
+[INFO]	[SensorNode] Energy Remaining: 4820 mJ (96.4%)
+[INFO]	[SensorNode] Energy Remaining: 4820 mJ (96.4%)
+[INFO]	[SensorNode] Energy Remaining: 4820 mJ (96.4%)
+[INFO]	[SensorNode] Energy Remaining: 4820 mJ (96.4%)
+[INFO]	[SensorNode] Energy Remaining: 4820 mJ (96.4%)
+[INFO]	[SensorNode] Energy Remaining: 4820 mJ (96.4%)
+[INFO]	[SensorNode] Energy Remaining: 4800 mJ (96%)
+[INFO]	[SensorNode] Energy Remaining: 4820 mJ (96.4%)
+[INFO]	[SensorNode] Energy Remaining: 4820 mJ (96.4%)
+[INFO]	[SensorNode] Energy Remaining: 4800 mJ (96%)
+[INFO]	[SensorNode] Energy Remaining: 4800 mJ (96%)
+[INFO]	[SensorNode] Energy Remaining: 4800 mJ (96%)
+[INFO]	[SensorNode] Energy Remaining: 4820 mJ (96.4%)
+[INFO]	[SensorNode] Energy Remaining: 4800 mJ (96%)
+[INFO]	[SensorNode] Energy Remaining: 4820 mJ (96.4%)
+[INFO]	[SensorNode] Energy Remaining: 4800 mJ (96%)
+[INFO]	[SensorNode] Energy Remaining: 4800 mJ (96%)
+[INFO]	[SensorNode] Energy Remaining: 4820 mJ (96.4%)
+[INFO]	[SensorNode] Energy Remaining: 4820 mJ (96.4%)
+[INFO]	[SensorNode] Energy Remaining: 4820 mJ (96.4%)
+[INFO]	[SensorNode] Energy Remaining: 4820 mJ (96.4%)
+[INFO]	[SensorNode] Energy Remaining: 4800 mJ (96%)
+[INFO]	[SensorNode] Energy Remaining: 4800 mJ (96%)
+[INFO]	[SensorNode] Energy Remaining: 4800 mJ (96%)
+[INFO]	[SensorNode] Energy Remaining: 4820 mJ (96.4%)
+[INFO]	[SensorNode] Energy Remaining: 4820 mJ (96.4%)
+[INFO]	[SensorNode] Energy Remaining: 4800 mJ (96%)
+[INFO]	[SensorNode] Energy Remaining: 4800 mJ (96%)
+[INFO]	[SensorNode] Energy Remaining: 4800 mJ (96%)
+[INFO]	[SensorNode] Energy Remaining: 4820 mJ (96.4%)
+[INFO]	[SensorNode] Energy Remaining: 4800 mJ (96%)
+[INFO]	[SensorNode] Energy Remaining: 4820 mJ (96.4%)
+[INFO]	[SensorNode] Energy Remaining: 4820 mJ (96.4%)
+[INFO]	[SensorNode] Energy Remaining: 4820 mJ (96.4%)
+[INFO]	[SensorNode] Energy Remaining: 4820 mJ (96.4%)
+[INFO]	[SensorNode] Energy Remaining: 4800 mJ (96%)
+[INFO]	[SensorNode] Energy Remaining: 4820 mJ (96.4%)
+[INFO]	[SensorNode] Energy Remaining: 4820 mJ (96.4%)
+[INFO]	[SensorNode] Energy Remaining: 4820 mJ (96.4%)
+[INFO]	[SensorNode] Energy Remaining: 4800 mJ (96%)
+[INFO]	[SensorNode] Energy Remaining: 4820 mJ (96.4%)
+[INFO]	[SensorNode] Energy Remaining: 4820 mJ (96.4%)
+[INFO]	[SensorNode] Energy Remaining: 4820 mJ (96.4%)
+[INFO]	[SensorNode] Energy Remaining: 4800 mJ (96%)
+[INFO]	[SensorNode] Energy Remaining: 4820 mJ (96.4%)
+[INFO]	[SensorNode] Energy Remaining: 4820 mJ (96.4%)
+[INFO]	[SensorNode] Energy Remaining: 4800 mJ (96%)
+[INFO]	[SensorNode] Energy Remaining: 4820 mJ (96.4%)
+[INFO]	[GatewayNode] Received=468, Forwarded=468, Dropped=0
+[INFO]	[GatewayNode] Energy Remaining: 320 mJ (6.4%)
+[INFO]	[CloudServer] Total Messages Received: 468
+[INFO]	[CloudServer] Average End-to-End Delay: 0.001 seconds
+[INFO]	[FakeNode] Attack simulation completed.
+
+End.
