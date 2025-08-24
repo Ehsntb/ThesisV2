@@ -1,6 +1,10 @@
 #include <omnetpp.h>
 #include <cstring>
 #include <set>
+#include <vector>
+#include <string>
+#include <functional>
+#include <cstdint>
 #include "LightIoTMessage_m.h"
 
 using namespace omnetpp;
@@ -32,8 +36,47 @@ class GatewayNode : public cSimpleModule {
     simtime_t hmacWindow = 1;      // s
     simtime_t procDelay  = 0;      // s
 
-    // Anti-replay (ID set)
+    // Duplicate detection method
+    std::string duplicateMethod = "set"; // "set" | "bloom"
+
+    // Set-based anti-replay
     std::set<int> seenIds;
+
+    // Bloom filter anti-replay
+    int bloomBits    = 16384;
+    int bloomHashes  = 3;
+    std::vector<uint8_t> bloom; // bit array
+
+    inline void bloomInit(int bits) {
+        int bytes = (bits + 7) / 8;
+        bloom.assign(bytes, 0u);
+    }
+    inline size_t bloomHash(uint64_t x, uint64_t seed) const {
+        // simple mix using std::hash and a seed
+        return std::hash<uint64_t>{}(x ^ (seed * 0x9e3779b97f4a7c15ULL));
+    }
+    inline bool bloomTest(int id) const {
+        if (bloom.empty()) return false;
+        bool ok = true;
+        for (int k = 0; k < bloomHashes; ++k) {
+            size_t h = bloomHash(static_cast<uint64_t>(id), (uint64_t)k);
+            size_t bit = h % (size_t)bloomBits;
+            size_t byteIdx = bit >> 3;
+            uint8_t mask = (uint8_t)(1u << (bit & 7));
+            if ((bloom[byteIdx] & mask) == 0) { ok = false; break; }
+        }
+        return ok; // true => probably seen before (can be false positive)
+    }
+    inline void bloomAdd(int id) {
+        if (bloom.empty()) return;
+        for (int k = 0; k < bloomHashes; ++k) {
+            size_t h = bloomHash(static_cast<uint64_t>(id), (uint64_t)k);
+            size_t bit = h % (size_t)bloomBits;
+            size_t byteIdx = bit >> 3;
+            uint8_t mask = (uint8_t)(1u << (bit & 7));
+            bloom[byteIdx] |= mask;
+        }
+    }
 
   protected:
     virtual void initialize() override {
@@ -50,6 +93,20 @@ class GatewayNode : public cSimpleModule {
         checkHmac       = par("checkHmac").boolValue();
         checkFreshness  = par("checkFreshness").boolValue();
         checkDuplicate  = par("checkDuplicate").boolValue();
+
+        // Duplicate method
+        if (hasPar("duplicateMethod"))
+            duplicateMethod = par("duplicateMethod").stdstringValue();
+        if (duplicateMethod != "set" && duplicateMethod != "bloom")
+            duplicateMethod = "set";
+
+        if (hasPar("bloomBits"))   bloomBits   = par("bloomBits").intValue();
+        if (hasPar("bloomHashes")) bloomHashes = par("bloomHashes").intValue();
+        if (duplicateMethod == "bloom") {
+            if (bloomBits < 8) bloomBits = 8;
+            if (bloomHashes < 1) bloomHashes = 1;
+            bloomInit(bloomBits);
+        }
     }
 
     virtual void handleMessage(cMessage *msg) override {
@@ -72,7 +129,15 @@ class GatewayNode : public cSimpleModule {
             // Compute checks with ablation toggles
             bool hmacOk = !checkHmac || ((m->getHmac() != nullptr) && (std::strcmp(m->getHmac(), "VALID") == 0));
             bool fresh  = !checkFreshness || ((simTime() - m->getTimestamp()) <= hmacWindow);
-            bool notDup = !checkDuplicate || (seenIds.find(m->getId()) == seenIds.end());
+
+            bool notDup = true;
+            if (checkDuplicate) {
+                if (duplicateMethod == "set") {
+                    notDup = (seenIds.find(m->getId()) == seenIds.end());
+                } else { // bloom
+                    notDup = !bloomTest(m->getId());
+                }
+            }
 
             if (!(hmacOk && fresh && notDup)) {
                 if (checkHmac && !hmacOk)      droppedHmac++;
@@ -89,8 +154,9 @@ class GatewayNode : public cSimpleModule {
             }
         }
 
-        // Register ID (harmless even if checkDuplicate=false)
-        seenIds.insert(m->getId());
+        // Register ID (even if ablation off)
+        if (duplicateMethod == "set")  seenIds.insert(m->getId());
+        else                             bloomAdd(m->getId());
 
         // Forwarding cost
         battery -= costForward;
