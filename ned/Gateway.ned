@@ -10,6 +10,9 @@ simple GatewayNode
         double costForward_mJ = default(5);
         double costVerify_mJ  = default(5);
         double batteryInit_mJ = default(5000);
+        bool checkHmac      = default(true);
+        bool checkFreshness = default(true);
+        bool checkDuplicate = default(true);
     gates:
         input  in[];
         output out;
