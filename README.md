@@ -14,7 +14,44 @@ The core idea emerged from the base paper titled:
 
 Our project extends this protocol by simulating it in a realistic OMNeT++ environment and enhancing it with multiple additional layers of protection and evaluation.
 
+**Note on scope:** This repository implements a lightweight, **parameterized** simulation of anti‑replay mechanisms (symbolic HMAC tag, timestamp freshness window, duplicate‑ID filtering). Real cryptographic primitives (e.g., AES/HMAC byte‑level computation) are **not** executed inside the simulator; their costs are modeled via parameters.
+
 ⸻
+
+⚡ Quick Start
+
+```bash
+# 1) Build (from repo root)
+rm -rf out Makefile && \
+opp_makemake -f --deep -o LightIoTSimulation -O out && \
+make -j"$(nproc)"
+
+# 2) Run a single scenario (headless)
+./out/clang-release/LightIoTSimulation -u Cmdenv -n .:ned -f run_record.ini -c Secure50_record
+
+# (GUI) Qtenv
+./out/clang-release/LightIoTSimulation -u Qtenv  -n .:ned -f run_record.ini -c Secure5_record
+
+# 3) Run all + aggregate + plot
+./run-all.sh
+
+# 4) View results
+column -s, -t < results/summary_all_record.csv
+ls -1 results/chart_*.png
+```
+
+🧩 Prerequisites
+
+- **OMNeT++ 6.1** installed and environment loaded:
+  ```bash
+  source /path/to/omnetpp-6.1/setenv
+  ```
+- **C++ toolchain**: clang/gcc + make
+- **Python 3.10+** with:
+  ```bash
+  pip install pandas matplotlib
+  ```
+- **OS tested**: Ubuntu 22.04 LTS
 
 🚧 Project Phases Breakdown
 
@@ -31,17 +68,20 @@ Our project extends this protocol by simulating it in a realistic OMNeT++ enviro
 
 ✅ Phase 2: OMNeT++ Simulation Code Implementation
 	•	Developed simulation logic in C++:
-	•	Message structures (LightIoTMessage.msg)
-	•	Node behaviors (SensorNode.cc, GatewayNode.cc, etc.)
-	•	Logging systems
-	•	Introduced AES encryption at application layer.
-	•	Implemented Secure Token mechanism for replay protection.
-	•	Created omnetpp.ini and omnetpp_secure.ini for multiple scenario setups.
+	•	Message structures (`LightIoTMessage_m.*` minimal C++ class; `.msg` generator not used here)
+	•	Node behaviors (`SensorNode.cc`, `GatewayNode.cc`, `CloudServer.cc`, `FakeNode.cc`)
+	•	Logging systems (OMNeT++ scalars/vectors + CSV aggregation)
+	•	Implemented lightweight security checks at the Gateway:
+	    – symbolic HMAC tag verification ("VALID"/"INVALID")
+	    – timestamp freshness window (`hmacWindow`)
+	    – duplicate ID filtering
+	•	Parameterized energy model (Forward=5mJ, Verify=5mJ) and optional processing delay (`procDelay`)
+	•	Created `run_record.ini` for reproducible scenarios (Secure / NoSec / Attack) at 5, 20, and 50 nodes
 
 Three main scenarios simulated:
-	1.	NoSecurity — Base model with no encryption
-	2.	Secure — LightIoT full secure model
-	3.	Attack — FakeNode launches Replay Attack
+	1.	NoSecurity — Base model with no security checks
+	2.	Secure — Lightweight anti‑replay checks (HMAC tag + freshness window + duplicate‑ID)
+	3.	Attack — FakeNode launches Replay Attack (and optional MITM variant via invalid HMAC)
 
 ✅ Phase 3: Execution and Parallel Simulation
 	•	Built and executed scenarios using Cmdenv and Qtenv.
@@ -63,260 +103,274 @@ Three main scenarios simulated:
 ⸻
 
 🛡️ Security Methods Used
-	•	AES-128 Encryption — Lightweight block cipher
-	•	Timestamp-Based Tokens — Prevent replay attacks
-	•	Packet Signing & ID Verification — For MITM defense
-	•	Scenario-specific behavior simulation using FakeNode
+	•	Symbolic HMAC Tag Verification at Gateway ("VALID"/"INVALID")
+	•	Timestamp Freshness Window (`hmacWindow`) to block stale replays
+	•	Duplicate Message‑ID Filtering (per‑run set of seen IDs)
+	•	Configurable energy accounting (Forward=5mJ, Verify=5mJ); real cryptographic computation is not performed inside the simulator (kept parametric)
+
+⸻
+
+🎯 Threat Model & Assumptions
+
+- **Attacker capability**: can sniff and inject packets on the path Sensor→Gateway (FakeNode models this). No computational break of crypto is assumed (Dolev–Yao style).
+- **Replay**: adversary re-sends previously observed packets with stale timestamps; in MITM variant it may tamper the tag to `INVALID`.
+- **Clocking**: loose synchronization assumed; the Gateway uses a **freshness window** (`hmacWindow`) for tolerance.
+- **Identity/IDs**: each Sensor uses a unique ID offset; Gateway tracks a per-run set of seen IDs (duplicate filter).
+- **Network**: the base runs assume an ideal channel (no loss/jitter) to isolate the effect of security. Sensitivity to channel effects can be added in future work.
+- **Energy model**: verification/forwarding costs are **parametric**; no byte-level crypto is executed in the simulator.
 
 ⸻
 
 🔄 System Message Flow
 
-To clarify the internal packet processing in the LightIoT simulation, the following is a step-by-step walkthrough of a single message lifecycle in the **Secure** scenario:
+To clarify the internal packet processing in the **Secure** scenario implemented here (lightweight anti‑replay), the following is a step‑by‑step walkthrough:
 
 1. **SensorNode Initialization**
-   - SensorNode initializes with its encryption key and token settings.
-   - Schedules periodic data generation events.
+   - Each SensorNode derives a unique base offset from its index (e.g., 100000, 200000, …).
+   - A periodic timer is scheduled for data generation.
 
 2. **Message Creation**
-   - At each scheduled time, a message is created.
-   - The payload is encrypted using AES-128.
-   - A timestamp-based token is generated and appended to the message.
+   - On each trigger, a `LightIoTMessage` is created.
+   - Fields are set as:
+     - `id = baseOffset + localCounter++` (unique per sensor)
+     - `hmac = "VALID"` (symbolic tag; no real crypto)
+     - `timestamp = simTime()`
+   - The message is sent to the Gateway.
 
-3. **Transmission to GatewayNode**
-   - The encrypted message with token is sent to the associated GatewayNode.
+3. **GatewayNode Verification**
+   - Gateway receives the message and accounts energy budget.
+   - If `securityEnabled=true`, the following checks are applied:
+     - **HMAC tag check:** `hmac == "VALID"`
+     - **Freshness:** `simTime() - timestamp ≤ hmacWindow`
+     - **Duplicate filter:** `id` not seen before in this run
+   - Failing any check → **drop** and log; otherwise message is **forwarded**.
+   - Optional processing delay `procDelay` is applied (models verification time).
+   - Energy costs: `costVerify` (when enabled) and `costForward`.
 
-4. **GatewayNode Verification**
-   - GatewayNode receives the packet.
-   - It decrypts the payload and verifies:
-     - Token freshness (based on time drift tolerance)
-     - Message authenticity using internal signature validation.
-   - If verification fails, the message is dropped and logged.
-   - If passed, it is forwarded to the CloudServer.
+4. **CloudServer Handling**
+   - Receives forwarded messages.
+   - Computes end‑to‑end delay `simTime() - timestamp` and updates counters.
+   - Used only for measurement/logging in this project.
 
-5. **CloudServer Handling**
-   - Receives verified messages from GatewayNodes.
-   - Logs message receipt for delay analysis.
-   - In a real-world case, it would store or react to this data.
-
-6. **Logging and Metrics**
-   - Every transition is logged in `log_secure.txt`.
-   - Packet timestamps are used to compute delay.
-   - Energy metrics are estimated based on node activity and scenario mode.
-
-This flow ensures each packet undergoes a multi-layered security validation, making the system resilient against replay attacks and timing manipulations.
+5. **FakeNode (Attacker)**
+   - Periodically injects packets every `replayInterval` (default 2.5s).
+   - **Replay mode:** fixed `id`, `hmac="VALID"`, and a stale `timestamp` (e.g., `simTime()-2s`).
+   - **MITM mode:** increments `id` but sets `hmac="INVALID"` (always dropped in Secure).
 
 ⸻
 
 📊 Data Collected (Energy/Delay/Drop Rate)
 
-Sample data extracted from energy_delay.csv:
+Core scalars are recorded per run and aggregated into `results/summary_all_record.csv`:
 
-Scenario	Nodes	Mode	AvgEnergySensor (mJ)	AvgEnergyGateway (mJ)	AvgDelay (s)	DropRate (%)
-Secure	5	Secure	265.0	180.0	0.0123	0.0
-NoSecurity	5	NoSecurity	135.0	90.0	0.0091	0.0
-Attack	5	Replay	270.0	185.0	0.0139	2.7
-Secure	50	Secure	2600.0	2250.0	0.0214	0.0
-Attack	50	Replay	2670.0	2315.0	0.0251	5.8
+| Config                  | Nodes | Mode             | Cloud_TotalReceived | GW_Received | GW_Forwarded | GW_Dropped | GW_Battery_mJ | Sensor_AvgBattery_mJ | Cloud_AvgDelay_s | Fake_AttacksSent |
+|-------------------------|-------|------------------|---------------------|-------------|--------------|------------|---------------|----------------------|------------------|------------------|
+| Secure50_record         | 50    | Secure           | 468                 | 468         | 468          | 0          | 320           | 4812.8               | 0.001            | 0                |
+| NoSec50_record          | 50    | NoSec            | 468                 | 468         | 468          | 0          | 2660          | 4812.8               | 0.0              | 0                |
+| Attack50_record         | 50    | Attack           | 468                 | 471         | 468          | 3          | 305           | 4812.8               | 0.001            | 3                |
+| AttackOnNoSec50_record  | 50    | Attack‑NoSec     | 479                 | 479         | 479          | 0          | 2605          | 4812.8               | 0.0167           | 4                |
+| Attack50_window3s_record| 50    | Attack‑Window3s  | 476                 | 479         | 476          | 3          | 225           | 4812.8               | 0.0052           | 4                |
 
-This showed clear effectiveness of the secure model with marginal increases in energy use but drastic drop in vulnerability.
+See `results/*.png` for the figures generated from this CSV (delay, energy, drops, and sensitivity plots).
+
+🧪 Experiment Matrix (Configs)
+
+| Config Name                  | Nodes | Security | Attacker | Notes                                  |
+|-----------------------------|-------|----------|----------|----------------------------------------|
+| Secure5_record              | 5     | ON       | OFF      | Baseline secure                        |
+| Secure20_record             | 20    | ON       | OFF      |                                        |
+| Secure50_record             | 50    | ON       | OFF      |                                        |
+| NoSec5_record               | 5     | OFF      | OFF      | Baseline no-security                   |
+| NoSec20_record              | 20    | OFF      | OFF      |                                        |
+| NoSec50_record              | 50    | OFF      | OFF      |                                        |
+| Attack5_record              | 5     | ON       | Replay   | 3 injections / 10s                     |
+| Attack20_record             | 20    | ON       | Replay   |                                        |
+| Attack50_record             | 50    | ON       | Replay   |                                        |
+| AttackOnNoSec50_record      | 50    | OFF      | Replay   | Attacker against NoSec                 |
+| Attack50_window3s_record    | 50    | ON       | Replay   | Freshness window = 3s (sensitivity)    |
+
+📌 **Key Findings at a Glance**
+- **Delay (E2E)**: NoSec ≈ 0 ms; Secure ≈ **1 ms**; Attack-on-Secure ≈ **1–5 ms** depending on window.
+- **Gateway Energy**: Secure consumes ≈ **2×** NoSec (due to verification cost); at 50 nodes → NoSec ≈ **2660 mJ**, Secure ≈ **320 mJ**.
+- **Replay Robustness**: Secure drops replay injections (3/10s). In **NoSec**, replays **pass through** (Cloud↑, AvgDelay↑).
+- **Freshness Window Sensitivity (3s)**: at most one stale replay may pass; duplicates are blocked by the ID filter.
 
 ⸻
 
 📁 Final File Structure Summary
 
 thesis/
-├── src/                  # All OMNeT++ simulation code
-│   ├── SensorNode.cc / .h
-│   ├── GatewayNode.cc / .h
-│   ├── CloudServer.cc / .h
-│   ├── FakeNode.cc / .h
-│   ├── LightIoTMessage.msg / _m.cc / _m.h
-│
-├── simulations/
-│   ├── omnetpp.ini
-│   └── omnetpp_secure.ini
-│
+├── src/                      # OMNeT++ simulation code (C++)
+│   ├── SensorNode.cc
+│   ├── GatewayNode.cc
+│   ├── CloudServer.cc
+│   └── FakeNode.cc
+├── ned/                      # NED topology files
+│   ├── LightIoTNetwork.ned
+│   ├── SensorNode.ned
+│   ├── GatewayNode.ned
+│   └── CloudServer.ned / FakeNode.ned
+├── run_record.ini            # Main reproducible experiment matrix (Secure/NoSec/Attack, 5/20/50)
 ├── results/
-│   ├── energy_delay.csv
-│   ├── stats_summary.csv
-│   ├── log_energy_delay.txt
-│   ├── log_secure.txt
-│
-├── analysis/
-│   ├── plot_energy.py
-│   ├── plot_delay.py
-│   ├── plot_droprate.py
-│   └── summary_parser.py
-│
-├── plots/               # Auto-generated PNG visualizations
-│
-├── run.sh / Makefile
+│   ├── *.sca / *.vec         # OMNeT++ scalar/vector outputs
+│   ├── summary_all_record.csv
+│   └── chart_*.png           # Figures (delay/energy/drops/sensitivity)
+├── plots/                    # (optional) additional figures
+├── run-all.sh                # One‑click script: run all + aggregate + plot
 └── README.md
-
-
-⸻
-
-🎯 Applications and Impact
-	•	Smart Hospitals: Real-time secure monitoring of vitals
-	•	Wearable Medical Devices: Secure health data transmission
-	•	Emergency Systems: Secure alerts with minimum delay
-
-LightIoT ensures high data integrity, low energy footprint, and attack resilience, all of which are vital in life-critical environments.
-
-⸻
-
-📎 Next Steps (If Needed)
-	•	Add more attack types (e.g., spoofing)
-	•	Integrate blockchain-inspired auditing (optional future work)
-	•	Extend to WSN-IoT hybrid scenarios
-	•	Prepare ISI-level papers on performance tradeoffs and architecture
-
-
-⸻
-
-📚 Thesis Writing Continuation Plan
-
-The documentation and codebase here represent not just a simulation, but a full-stack validation of a proposed secure communication model in the Medical IoT domain. To ensure academic readiness and transferability, the next documentation phases will include:
-
-1. **Persian Translation of the Full Report** — A complete Persian version of all technical explanations, suitable for submission to Iranian academic committees.
-2. **Detailed Explanation of Each C++ Class** — Including method roles, interactions, and flow of encrypted vs. non-encrypted packets.
-3. **Execution Tracing** — Step-by-step flowchart and description of simulation run (init → packet creation → encryption → routing → result logging).
-4. **Full Academic Abstract (EN + FA)** — To be used in the printed thesis.
-5. **List of Referenced Works** — Including the original LightIoT article and related simulations using OMNeT++.
 
 ⸻
 
 🧪 Experimental Configuration & Runtime Behavior
 
-This section documents the technical setup, test configurations, and detailed runtime parameters for reproducibility and advanced benchmarking.
-
 ▶️ **Simulation Environment**:
-- **Simulator**: OMNeT++ 6.x (install from https://omnetpp.org/download)
-- **Execution Mode**: Both `Cmdenv` and `Qtenv` supported
-- **Platform**: Linux/macOS (Tested on Ubuntu 22.04 LTS)
-- **Compiler**: g++ 11+
-- **Python Version**: 3.10+
-- **Python Packages**: `pandas`, `matplotlib` (install with `pip install pandas matplotlib`)
+- **Simulator**: OMNeT++ 6.1
+- **Execution Mode**: `Cmdenv` and `Qtenv`
+- **Platform**: Ubuntu 22.04 LTS (tested)
+- **Python**: 3.10+ with `pandas`, `matplotlib` (for plotting)
 
-▶️ **Node Configuration**:
-- Node counts tested: 5, 20, 50
+▶️ **Scenarios & Node Counts**:
+- Node counts: 5, 20, 50
 - Scenarios:
-  - `NoSecurity`: Plain communication
-  - `Secure`: AES + Token + Verification enabled
-  - `Attack`: Replay scenario via FakeNode
+  - `NoSecurity`: security disabled (no verify, no procDelay)
+  - `Secure`: symbolic HMAC + freshness window + duplicate‑ID
+  - `Attack`: Replay via FakeNode (and optional MITM with invalid HMAC)
 
-▶️ **Timing Parameters**:
-- Sensor interval: 0.1s to 1s (randomized)
-- Replay injection: every 2.5s (in `Attack` mode)
-- Token lifetime: ±0.5s drift accepted at Gateway
+▶️ **Key Parameters**:
+- Simulation time: 10s, seed: 123 (reproducible)
+- Sensor send interval: ~1s (jittered)
+- Replay injection: every 2.5s (3–4 replays per 10s)
+- Freshness window: 1s (Secure); sensitivity run at 3s
+- Energy model: `costForward_mJ = 5`, `costVerify_mJ = 5`
+- Optional processing delay at Gateway: `procDelay = 1ms` (Secure)
 
-▶️ **Energy Estimation Assumptions**:
-- Tx per packet: ~5mJ
-- Rx per packet: ~3mJ
-- AES encryption: ~1.2mJ
-- Token validation: ~0.7mJ
+▶️ **Outputs**:
+- Scalars/Vectors → `results/*.sca`, `results/*.vec`
+- Aggregated CSV → `results/summary_all_record.csv`
+- Figures → `results/chart_*.png`
 
-▶️ **CSV Logging Format**:
-Each simulation writes to:
-- `energy_delay.csv`: Aggregated energy/delay/drop results
-- `stats_summary.csv`: Per-node event counters
+🧬 Reproducibility: Multi‑Seed & Confidence Intervals (Optional)
 
-▶️ **Performance Goals**:
-- < 5% Drop Rate in `Attack` mode
-- < 30% Overhead increase (energy) in `Secure` vs `NoSecurity`
-- Max 0.025s average delay for any mode
+For statistical robustness in reports, you may repeat each configuration with multiple seeds and compute 95% confidence intervals.
 
-This section strengthens the thesis by offering empirical context to interpret simulation results and replicate behaviors in similar setups.
+**Option A — INI-based repeats**
+```ini
+[Config Secure50_CI] extends Secure50_record
+repeat = 5
+seed-set = ${repetition}
+```
+Run:
+```bash
+./out/clang-release/LightIoTSimulation -u Cmdenv -n .:ned -f run_record.ini -c Secure50_CI
+```
+This generates runs `-0..-4`. Aggregate them to compute mean/CI.
+
+**Option B — Shell loop**
+```bash
+for SEED in 1 2 3 4 5; do
+  ./out/clang-release/LightIoTSimulation -u Cmdenv -n .:ned -f run_record.ini -c Secure50_record -r $SEED || true
+done
+```
+
+**Compute Mean & 95% CI (example Python)**
+```python
+import glob, pandas as pd, numpy as np
+def pick(sca, metric):
+    for line in open(sca):
+        parts=line.split()
+        if len(parts)>=4 and parts[0]=='scalar' and parts[2]==metric:
+            return float(parts[3])
+scas=sorted(glob.glob('results/Secure50_CI-*.sca'))
+vals=[pick(s,'Cloud_AvgEndToEndDelay_s') for s in scas]
+m=np.mean(vals); se=np.std(vals,ddof=1)/np.sqrt(len(vals)); ci=1.96*se
+print('mean=',m,' 95%CI=±',ci)
+```
+
+✅ Sanity Checks (Commands)
+```bash
+# Forwarded equals Cloud received?
+SCA=results/Secure50_record-0.sca
+awk '$1=="scalar"&&$3=="GW_Forwarded"{f=$4} $1=="scalar"&&$3=="Cloud_TotalReceived"{c=$4} END{print "GW_Forwarded=",f," Cloud_TotalReceived=",c," OK?",(f==c)}' "$SCA"
+
+# Energy consistency (example for NoSec50: ~5000 - 5*468 = 2660)
+awk '$1=="scalar"&&$3=="GW_BatteryRemaining_mJ"{print "GW_Battery=", $4}' results/NoSec50_record-0.sca
+```
+
+🧹 .gitignore (recommended)
+```
+out/
+results/*.sca
+results/*.vec
+results/*.elog
+results/*.vci
+results/*.csv
+results/chart_*.png
+LightIoTSimulation
+*.tar.gz
+*.zip
+.vscode/
+.idea/
+```
 
 ⸻
 
-🔧 Class-by-Class Code Explanation
+📄 License & How to Cite
 
-This section provides a technical walkthrough of each C++ class used in the LightIoT simulation. Understanding these modules is crucial for anyone intending to extend, audit, or replicate this research.
+**License**: Choose and add a `LICENSE` file (e.g., MIT or Apache‑2.0). Until then, this repository defaults to “All rights reserved”.
 
----
-
-🧠 Key Design Considerations & Innovation Summary
-
-This project stands out not just in implementation, but in the depth of innovation and design foresight it demonstrates across every level of the simulation. Here’s a high-level recap of what was accomplished:
-
-### 1. Security-Performance Tradeoff Optimization
-Unlike heavy cryptographic protocols that overwhelm IoT nodes, LightIoT strikes a balance by:
-- Using AES-128 for acceptable trade-off between security and computation.
-- Introducing token validation with drift-tolerant timestamps.
-- Ensuring sub-30% energy overhead while resisting replay/MITM attacks.
-
-### 2. Attack Simulation Design
-Replay attacks are dynamically recreated with `FakeNode` that mimics stored message injection:
-- Allows precise replay intervals and drift.
-- Validates security robustness under worst-case scenarios.
-
-### 3. Scalability Realism
-Each simulation was executed under 3 load conditions (5, 20, 50 nodes):
-- Ensured message integrity and system throughput at each level.
-- Demonstrated system resilience and energy scaling curve under secure and insecure modes.
-
-### 4. Accurate Runtime Modeling
-Rather than random estimations, energy metrics are computed based on:
-- Number of transmissions/receptions per node
-- AES and Token handling costs
-- Message delay determined from timestamp logging
-
-### 5. Real-World Applicability
-- Emulates real hospital setups with sensors, gateways, and central data servers.
-- Demonstrates resilience and delay-efficiency under potential cyber threats.
-
-This section encapsulates the core value propositions of the project: precision, realism, modularity, and reproducibility — all of which are essential in both research and deployment.
+**Suggested citation (edit with your details):**
+```bibtex
+@misc{LightIoT-Sim-2025,
+  title        = {LightIoT: Lightweight Anti-Replay Simulation Framework for Medical IoT},
+  author       = {<Your Name>},
+  year         = {2025},
+  howpublished = {\url{https://github.com/Ehsntb/ThesisV2}},
+  note         = {OMNeT++ 6.1 artifacts and reproducible scripts}
+}
+```
 
 ### SensorNode.cc
-**Purpose**: Simulates a medical sensor device transmitting health data.
+**Purpose**: Simulates a medical sensor device transmitting data.
 
-**Key Methods**:
-- `initialize()`: Sets encryption keys, initializes timer and state.
-- `handleMessage(cMessage*)`: Handles timer triggers, creates LightIoT messages, encrypts payloads, generates token.
-- `sendEncryptedPacket()`: Encrypts message with AES and appends timestamp token before sending to GatewayNode.
+**Key Points**:
+- Periodically creates `LightIoTMessage` with unique `id = baseOffset + localCounter`.
+- Sets `hmac = "VALID"` (symbolic tag; no actual encryption/signing inside the simulator).
+- Sets `timestamp = simTime()` and sends to Gateway.
 
 ---
 
 ### GatewayNode.cc
-**Purpose**: Acts as an intermediary, validating and forwarding packets.
+**Purpose**: Verifies and forwards packets toward the Cloud.
 
-**Key Methods**:
-- `initialize()`: Loads decryption keys, sets drop statistics counter.
-- `handleMessage(cMessage*)`: Decrypts incoming messages, validates token timestamps.
-- `verifyAndForward()`: Verifies authenticity and freshness of messages and forwards valid ones to CloudServer. Drops invalid ones.
+**Key Points**:
+- Optional checks when `securityEnabled=true`: HMAC tag equality, freshness within `hmacWindow`, and duplicate‑ID filtering.
+- Drops on failed checks; otherwise forwards (optionally with `procDelay`).
+- Accounts per‑message energy: `costVerify` (if enabled) + `costForward`.
 
 ---
 
 ### CloudServer.cc
-**Purpose**: Represents the server where validated medical data is stored.
+**Purpose**: Collects verified packets and measures end‑to‑end delay.
 
-**Key Methods**:
-- `initialize()`: Initializes counters and log references.
-- `handleMessage(cMessage*)`: Logs received messages, extracts timestamp for delay measurement.
+**Key Points**:
+- Computes delay as `simTime() - timestamp` for each received message.
+- Accumulates counters used in scalars/CSV.
 
 ---
 
 ### FakeNode.cc
-**Purpose**: Simulates an attacker replaying old packets into the network.
+**Purpose**: Simulates replay or MITM‑style injections.
 
-**Key Methods**:
-- `initialize()`: Loads a stored packet from earlier simulation steps.
-- `handleMessage(cMessage*)`: Re-injects old packets into the network at scheduled intervals to simulate a replay attack.
+**Key Points**:
+- Periodically injects packets with a stale `timestamp` (replay), keeping `id` fixed, `hmac="VALID"`.
+- In MITM mode, uses `hmac="INVALID"` (ensures drop under Secure).
 
 ---
 
-### LightIoTMessage.msg / _m.cc / _m.h
-**Purpose**: Defines the structure of messages exchanged between nodes.
+### LightIoTMessage_m.*
+**Purpose**: Minimal OMNeT++ C++ message class used in this project.
 
 **Fields**:
-- `string payload`: The health data.
-- `simtime_t timestamp`: Time-based token to prevent replay attacks.
-- `int messageId`: For tracking and verification.
-
-The `_m.cc` and `_m.h` files are auto-generated from the `.msg` definition.
-
----
-
-This modular class design ensures that each node's role is clearly separated and maintainable. It also allows for easier testing of individual behaviors in isolation.
+- `int id`
+- `const char* hmac`
+- `simtime_t timestamp`
