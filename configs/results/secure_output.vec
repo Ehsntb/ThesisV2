@@ -1,8 +1,8 @@
 version 3
-run Attack50_record-0-20250827-00:58:21-5594
+run Attack50_record-0-20250827-02:03:16-6727
 attr configname Attack50_record
-attr datetime 20250827-00:58:21
-attr datetimef 20250827-005821
+attr datetime 20250827-02:03:16
+attr datetimef 20250827-020316
 attr experiment Attack50_record
 attr inifile run_record.ini
 attr iterationvars ""
@@ -10,7 +10,7 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network ned.LightIoTNetwork
-attr processid 5594
+attr processid 6727
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -46,10 +46,7 @@ config output-scalar-file results/Attack50_record-0.sca
 config output-vector-file results/Attack50_record-0.vec
 config **.scalar-recording true
 config **.vector-recording true
-config output-scalar-file results/Attack50_record-0.sca
-config output-vector-file results/Attack50_record-0.vec
-config **.scalar-recording true
-config **.vector-recording true
+config **.result-recording-modes all
 config output-scalar-file results/Attack50_record-0.sca
 config output-vector-file results/Attack50_record-0.vec
 config **.scalar-recording true

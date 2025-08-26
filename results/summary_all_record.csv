@@ -1,12 +1,1 @@
 Config,Nodes,Mode,Cloud_TotalReceived,GW_Received,GW_Forwarded,GW_Dropped,GW_Dropped_HMAC,GW_Dropped_Stale,GW_Dropped_Duplicate,GW_Battery_mJ,Sensor_AvgBattery_mJ,Cloud_AvgDelay_s,Fake_AttacksSent
-Attack5_record,5,Attack,45.0,48.0,45.0,3.0,0.0,0.0,0.0,4535.0,0.0,0.0,3.0
-Attack20_record,20,Attack,189.0,192.0,189.0,3.0,0.0,0.0,0.0,3095.0,0.0,0.0,3.0
-Attack50_record,50,Attack,468.0,471.0,468.0,3.0,0.0,0.0,0.0,305.0,0.0,0.0,3.0
-Attack50_window3s_record,,Attack50_window3s_record,476.0,479.0,476.0,3.0,0.0,0.0,0.0,225.0,0.0,0.0,4.0
-AttackOnNoSec50_record,50,AttackOnNoSec,479.0,479.0,479.0,0.0,0.0,0.0,0.0,2605.0,0.0,0.0,4.0
-NoSec5_record,5,NoSec,45.0,45.0,45.0,0.0,0.0,0.0,0.0,4775.0,0.0,0.0,0.0
-NoSec20_record,20,NoSec,188.0,188.0,188.0,0.0,0.0,0.0,0.0,4060.0,0.0,0.0,0.0
-NoSec50_record,50,NoSec,468.0,468.0,468.0,0.0,0.0,0.0,0.0,2660.0,0.0,0.0,0.0
-Secure5_record,5,Secure,45.0,45.0,45.0,0.0,0.0,0.0,0.0,4550.0,0.0,0.0,0.0
-Secure20_record,20,Secure,188.0,188.0,188.0,0.0,0.0,0.0,0.0,3120.0,0.0,0.0,0.0
-Secure50_record,50,Secure,468.0,468.0,468.0,0.0,0.0,0.0,0.0,320.0,0.0,0.0,0.0
