@@ -1,3 +1,5 @@
+// /ned/SensorNode.ned
+
 package ned;
 
 simple SensorNode

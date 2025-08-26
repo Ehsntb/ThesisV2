@@ -1,3 +1,5 @@
+// /ned/LightIoTNetwork.ned
+
 package ned;
 
 network LightIoTNetwork

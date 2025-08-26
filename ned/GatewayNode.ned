@@ -1,3 +1,5 @@
+// /ned/GatewayNode.ned
+
 package ned;
 
 simple GatewayNode
