@@ -1,0 +1,68 @@
+name: CI
+on:
+  push:
+  pull_request:
+jobs:
+  sanity:
+    name: Sanity & Formatting Checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Ensure required files/directories exist
+        run: |
+          set -euo pipefail
+          for p in ned src; do
+            [[ -d "$p" ]] || { echo "::error::$p directory is missing"; exit 1; }
+          done
+          for f in \
+            ned/SensorNode.ned ned/GatewayNode.ned ned/FakeNode.ned ned/CloudServer.ned ned/LightIoTNetwork.ned \
+            src/SensorNode.cc src/GatewayNode.cc src/FakeNode.cc src/CloudServer.cc \
+            src/LightIoTMessage_m.h src/LightIoTMessage_m.cc \
+            run_record.ini omnetpp.ini ; do
+            [[ -f "$f" ]] || { echo "::error::missing $f"; exit 1; }
+          done
+
+      - name: Verify NED/INI line endings are LF (no CRLF)
+        run: |
+          set -euo pipefail
+          bad=0
+          while IFS= read -r -d '' f; do
+            if grep -U -q $'\r' "$f"; then
+              echo "::error::CRLF found in $f"; bad=1
+            fi
+          done < <(git ls-files -z '*.ned' '*.ini' '*.cc' '*.h' '*.sh' '*.py')
+          exit $bad
+
+      - name: Quick INI validation (sections & keys)
+        run: |
+          python - <<'PY'
+import configparser, sys
+path='run_record.ini'
+cfg=configparser.ConfigParser(allow_no_value=True, strict=False)
+cfg.read(path)
+required = ['Secure5_record','Secure20_record','Secure50_record',
+            'NoSec5_record','NoSec20_record','NoSec50_record',
+            'Attack5_record','Attack20_record','Attack50_record']
+missing=[s for s in required if s not in cfg]
+if missing:
+    print(f"::error::Missing configs in {path}: {missing}")
+    sys.exit(1)
+print("OK: run_record.ini has all required configs")
+PY
+
+      - name: Basic bash lint (shellcheck if available)
+        run: |
+          set -euo pipefail
+          sudo apt-get update -y && sudo apt-get install -y shellcheck || true
+          if command -v shellcheck >/dev/null 2>&1; then
+            find scripts -maxdepth 1 -type f -name '*.sh' -print0 2>/dev/null | xargs -0 -r shellcheck -x
+          else
+            echo "shellcheck not installed; skipping"
+          fi

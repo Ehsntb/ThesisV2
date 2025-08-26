@@ -6,17 +6,16 @@ network LightIoTNetwork
         int numSensorNodes = default(5);
     submodules:
         sensor[numSensorNodes]: SensorNode {
-            parameters:
-                @display("i=device/wifilaptop");
+            parameters: @display("i=device/wifilaptop");
         }
         gateway: GatewayNode {
-            @display("i=device/router");
+            parameters: @display("i=device/router");
         }
         cloud: CloudServer {
-            @display("i=cloud");
+            parameters: @display("i=cloud");
         }
         fakeNode: FakeNode {
-            @display("i=block/process");
+            parameters: @display("i=block/process");
         }
     connections allowunconnected:
         for i=0..numSensorNodes-1 {

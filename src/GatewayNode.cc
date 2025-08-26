@@ -1,3 +1,4 @@
+
 #include <omnetpp.h>
 #include <cstring>
 #include <set>
@@ -5,7 +6,10 @@
 #include <string>
 #include <functional>
 #include <cstdint>
+#include <cmath>
 #include "LightIoTMessage_m.h"
+#include "crypto/crypto_utils.h"
+#include "crypto/cmac.h"
 
 using namespace omnetpp;
 
@@ -47,6 +51,10 @@ class GatewayNode : public cSimpleModule {
     int bloomHashes  = 3;
     std::vector<uint8_t> bloom; // bit array
 
+    // Crypto key
+    std::string aesKeyHex;
+    std::vector<uint8_t> keyBytes;
+
     inline void bloomInit(int bits) {
         int bytes = (bits + 7) / 8;
         bloom.assign(bytes, 0u);
@@ -78,6 +86,11 @@ class GatewayNode : public cSimpleModule {
         }
     }
 
+    inline int64_t ts_to_us(simtime_t t) const {
+        double d = SIMTIME_DBL(t);
+        return (int64_t) llround(d * 1e6);
+    }
+
   protected:
     virtual void initialize() override {
         batteryInit     = par("batteryInit_mJ").doubleValue();
@@ -107,6 +120,14 @@ class GatewayNode : public cSimpleModule {
             if (bloomHashes < 1) bloomHashes = 1;
             bloomInit(bloomBits);
         }
+
+        // Crypto key (hex -> 16 bytes)
+        if (hasPar("aesKeyHex"))
+            aesKeyHex = par("aesKeyHex").stdstringValue();
+        if (!hexToBytes(aesKeyHex, keyBytes) || keyBytes.size()!=16) {
+            EV << "[GatewayNode] Invalid aesKeyHex; expected 16-byte hex.\n";
+            keyBytes.assign(16, 0);
+        }
     }
 
     virtual void handleMessage(cMessage *msg) override {
@@ -127,10 +148,28 @@ class GatewayNode : public cSimpleModule {
             battery -= costVerify;
 
             // Compute checks with ablation toggles
-            bool hmacOk = !checkHmac || ((m->getHmac() != nullptr) && (std::strcmp(m->getHmac(), "VALID") == 0));
-            bool fresh  = !checkFreshness || ((simTime() - m->getTimestamp()) <= hmacWindow);
-
+            bool hmacOk = true;
+            bool fresh  = true;
             bool notDup = true;
+
+            if (checkHmac) {
+                // Recompute CMAC over (id || ts_us) and compare (constant-time)
+                int id = m->getId();
+                int64_t ts_us = ts_to_us(m->getTimestamp());
+                std::vector<uint8_t> mbytes;
+                packIdTsBigEndian(id, ts_us, mbytes);
+                uint8_t tag[16];
+                aes128_cmac(keyBytes.data(), mbytes.data(), mbytes.size(), tag);
+
+                std::vector<uint8_t> rx;
+                const std::string inHex = m->getMacHex();
+                hmacOk = hexToBytes(inHex, rx) && rx.size()==16 && ct_equal(rx.data(), tag, 16);
+            }
+
+            if (checkFreshness) {
+                fresh  = ((simTime() - m->getTimestamp()) <= hmacWindow);
+            }
+
             if (checkDuplicate) {
                 if (duplicateMethod == "set") {
                     notDup = (seenIds.find(m->getId()) == seenIds.end());
@@ -156,7 +195,7 @@ class GatewayNode : public cSimpleModule {
 
         // Register ID (even if ablation off)
         if (duplicateMethod == "set")  seenIds.insert(m->getId());
-        else                             bloomAdd(m->getId());
+        else                            bloomAdd(m->getId());
 
         // Forwarding cost
         battery -= costForward;

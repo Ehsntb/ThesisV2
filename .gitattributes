@@ -1,0 +1,13 @@
+# Normalize to LF to avoid parser issues
+*.ned text eol=lf
+*.ini text eol=lf
+*.cc  text eol=lf
+*.c   text eol=lf
+*.h   text eol=lf
+*.sh  text eol=lf
+*.py  text eol=lf
+
+# Binary
+*.png binary
+*.jpg binary
+*.pdf binary
