@@ -63,11 +63,17 @@ class SensorNode : public cSimpleModule {
     }
 
     virtual void finish() override {
-        double percent = (batteryCapacity / 5000.0) * 100;
-        EV << "[SensorNode] Energy Remaining: " << batteryCapacity
-           << " mJ (" << percent << "%)\n";
-        if (sendEvent != nullptr) { cancelAndDelete(sendEvent); sendEvent=nullptr; }
-        recordScalar("Sensor_BatteryRemaining_mJ", batteryCapacity);
+       double percent = (batteryCapacity / 5000.0) * 100;
+        
+       // record per-sensor energy for later averaging
+       recordScalar("Sensor_EnergyRemaining_mJ", batteryCapacity);
+        
+       EV << "[SensorNode] Energy Remaining: " << batteryCapacity
+          << " mJ (" << percent << "%)\n";
+       if (sendEvent != nullptr) {
+           cancelAndDelete(sendEvent);
+           sendEvent = nullptr;
+       }
     }
 };
 
