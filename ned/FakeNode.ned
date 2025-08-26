@@ -1,3 +1,5 @@
+// /ned/FakeNode.ned
+
 package ned;
 
 simple FakeNode

@@ -2,7 +2,7 @@
 # OMNeT++/OMNEST Makefile for LightIoTSimulation
 #
 # This file was generated with the command:
-#  opp_makemake -f --deep -o LightIoTSimulation -O out -u Cmdenv -l oppscave
+#  opp_makemake -f --deep -o LightIoTSimulation -O out
 #
 
 # Name of target to be created (-o option)
@@ -14,8 +14,8 @@ TARGET_IMPDEF = $(TARGET_NAME)$(IMPDEF_SUFFIX)
 TARGET_FILES = $(TARGET_DIR)/$(TARGET)
 
 # User interface (uncomment one) (-u option)
-#USERIF_LIBS = $(ALL_ENV_LIBS) # that is, $(QTENV_LIBS) $(CMDENV_LIBS)
-USERIF_LIBS = $(CMDENV_LIBS)
+USERIF_LIBS = $(ALL_ENV_LIBS) # that is, $(QTENV_LIBS) $(CMDENV_LIBS)
+#USERIF_LIBS = $(CMDENV_LIBS)
 #USERIF_LIBS = $(QTENV_LIBS)
 
 # C++ include paths (with -I)
@@ -25,7 +25,7 @@ INCLUDE_PATH =
 EXTRA_OBJS =
 
 # Additional libraries (-L, -l options)
-LIBS =  -loppscave
+LIBS =
 
 # Output directory
 PROJECT_OUTPUT_DIR = out
