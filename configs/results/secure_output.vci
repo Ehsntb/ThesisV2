@@ -1,35 +1,33 @@
-file 15324 1756070546                                           
+file 4190 1756242909                                            
 version 3
-run Secure50_hmacOnly-0-20250825-00:52:26-6297
-attr configname Secure50_hmacOnly
-attr datetime 20250825-00:52:26
-attr datetimef 20250825-005226
-attr experiment Secure50_hmacOnly
+run Attack5_record-0-20250827-00:45:09-5379
+attr configname Attack5_record
+attr datetime 20250827-00:45:09
+attr datetimef 20250827-004509
+attr experiment Attack5_record
 attr inifile run_record.ini
 attr iterationvars ""
 attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network ned.LightIoTNetwork
-attr processid 6297
+attr processid 5379
 attr repetition 0
 attr replication #0
 attr resultdir results
 attr runnumber 0
 attr seedset 123
-config extends Secure50_record
-config **.gateway.checkHmac true
-config **.gateway.checkFreshness false
-config **.gateway.checkDuplicate false
-config LightIoTNetwork.numSensorNodes 50
-config **.fakeNode.enabled false
+config LightIoTNetwork.numSensorNodes 5
+config **.fakeNode.enabled true
+config **.fakeNode.attackMode 1
+config **.fakeNode.replayInterval 2.5s
 config **.gateway.securityEnabled true
 config **.gateway.procDelay 1ms
 config **.gateway.costVerify_mJ 5
 config **.gateway.hmacWindow 1s
 config description "Secure Mode Simulation (includes all scenarios)"
 config network ned.LightIoTNetwork
-config ned-path .:ned
+config ned-path .
 config sim-time-limit 10s
 config record-eventlog true
 config cmdenv-express-mode false
@@ -45,16 +43,16 @@ config network LightIoTNetwork
 config sim-time-limit 10s
 config output-scalar-file results/attack_output.sca
 config output-vector-file results/attack_output.vec
-config output-scalar-file results/Secure50_hmacOnly-0.sca
-config output-vector-file results/Secure50_hmacOnly-0.vec
+config output-scalar-file results/Attack5_record-0.sca
+config output-vector-file results/Attack5_record-0.vec
 config **.scalar-recording true
 config **.vector-recording true
-config output-scalar-file results/Secure50_hmacOnly-0.sca
-config output-vector-file results/Secure50_hmacOnly-0.vec
+config output-scalar-file results/Attack5_record-0.sca
+config output-vector-file results/Attack5_record-0.vec
 config **.scalar-recording true
 config **.vector-recording true
-config output-scalar-file results/Secure50_hmacOnly-0.sca
-config output-vector-file results/Secure50_hmacOnly-0.vec
+config output-scalar-file results/Attack5_record-0.sca
+config output-vector-file results/Attack5_record-0.vec
 config **.scalar-recording true
 config **.vector-recording true
 config **.result-recording-modes all
@@ -62,6 +60,8 @@ config sim-time-limit 10s
 config rng-class cMersenneTwister
 config num-rngs 1
 config seed-set 123
+config **.sensor[*].aesKeyHex "\"00112233445566778899AABBCCDDEEFF\""
+config **.gateway.aesKeyHex "\"00112233445566778899AABBCCDDEEFF\""
 config network ned.LightIoTNetwork
 config **.fakeNode.enabled false
 config **.gateway.batteryInit_mJ 5000
@@ -71,5 +71,5 @@ config **.gateway.procDelay 1ms
 config **.gateway.hmacWindow 1s
 
 vector 0 LightIoTNetwork.cloud EndToEndDelay_s ETV
-0	2475 12848 3 1422 0.560677898185 9.977081286929 474 0.001 0.001 0.474 0.00047400000000001
+0	2507 1682 3 150 0.727851454936 9.97507689495 48 0.000999513686 0.001000473018 0.048001893868 4.800379177829e-05
 

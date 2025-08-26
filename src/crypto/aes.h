@@ -1,3 +1,10 @@
+#ifndef AES128
+#define AES128 1
+#endif
+
+#ifndef ECB
+#define ECB 1
+#endif
 #ifndef _AES_H_
 #define _AES_H_
 

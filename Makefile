@@ -2,7 +2,7 @@
 # OMNeT++/OMNEST Makefile for LightIoTSimulation
 #
 # This file was generated with the command:
-#  opp_makemake -f --deep -o LightIoTSimulation -O out
+#  opp_makemake -f --deep -o LightIoTSimulation -O out -e cc
 #
 
 # Name of target to be created (-o option)
@@ -33,7 +33,14 @@ PROJECTRELATIVE_PATH =
 O = $(PROJECT_OUTPUT_DIR)/$(CONFIGNAME)/$(PROJECTRELATIVE_PATH)
 
 # Object files for local .cc, .msg and .sm files
-OBJS = $O/src/CloudServer.o $O/src/FakeNode.o $O/src/GatewayNode.o $O/src/SensorNode.o
+OBJS = \
+    $O/src/CloudServer.o \
+    $O/src/FakeNode.o \
+    $O/src/GatewayNode.o \
+    $O/src/SensorNode.o \
+    $O/src/crypto/aes_link.o \
+    $O/src/crypto/cmac.o \
+    $O/src/crypto/crypto_utils.o
 
 # Message files
 MSGFILES =
