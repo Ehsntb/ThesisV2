@@ -20,9 +20,15 @@ class CloudServer : public cSimpleModule {
         delete m;
     }
     virtual void finish() override {
-        double avgDelay = received ? totalDelay.dbl() / received : 0.0;
+        double avgDelay = (received > 0) ? totalDelay.dbl() / received : 0.0;
+    
+        // record as scalars for tools/parsers
         recordScalar("Cloud_TotalReceived", received);
-        recordScalar("Cloud_AvgEndToEndDelay_s", avgDelay);
+        recordScalar("Cloud_AvgDelay_s", avgDelay);
+    
+        // readable logs
+        EV << "[CloudServer] Total Messages Received: " << received << endl;
+        EV << "[CloudServer] Average End-to-End Delay: " << avgDelay << " seconds" << endl;
     }
 };
 Define_Module(CloudServer);

@@ -1,0 +1,94 @@
+version 3
+run RecordingCheck-0-20250827-01:11:05-6057
+attr configname RecordingCheck
+attr datetime 20250827-01:11:05
+attr datetimef 20250827-011105
+attr experiment RecordingCheck
+attr inifile configs/_recording_check.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network ned.LightIoTNetwork
+attr processid 6057
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config network ned.LightIoTNetwork
+config sim-time-limit 2s
+config output-scalar-file results/RecordingCheck-0.sca
+config output-vector-file results/RecordingCheck-0.vec
+config **.scalar-recording true
+config **.vector-recording true
+config **.result-recording-modes all
+
+par LightIoTNetwork.sensor[0] typename "\"ned.SensorNode\""
+par LightIoTNetwork.sensor[0] sendInterval 0.5s
+attr unit s
+par LightIoTNetwork.sensor[0] mode "\"Secure\""
+par LightIoTNetwork.sensor[0] aesKeyHex "\"00112233445566778899AABBCCDDEEFF\""
+scalar LightIoTNetwork.sensor[0] Sensor_EnergyRemaining_mJ 4980
+par LightIoTNetwork.sensor[1] typename "\"ned.SensorNode\""
+par LightIoTNetwork.sensor[1] sendInterval 0.5s
+attr unit s
+par LightIoTNetwork.sensor[1] mode "\"Secure\""
+par LightIoTNetwork.sensor[1] aesKeyHex "\"00112233445566778899AABBCCDDEEFF\""
+scalar LightIoTNetwork.sensor[1] Sensor_EnergyRemaining_mJ 4980
+par LightIoTNetwork.sensor[2] typename "\"ned.SensorNode\""
+par LightIoTNetwork.sensor[2] sendInterval 0.5s
+attr unit s
+par LightIoTNetwork.sensor[2] mode "\"Secure\""
+par LightIoTNetwork.sensor[2] aesKeyHex "\"00112233445566778899AABBCCDDEEFF\""
+scalar LightIoTNetwork.sensor[2] Sensor_EnergyRemaining_mJ 4980
+par LightIoTNetwork.sensor[3] typename "\"ned.SensorNode\""
+par LightIoTNetwork.sensor[3] sendInterval 0.5s
+attr unit s
+par LightIoTNetwork.sensor[3] mode "\"Secure\""
+par LightIoTNetwork.sensor[3] aesKeyHex "\"00112233445566778899AABBCCDDEEFF\""
+scalar LightIoTNetwork.sensor[3] Sensor_EnergyRemaining_mJ 4980
+par LightIoTNetwork.sensor[4] typename "\"ned.SensorNode\""
+par LightIoTNetwork.sensor[4] sendInterval 0.5s
+attr unit s
+par LightIoTNetwork.sensor[4] mode "\"Secure\""
+par LightIoTNetwork.sensor[4] aesKeyHex "\"00112233445566778899AABBCCDDEEFF\""
+scalar LightIoTNetwork.sensor[4] Sensor_EnergyRemaining_mJ 4980
+par LightIoTNetwork.gateway typename "\"ned.GatewayNode\""
+par LightIoTNetwork.gateway aesKeyHex "\"00112233445566778899AABBCCDDEEFF\""
+par LightIoTNetwork.gateway securityEnabled true
+par LightIoTNetwork.gateway checkHmac true
+par LightIoTNetwork.gateway checkFreshness true
+par LightIoTNetwork.gateway checkDuplicate true
+par LightIoTNetwork.gateway duplicateMethod "\"set\""
+par LightIoTNetwork.gateway bloomBits 16384
+par LightIoTNetwork.gateway bloomHashes 3
+par LightIoTNetwork.gateway costForward_mJ 5
+par LightIoTNetwork.gateway costVerify_mJ 5
+par LightIoTNetwork.gateway batteryInit_mJ 5000
+par LightIoTNetwork.gateway procDelay 0s
+attr unit s
+par LightIoTNetwork.gateway hmacWindow 1s
+attr unit s
+scalar LightIoTNetwork.gateway GW_Received 5
+scalar LightIoTNetwork.gateway GW_Forwarded 5
+scalar LightIoTNetwork.gateway GW_Dropped 0
+scalar LightIoTNetwork.gateway GW_Dropped_HMAC 0
+scalar LightIoTNetwork.gateway GW_Dropped_Stale 0
+scalar LightIoTNetwork.gateway GW_Dropped_Duplicate 0
+scalar LightIoTNetwork.gateway GW_BatteryRemaining_mJ 4950
+par LightIoTNetwork.cloud typename "\"ned.CloudServer\""
+scalar LightIoTNetwork.cloud Cloud_TotalReceived 5
+scalar LightIoTNetwork.cloud Cloud_AvgDelay_s -8.03734e-08
+par LightIoTNetwork.fakeNode typename "\"ned.FakeNode\""
+par LightIoTNetwork.fakeNode enabled true
+par LightIoTNetwork.fakeNode replayInterval 2.5s
+attr unit s
+par LightIoTNetwork.fakeNode attackMode 2
+par LightIoTNetwork.fakeNode replayId 100000
+par LightIoTNetwork.fakeNode replayTsUs 500000
+par LightIoTNetwork.fakeNode replayTagHex "\"00000000000000000000000000000000\""
+scalar LightIoTNetwork.fakeNode Fake_AttacksSent 0
+par LightIoTNetwork typename "\"ned.LightIoTNetwork\""
+par LightIoTNetwork numSensorNodes 5
+
