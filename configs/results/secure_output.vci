@@ -1,9 +1,9 @@
-file 4088 1756250390                                            
+file 4158 1756413597                                            
 version 3
-run Attack5_record-0-20250827-02:49:50-7950
+run Attack5_record-0-20250829-00:09:57-28161
 attr configname Attack5_record
-attr datetime 20250827-02:49:50
-attr datetimef 20250827-024950
+attr datetime 20250829-00:09:57
+attr datetimef 20250829-000957
 attr experiment Attack5_record
 attr inifile run_record.ini
 attr iterationvars ""
@@ -11,7 +11,7 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network ned.LightIoTNetwork
-attr processid 7950
+attr processid 28161
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -49,6 +49,8 @@ config **.scalar-recording true
 config **.vector-recording true
 config **.statistic-recording true
 config **.result-recording-modes all
+config record-scalar-results true
+config record-vector-results true
 config output-scalar-file results/Attack5_record-0.sca
 config output-vector-file results/Attack5_record-0.vec
 config **.scalar-recording true
@@ -69,5 +71,5 @@ config **.gateway.procDelay 1ms
 config **.gateway.hmacWindow 1s
 
 vector 0 LightIoTNetwork.cloud EndToEndDelay_s ETV
-0	2405 1682 3 150 0.727851454936 9.97507689495 48 0.000999513686 0.001000473018 0.048001893868 4.800379177829e-05
+0	2475 1682 3 150 0.727851454936 9.97507689495 48 0.000999513686 0.001000473018 0.048001893868 4.800379177829e-05
 
