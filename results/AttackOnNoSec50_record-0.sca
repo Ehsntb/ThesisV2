@@ -1,33 +1,33 @@
 version 3
-run Attack50_record-0-20250901-01:10:54-81226
-attr configname Attack50_record
-attr datetime 20250901-01:10:54
-attr datetimef 20250901-011054
-attr experiment Attack50_record
+run AttackOnNoSec50_record-0-20250901-01:12:27-81865
+attr configname AttackOnNoSec50_record
+attr datetime 20250901-01:12:27
+attr datetimef 20250901-011227
+attr experiment AttackOnNoSec50_record
 attr inifile run_record.ini
 attr iterationvars ""
 attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network ned.LightIoTNetwork
-attr processid 81226
+attr processid 81865
 attr repetition 0
 attr replication #0
 attr resultdir results
 attr runnumber 0
 attr seedset 123
 config network ned.LightIoTNetwork
-config output-scalar-file results/Attack50_record-0.sca
-config output-vector-file results/Attack50_record-0.vec
+config output-scalar-file results/AttackOnNoSec50_record-0.sca
+config output-vector-file results/AttackOnNoSec50_record-0.vec
 config **.scalar-recording true
 config **.vector-recording true
 config **.result-recording-modes all
 config LightIoTNetwork.numSensorNodes 50
-config **.gateway.securityEnabled true
+config **.gateway.securityEnabled false
 config **.gateway.hmacWindow 3s
-config **.gateway.procDelay 1ms
+config **.gateway.procDelay 0s
 config **.gateway.costForward_mJ 5
-config **.gateway.costVerify_mJ 5
+config **.gateway.costVerify_mJ 0
 config **.gateway.batteryInit_mJ 5000
 config **.fakeNode.enabled true
 config **.fakeNode.attackMode 1
@@ -54,8 +54,8 @@ config network LightIoTNetwork
 config sim-time-limit 10s
 config output-scalar-file results/attack_output.sca
 config output-vector-file results/attack_output.vec
-config output-scalar-file results/Attack50_record-0.sca
-config output-vector-file results/Attack50_record-0.vec
+config output-scalar-file results/AttackOnNoSec50_record-0.sca
+config output-vector-file results/AttackOnNoSec50_record-0.vec
 config **.scalar-recording true
 config **.vector-recording true
 config **.statistic-recording true
@@ -366,7 +366,7 @@ par LightIoTNetwork.sensor[49] aesKeyHex "\"00112233445566778899AABBCCDDEEFF\""
 scalar LightIoTNetwork.sensor[49] Sensor_EnergyRemaining_mJ 4800
 par LightIoTNetwork.gateway typename "\"ned.GatewayNode\""
 par LightIoTNetwork.gateway aesKeyHex "\"00112233445566778899AABBCCDDEEFF\""
-par LightIoTNetwork.gateway securityEnabled true
+par LightIoTNetwork.gateway securityEnabled false
 par LightIoTNetwork.gateway checkHmac true
 par LightIoTNetwork.gateway checkFreshness true
 par LightIoTNetwork.gateway checkDuplicate true
@@ -374,22 +374,22 @@ par LightIoTNetwork.gateway duplicateMethod "\"set\""
 par LightIoTNetwork.gateway bloomBits 16384
 par LightIoTNetwork.gateway bloomHashes 3
 par LightIoTNetwork.gateway costForward_mJ 5
-par LightIoTNetwork.gateway costVerify_mJ 5
+par LightIoTNetwork.gateway costVerify_mJ 0
 par LightIoTNetwork.gateway batteryInit_mJ 5000
-par LightIoTNetwork.gateway procDelay 0.001s
+par LightIoTNetwork.gateway procDelay 0s
 attr unit s
 par LightIoTNetwork.gateway hmacWindow 3s
 attr unit s
 scalar LightIoTNetwork.gateway GW_Received 479
-scalar LightIoTNetwork.gateway GW_Forwarded 475
-scalar LightIoTNetwork.gateway GW_Dropped 4
-scalar LightIoTNetwork.gateway GW_Dropped_HMAC 4
-scalar LightIoTNetwork.gateway GW_Dropped_Stale 3
-scalar LightIoTNetwork.gateway GW_Dropped_Duplicate 4
-scalar LightIoTNetwork.gateway GW_BatteryRemaining_mJ 230
+scalar LightIoTNetwork.gateway GW_Forwarded 479
+scalar LightIoTNetwork.gateway GW_Dropped 0
+scalar LightIoTNetwork.gateway GW_Dropped_HMAC 0
+scalar LightIoTNetwork.gateway GW_Dropped_Stale 0
+scalar LightIoTNetwork.gateway GW_Dropped_Duplicate 0
+scalar LightIoTNetwork.gateway GW_BatteryRemaining_mJ 2605
 par LightIoTNetwork.cloud typename "\"ned.CloudServer\""
-scalar LightIoTNetwork.cloud Cloud_TotalReceived 475
-scalar LightIoTNetwork.cloud Cloud_AvgDelay_s 0.0010000098174379
+scalar LightIoTNetwork.cloud Cloud_TotalReceived 479
+scalar LightIoTNetwork.cloud Cloud_AvgDelay_s 0.046538288726754
 par LightIoTNetwork.fakeNode typename "\"ned.FakeNode\""
 par LightIoTNetwork.fakeNode enabled true
 par LightIoTNetwork.fakeNode replayInterval 2.5s

@@ -1,24 +1,24 @@
 version 3
-run Attack50_record-0-20250901-01:10:54-81226
-attr configname Attack50_record
-attr datetime 20250901-01:10:54
-attr datetimef 20250901-011054
-attr experiment Attack50_record
+run Attack50_window3s_record-0-20250901-01:14:04-82528
+attr configname Attack50_window3s_record
+attr datetime 20250901-01:14:04
+attr datetimef 20250901-011404
+attr experiment Attack50_window3s_record
 attr inifile run_record.ini
 attr iterationvars ""
 attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network ned.LightIoTNetwork
-attr processid 81226
+attr processid 82528
 attr repetition 0
 attr replication #0
 attr resultdir results
 attr runnumber 0
 attr seedset 123
 config network ned.LightIoTNetwork
-config output-scalar-file results/Attack50_record-0.sca
-config output-vector-file results/Attack50_record-0.vec
+config output-scalar-file results/Attack50_window3s_record-0.sca
+config output-vector-file results/Attack50_window3s_record-0.vec
 config **.scalar-recording true
 config **.vector-recording true
 config **.result-recording-modes all
@@ -54,8 +54,8 @@ config network LightIoTNetwork
 config sim-time-limit 10s
 config output-scalar-file results/attack_output.sca
 config output-vector-file results/attack_output.vec
-config output-scalar-file results/Attack50_record-0.sca
-config output-vector-file results/Attack50_record-0.vec
+config output-scalar-file results/Attack50_window3s_record-0.sca
+config output-vector-file results/Attack50_window3s_record-0.vec
 config **.scalar-recording true
 config **.vector-recording true
 config **.statistic-recording true

@@ -1,9 +1,9 @@
-file 19317 1756422443                                           
+file 19319 1756676523                                           
 version 3
-run Attack50_record-0-20250829-02:36:20-7183
+run Attack50_record-0-20250901-01:10:54-81226
 attr configname Attack50_record
-attr datetime 20250829-02:36:20
-attr datetimef 20250829-023620
+attr datetime 20250901-01:10:54
+attr datetimef 20250901-011054
 attr experiment Attack50_record
 attr inifile run_record.ini
 attr iterationvars ""
@@ -11,7 +11,7 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network ned.LightIoTNetwork
-attr processid 7183
+attr processid 81226
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -66,5 +66,5 @@ config num-rngs 1
 config seed-set 123
 
 vector 0 LightIoTNetwork.cloud EndToEndDelay_s ETV
-0	2218 17098 3 1433 0.560677898185 9.993869400001 475 0.000999501954 0.001000498164 0.475004663283 0.00047500936778906
+0	2220 17098 3 1433 0.560677898185 9.993869400001 475 0.000999501954 0.001000498164 0.475004663283 0.00047500936778906
 

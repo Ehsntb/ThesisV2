@@ -1,9 +1,9 @@
-file 12274 1755555876                                           
+file 18227 1756676618                                           
 version 3
-run AttackOnNoSec50_record-0-20250819-01:54:36-5301
+run AttackOnNoSec50_record-0-20250901-01:12:27-81865
 attr configname AttackOnNoSec50_record
-attr datetime 20250819-01:54:36
-attr datetimef 20250819-015436
+attr datetime 20250901-01:12:27
+attr datetimef 20250901-011227
 attr experiment AttackOnNoSec50_record
 attr inifile run_record.ini
 attr iterationvars ""
@@ -11,7 +11,7 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network ned.LightIoTNetwork
-attr processid 5301
+attr processid 81865
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -25,6 +25,7 @@ config **.vector-recording true
 config **.result-recording-modes all
 config LightIoTNetwork.numSensorNodes 50
 config **.gateway.securityEnabled false
+config **.gateway.hmacWindow 3s
 config **.gateway.procDelay 0s
 config **.gateway.costForward_mJ 5
 config **.gateway.costVerify_mJ 0
@@ -36,7 +37,34 @@ config sim-time-limit 10s
 config rng-class cMersenneTwister
 config num-rngs 1
 config seed-set 123
+config description "Secure Mode Simulation (includes all scenarios)"
+config network ned.LightIoTNetwork
+config ned-path .
+config sim-time-limit 10s
+config record-eventlog true
+config cmdenv-express-mode false
+config network ned.LightIoTNetwork
+config sim-time-limit 10s
+config output-scalar-file results/secure_output.sca
+config output-vector-file results/secure_output.vec
+config network LightIoTNetwork
+config sim-time-limit 10s
+config output-scalar-file results/nosecure_output.sca
+config output-vector-file results/nosecure_output.vec
+config network LightIoTNetwork
+config sim-time-limit 10s
+config output-scalar-file results/attack_output.sca
+config output-vector-file results/attack_output.vec
+config output-scalar-file results/AttackOnNoSec50_record-0.sca
+config output-vector-file results/AttackOnNoSec50_record-0.vec
+config **.scalar-recording true
+config **.vector-recording true
+config **.statistic-recording true
+config **.result-recording-modes all
+config rng-class cMersenneTwister
+config num-rngs 1
+config seed-set 123
 
 vector 0 LightIoTNetwork.cloud EndToEndDelay_s ETV
-0	1201 11072 3 1437 0.559677898185 9.992869400001 479 0 2 8 16
+0	2269 15957 3 1437 0.559677898185 9.992869400001 479 -4.98046e-07 9.322958909208 22.291840300115 155.48148401492
 

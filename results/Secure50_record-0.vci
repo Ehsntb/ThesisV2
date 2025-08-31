@@ -1,9 +1,9 @@
-file 14800 1755553759                                           
+file 19138 1756676146                                           
 version 3
-run Secure50_record-0-20250819-01:19:19-4236
+run Secure50_record-0-20250901-01:04:00-78322
 attr configname Secure50_record
-attr datetime 20250819-01:19:19
-attr datetimef 20250819-011919
+attr datetime 20250901-01:04:00
+attr datetimef 20250901-010400
 attr experiment Secure50_record
 attr inifile run_record.ini
 attr iterationvars ""
@@ -11,12 +11,12 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network ned.LightIoTNetwork
-attr processid 4236
+attr processid 78322
 attr repetition 0
 attr replication #0
 attr resultdir results
 attr runnumber 0
-attr seedset 0
+attr seedset 123
 config network ned.LightIoTNetwork
 config output-scalar-file results/Secure50_record-0.sca
 config output-vector-file results/Secure50_record-0.vec
@@ -34,7 +34,7 @@ config **.gateway.batteryInit_mJ 5000
 config sim-time-limit 10s
 config description "Secure Mode Simulation (includes all scenarios)"
 config network ned.LightIoTNetwork
-config ned-path .:ned
+config ned-path .
 config sim-time-limit 10s
 config record-eventlog true
 config cmdenv-express-mode false
@@ -54,11 +54,12 @@ config output-scalar-file results/Secure50_record-0.sca
 config output-vector-file results/Secure50_record-0.vec
 config **.scalar-recording true
 config **.vector-recording true
-config output-scalar-file results/Secure50_record-0.sca
-config output-vector-file results/Secure50_record-0.vec
-config **.scalar-recording true
-config **.vector-recording true
+config **.statistic-recording true
+config **.result-recording-modes all
+config rng-class cMersenneTwister
+config num-rngs 1
+config seed-set 123
 
 vector 0 LightIoTNetwork.cloud EndToEndDelay_s ETV
-0	2110 12689 3 1404 0.52121839912 9.990740453941 468 0.001 0.001 0.468 0.000468
+0	2078 17059 3 1422 0.560677898185 9.977081286929 474 0.000999503525 0.001000498365 0.47399867142 0.0004739973822656
 
