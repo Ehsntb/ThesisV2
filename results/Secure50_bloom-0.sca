@@ -1,32 +1,38 @@
 version 3
-run Attack50_window1s_record-0-20250901-01:55:08-1621
-attr configname Attack50_window1s_record
-attr datetime 20250901-01:55:08
-attr datetimef 20250901-015508
-attr experiment Attack50_window1s_record
+run Secure50_bloom-0-20250901-01:36:58-93759
+attr configname Secure50_bloom
+attr datetime 20250901-01:36:58
+attr datetimef 20250901-013658
+attr experiment Secure50_bloom
 attr inifile run_record.ini
 attr iterationvars ""
 attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network ned.LightIoTNetwork
-attr processid 1621
+attr processid 93759
 attr repetition 0
 attr replication #0
 attr resultdir results
 attr runnumber 0
 attr seedset 123
 config network ned.LightIoTNetwork
+config output-scalar-file results/Secure50_bloom-0.sca
+config output-vector-file results/Secure50_bloom-0.vec
+config **.scalar-recording true
+config **.vector-recording true
+config **.result-recording-modes all
 config LightIoTNetwork.numSensorNodes 50
+config **.fakeNode.enabled false
 config **.gateway.securityEnabled true
 config **.gateway.hmacWindow 1s
 config **.gateway.procDelay 1ms
 config **.gateway.costForward_mJ 5
 config **.gateway.costVerify_mJ 5
 config **.gateway.batteryInit_mJ 5000
-config **.fakeNode.enabled true
-config **.fakeNode.attackMode 1
-config **.fakeNode.replayInterval 2.5s
+config **.gateway.duplicateMethod "\"bloom\""
+config **.gateway.bloomBits 16384
+config **.gateway.bloomHashes 3
 config sim-time-limit 10s
 config description "Secure Mode Simulation (includes all scenarios)"
 config network ned.LightIoTNetwork
@@ -46,8 +52,8 @@ config network LightIoTNetwork
 config sim-time-limit 10s
 config output-scalar-file results/attack_output.sca
 config output-vector-file results/attack_output.vec
-config output-scalar-file results/Attack50_window1s_record-0.sca
-config output-vector-file results/Attack50_window1s_record-0.vec
+config output-scalar-file results/Secure50_bloom-0.sca
+config output-vector-file results/Secure50_bloom-0.vec
 config **.scalar-recording true
 config **.vector-recording true
 config **.statistic-recording true
@@ -67,7 +73,7 @@ par LightIoTNetwork.sensor[1] sendInterval 0.5s
 attr unit s
 par LightIoTNetwork.sensor[1] mode "\"Secure\""
 par LightIoTNetwork.sensor[1] aesKeyHex "\"00112233445566778899AABBCCDDEEFF\""
-scalar LightIoTNetwork.sensor[1] Sensor_EnergyRemaining_mJ 4800
+scalar LightIoTNetwork.sensor[1] Sensor_EnergyRemaining_mJ 4820
 par LightIoTNetwork.sensor[2] typename "\"ned.SensorNode\""
 par LightIoTNetwork.sensor[2] sendInterval 0.5s
 attr unit s
@@ -79,7 +85,7 @@ par LightIoTNetwork.sensor[3] sendInterval 0.5s
 attr unit s
 par LightIoTNetwork.sensor[3] mode "\"Secure\""
 par LightIoTNetwork.sensor[3] aesKeyHex "\"00112233445566778899AABBCCDDEEFF\""
-scalar LightIoTNetwork.sensor[3] Sensor_EnergyRemaining_mJ 4820
+scalar LightIoTNetwork.sensor[3] Sensor_EnergyRemaining_mJ 4800
 par LightIoTNetwork.sensor[4] typename "\"ned.SensorNode\""
 par LightIoTNetwork.sensor[4] sendInterval 0.5s
 attr unit s
@@ -97,31 +103,31 @@ par LightIoTNetwork.sensor[6] sendInterval 0.5s
 attr unit s
 par LightIoTNetwork.sensor[6] mode "\"Secure\""
 par LightIoTNetwork.sensor[6] aesKeyHex "\"00112233445566778899AABBCCDDEEFF\""
-scalar LightIoTNetwork.sensor[6] Sensor_EnergyRemaining_mJ 4800
+scalar LightIoTNetwork.sensor[6] Sensor_EnergyRemaining_mJ 4820
 par LightIoTNetwork.sensor[7] typename "\"ned.SensorNode\""
 par LightIoTNetwork.sensor[7] sendInterval 0.5s
 attr unit s
 par LightIoTNetwork.sensor[7] mode "\"Secure\""
 par LightIoTNetwork.sensor[7] aesKeyHex "\"00112233445566778899AABBCCDDEEFF\""
-scalar LightIoTNetwork.sensor[7] Sensor_EnergyRemaining_mJ 4800
+scalar LightIoTNetwork.sensor[7] Sensor_EnergyRemaining_mJ 4820
 par LightIoTNetwork.sensor[8] typename "\"ned.SensorNode\""
 par LightIoTNetwork.sensor[8] sendInterval 0.5s
 attr unit s
 par LightIoTNetwork.sensor[8] mode "\"Secure\""
 par LightIoTNetwork.sensor[8] aesKeyHex "\"00112233445566778899AABBCCDDEEFF\""
-scalar LightIoTNetwork.sensor[8] Sensor_EnergyRemaining_mJ 4820
+scalar LightIoTNetwork.sensor[8] Sensor_EnergyRemaining_mJ 4800
 par LightIoTNetwork.sensor[9] typename "\"ned.SensorNode\""
 par LightIoTNetwork.sensor[9] sendInterval 0.5s
 attr unit s
 par LightIoTNetwork.sensor[9] mode "\"Secure\""
 par LightIoTNetwork.sensor[9] aesKeyHex "\"00112233445566778899AABBCCDDEEFF\""
-scalar LightIoTNetwork.sensor[9] Sensor_EnergyRemaining_mJ 4820
+scalar LightIoTNetwork.sensor[9] Sensor_EnergyRemaining_mJ 4800
 par LightIoTNetwork.sensor[10] typename "\"ned.SensorNode\""
 par LightIoTNetwork.sensor[10] sendInterval 0.5s
 attr unit s
 par LightIoTNetwork.sensor[10] mode "\"Secure\""
 par LightIoTNetwork.sensor[10] aesKeyHex "\"00112233445566778899AABBCCDDEEFF\""
-scalar LightIoTNetwork.sensor[10] Sensor_EnergyRemaining_mJ 4820
+scalar LightIoTNetwork.sensor[10] Sensor_EnergyRemaining_mJ 4800
 par LightIoTNetwork.sensor[11] typename "\"ned.SensorNode\""
 par LightIoTNetwork.sensor[11] sendInterval 0.5s
 attr unit s
@@ -139,19 +145,19 @@ par LightIoTNetwork.sensor[13] sendInterval 0.5s
 attr unit s
 par LightIoTNetwork.sensor[13] mode "\"Secure\""
 par LightIoTNetwork.sensor[13] aesKeyHex "\"00112233445566778899AABBCCDDEEFF\""
-scalar LightIoTNetwork.sensor[13] Sensor_EnergyRemaining_mJ 4820
+scalar LightIoTNetwork.sensor[13] Sensor_EnergyRemaining_mJ 4800
 par LightIoTNetwork.sensor[14] typename "\"ned.SensorNode\""
 par LightIoTNetwork.sensor[14] sendInterval 0.5s
 attr unit s
 par LightIoTNetwork.sensor[14] mode "\"Secure\""
 par LightIoTNetwork.sensor[14] aesKeyHex "\"00112233445566778899AABBCCDDEEFF\""
-scalar LightIoTNetwork.sensor[14] Sensor_EnergyRemaining_mJ 4820
+scalar LightIoTNetwork.sensor[14] Sensor_EnergyRemaining_mJ 4800
 par LightIoTNetwork.sensor[15] typename "\"ned.SensorNode\""
 par LightIoTNetwork.sensor[15] sendInterval 0.5s
 attr unit s
 par LightIoTNetwork.sensor[15] mode "\"Secure\""
 par LightIoTNetwork.sensor[15] aesKeyHex "\"00112233445566778899AABBCCDDEEFF\""
-scalar LightIoTNetwork.sensor[15] Sensor_EnergyRemaining_mJ 4800
+scalar LightIoTNetwork.sensor[15] Sensor_EnergyRemaining_mJ 4820
 par LightIoTNetwork.sensor[16] typename "\"ned.SensorNode\""
 par LightIoTNetwork.sensor[16] sendInterval 0.5s
 attr unit s
@@ -223,7 +229,7 @@ par LightIoTNetwork.sensor[27] sendInterval 0.5s
 attr unit s
 par LightIoTNetwork.sensor[27] mode "\"Secure\""
 par LightIoTNetwork.sensor[27] aesKeyHex "\"00112233445566778899AABBCCDDEEFF\""
-scalar LightIoTNetwork.sensor[27] Sensor_EnergyRemaining_mJ 4800
+scalar LightIoTNetwork.sensor[27] Sensor_EnergyRemaining_mJ 4820
 par LightIoTNetwork.sensor[28] typename "\"ned.SensorNode\""
 par LightIoTNetwork.sensor[28] sendInterval 0.5s
 attr unit s
@@ -235,7 +241,7 @@ par LightIoTNetwork.sensor[29] sendInterval 0.5s
 attr unit s
 par LightIoTNetwork.sensor[29] mode "\"Secure\""
 par LightIoTNetwork.sensor[29] aesKeyHex "\"00112233445566778899AABBCCDDEEFF\""
-scalar LightIoTNetwork.sensor[29] Sensor_EnergyRemaining_mJ 4820
+scalar LightIoTNetwork.sensor[29] Sensor_EnergyRemaining_mJ 4800
 par LightIoTNetwork.sensor[30] typename "\"ned.SensorNode\""
 par LightIoTNetwork.sensor[30] sendInterval 0.5s
 attr unit s
@@ -259,7 +265,7 @@ par LightIoTNetwork.sensor[33] sendInterval 0.5s
 attr unit s
 par LightIoTNetwork.sensor[33] mode "\"Secure\""
 par LightIoTNetwork.sensor[33] aesKeyHex "\"00112233445566778899AABBCCDDEEFF\""
-scalar LightIoTNetwork.sensor[33] Sensor_EnergyRemaining_mJ 4800
+scalar LightIoTNetwork.sensor[33] Sensor_EnergyRemaining_mJ 4820
 par LightIoTNetwork.sensor[34] typename "\"ned.SensorNode\""
 par LightIoTNetwork.sensor[34] sendInterval 0.5s
 attr unit s
@@ -343,7 +349,7 @@ par LightIoTNetwork.sensor[47] sendInterval 0.5s
 attr unit s
 par LightIoTNetwork.sensor[47] mode "\"Secure\""
 par LightIoTNetwork.sensor[47] aesKeyHex "\"00112233445566778899AABBCCDDEEFF\""
-scalar LightIoTNetwork.sensor[47] Sensor_EnergyRemaining_mJ 4800
+scalar LightIoTNetwork.sensor[47] Sensor_EnergyRemaining_mJ 4820
 par LightIoTNetwork.sensor[48] typename "\"ned.SensorNode\""
 par LightIoTNetwork.sensor[48] sendInterval 0.5s
 attr unit s
@@ -355,14 +361,14 @@ par LightIoTNetwork.sensor[49] sendInterval 0.5s
 attr unit s
 par LightIoTNetwork.sensor[49] mode "\"Secure\""
 par LightIoTNetwork.sensor[49] aesKeyHex "\"00112233445566778899AABBCCDDEEFF\""
-scalar LightIoTNetwork.sensor[49] Sensor_EnergyRemaining_mJ 4800
+scalar LightIoTNetwork.sensor[49] Sensor_EnergyRemaining_mJ 4820
 par LightIoTNetwork.gateway typename "\"ned.GatewayNode\""
 par LightIoTNetwork.gateway aesKeyHex "\"00112233445566778899AABBCCDDEEFF\""
 par LightIoTNetwork.gateway securityEnabled true
 par LightIoTNetwork.gateway checkHmac true
 par LightIoTNetwork.gateway checkFreshness true
 par LightIoTNetwork.gateway checkDuplicate true
-par LightIoTNetwork.gateway duplicateMethod "\"set\""
+par LightIoTNetwork.gateway duplicateMethod "\"bloom\""
 par LightIoTNetwork.gateway bloomBits 16384
 par LightIoTNetwork.gateway bloomHashes 3
 par LightIoTNetwork.gateway costForward_mJ 5
@@ -372,25 +378,25 @@ par LightIoTNetwork.gateway procDelay 0.001s
 attr unit s
 par LightIoTNetwork.gateway hmacWindow 1s
 attr unit s
-scalar LightIoTNetwork.gateway GW_Received 479
-scalar LightIoTNetwork.gateway GW_Forwarded 475
-scalar LightIoTNetwork.gateway GW_Dropped 4
-scalar LightIoTNetwork.gateway GW_Dropped_HMAC 4
-scalar LightIoTNetwork.gateway GW_Dropped_Stale 4
-scalar LightIoTNetwork.gateway GW_Dropped_Duplicate 4
-scalar LightIoTNetwork.gateway GW_BatteryRemaining_mJ 230
+scalar LightIoTNetwork.gateway GW_Received 474
+scalar LightIoTNetwork.gateway GW_Forwarded 474
+scalar LightIoTNetwork.gateway GW_Dropped 0
+scalar LightIoTNetwork.gateway GW_Dropped_HMAC 0
+scalar LightIoTNetwork.gateway GW_Dropped_Stale 0
+scalar LightIoTNetwork.gateway GW_Dropped_Duplicate 0
+scalar LightIoTNetwork.gateway GW_BatteryRemaining_mJ 260
 par LightIoTNetwork.cloud typename "\"ned.CloudServer\""
-scalar LightIoTNetwork.cloud Cloud_TotalReceived 475
-scalar LightIoTNetwork.cloud Cloud_AvgDelay_s 0.0010000098174379
+scalar LightIoTNetwork.cloud Cloud_TotalReceived 474
+scalar LightIoTNetwork.cloud Cloud_AvgDelay_s 0.00099999719708861
 par LightIoTNetwork.fakeNode typename "\"ned.FakeNode\""
-par LightIoTNetwork.fakeNode enabled true
+par LightIoTNetwork.fakeNode enabled false
 par LightIoTNetwork.fakeNode replayInterval 2.5s
 attr unit s
-par LightIoTNetwork.fakeNode attackMode 1
+par LightIoTNetwork.fakeNode attackMode 2
 par LightIoTNetwork.fakeNode replayId 100000
 par LightIoTNetwork.fakeNode replayTsUs 500000
 par LightIoTNetwork.fakeNode replayTagHex "\"00000000000000000000000000000000\""
-scalar LightIoTNetwork.fakeNode Fake_AttacksSent 4
+scalar LightIoTNetwork.fakeNode Fake_AttacksSent 0
 par LightIoTNetwork typename "\"ned.LightIoTNetwork\""
 par LightIoTNetwork numSensorNodes 50
 

@@ -1,25 +1,30 @@
 version 3
-run Attack50_window1s_record-0-20250901-01:55:08-1621
-attr configname Attack50_window1s_record
-attr datetime 20250901-01:55:08
-attr datetimef 20250901-015508
-attr experiment Attack50_window1s_record
+run Attack50_window5s_record-0-20250901-12:21:03-96969
+attr configname Attack50_window5s_record
+attr datetime 20250901-12:21:03
+attr datetimef 20250901-122103
+attr experiment Attack50_window5s_record
 attr inifile run_record.ini
 attr iterationvars ""
 attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network ned.LightIoTNetwork
-attr processid 1621
+attr processid 96969
 attr repetition 0
 attr replication #0
 attr resultdir results
 attr runnumber 0
 attr seedset 123
 config network ned.LightIoTNetwork
+config output-scalar-file results/Attack50_window5s_record-0.sca
+config output-vector-file results/Attack50_window5s_record-0.vec
+config **.scalar-recording true
+config **.vector-recording true
+config **.result-recording-modes all
 config LightIoTNetwork.numSensorNodes 50
 config **.gateway.securityEnabled true
-config **.gateway.hmacWindow 1s
+config **.gateway.hmacWindow 5s
 config **.gateway.procDelay 1ms
 config **.gateway.costForward_mJ 5
 config **.gateway.costVerify_mJ 5
@@ -28,6 +33,9 @@ config **.fakeNode.enabled true
 config **.fakeNode.attackMode 1
 config **.fakeNode.replayInterval 2.5s
 config sim-time-limit 10s
+config rng-class cMersenneTwister
+config num-rngs 1
+config seed-set 123
 config description "Secure Mode Simulation (includes all scenarios)"
 config network ned.LightIoTNetwork
 config ned-path .
@@ -46,8 +54,8 @@ config network LightIoTNetwork
 config sim-time-limit 10s
 config output-scalar-file results/attack_output.sca
 config output-vector-file results/attack_output.vec
-config output-scalar-file results/Attack50_window1s_record-0.sca
-config output-vector-file results/Attack50_window1s_record-0.vec
+config output-scalar-file results/Attack50_window5s_record-0.sca
+config output-vector-file results/Attack50_window5s_record-0.vec
 config **.scalar-recording true
 config **.vector-recording true
 config **.statistic-recording true
@@ -370,13 +378,13 @@ par LightIoTNetwork.gateway costVerify_mJ 5
 par LightIoTNetwork.gateway batteryInit_mJ 5000
 par LightIoTNetwork.gateway procDelay 0.001s
 attr unit s
-par LightIoTNetwork.gateway hmacWindow 1s
+par LightIoTNetwork.gateway hmacWindow 5s
 attr unit s
 scalar LightIoTNetwork.gateway GW_Received 479
 scalar LightIoTNetwork.gateway GW_Forwarded 475
 scalar LightIoTNetwork.gateway GW_Dropped 4
 scalar LightIoTNetwork.gateway GW_Dropped_HMAC 4
-scalar LightIoTNetwork.gateway GW_Dropped_Stale 4
+scalar LightIoTNetwork.gateway GW_Dropped_Stale 2
 scalar LightIoTNetwork.gateway GW_Dropped_Duplicate 4
 scalar LightIoTNetwork.gateway GW_BatteryRemaining_mJ 230
 par LightIoTNetwork.cloud typename "\"ned.CloudServer\""
