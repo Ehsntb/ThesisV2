@@ -1,8 +1,8 @@
 version 3
-run Attack50_record-0-20250901-01:10:54-81226
+run Attack50_record-0-20250902-23:13:17-2034
 attr configname Attack50_record
-attr datetime 20250901-01:10:54
-attr datetimef 20250901-011054
+attr datetime 20250902-23:13:17
+attr datetimef 20250902-231317
 attr experiment Attack50_record
 attr inifile run_record.ini
 attr iterationvars ""
@@ -10,7 +10,7 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network ned.LightIoTNetwork
-attr processid 81226
+attr processid 2034
 attr repetition 0
 attr replication #0
 attr resultdir results

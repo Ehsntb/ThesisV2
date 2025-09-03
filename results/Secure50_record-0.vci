@@ -1,9 +1,9 @@
-file 19138 1756676146                                           
+file 15840 1756842186                                           
 version 3
-run Secure50_record-0-20250901-01:04:00-78322
+run Secure50_record-0-20250902-23:11:30-2005
 attr configname Secure50_record
-attr datetime 20250901-01:04:00
-attr datetimef 20250901-010400
+attr datetime 20250902-23:11:30
+attr datetimef 20250902-231130
 attr experiment Secure50_record
 attr inifile run_record.ini
 attr iterationvars ""
@@ -11,7 +11,7 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network ned.LightIoTNetwork
-attr processid 78322
+attr processid 2005
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -61,5 +61,5 @@ config num-rngs 1
 config seed-set 123
 
 vector 0 LightIoTNetwork.cloud EndToEndDelay_s ETV
-0	2078 17059 3 1422 0.560677898185 9.977081286929 474 0.000999503525 0.001000498365 0.47399867142 0.0004739973822656
+0	2076 13763 3 1152 0.560677898185 8.102628693845 384 0.000999503525 0.001000498365 0.384001552174 0.00038400313638829
 
