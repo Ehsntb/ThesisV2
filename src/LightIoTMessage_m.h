@@ -5,38 +5,36 @@
 
 #include <omnetpp.h>
 #include <string>
-
 using namespace omnetpp;
 
 class LightIoTMessage : public cMessage {
   private:
-    int id = 0;
-    std::string macHex;   // CMAC(AES-128) in hex
+    int id = 0;                  // شناسه یکتا (جهانی)
+    int src = 0;                 // اندیس فرستنده (sensor index)
+    int seq = 0;                 // شماره ترتیبی هر سنسور
+    std::string macHex;          // CMAC(AES-128) hex
     simtime_t timestamp = SIMTIME_ZERO;
 
   public:
     LightIoTMessage(const char *name=nullptr) : cMessage(name) {}
     LightIoTMessage(const LightIoTMessage& other) : cMessage(other) {
-        id = other.id;
-        macHex = other.macHex;
-        timestamp = other.timestamp;
+        id = other.id; src = other.src; seq = other.seq;
+        macHex = other.macHex; timestamp = other.timestamp;
     }
-
     LightIoTMessage& operator=(const LightIoTMessage& other) {
         if (this == &other) return *this;
         cMessage::operator=(other);
-        id = other.id;
-        macHex = other.macHex;
-        timestamp = other.timestamp;
+        id = other.id; src = other.src; seq = other.seq;
+        macHex = other.macHex; timestamp = other.timestamp;
         return *this;
     }
-
     virtual LightIoTMessage *dup() const override { return new LightIoTMessage(*this); }
 
-    void setId(int i) { id = i; }
-    int getId() const { return id; }
+    void setId(int v) { id = v; }           int getId() const { return id; }
+    void setSrc(int v){ src = v; }           int getSrc() const{ return src; }
+    void setSeq(int v){ seq = v; }           int getSeq() const{ return seq; }
 
-    // Backward-compat with old naming:
+    // سازگاری با کد قبلی
     void setHmac(const char* h) { macHex = (h ? h : ""); }
     const char* getHmac() const { return macHex.c_str(); }
 
