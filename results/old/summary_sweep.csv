@@ -1,7 +1,0 @@
-Nodes,Mode,Cloud_Received,Gateway_Received,Gateway_Forwarded,Gateway_Dropped,Gateway_Energy_mJ,Sensor_Energy_mJ,Avg_Delay_s
-5,Secure,45,48,45,3,4535,4820,0.001
-5,NoSec,48,48,48,0,4760,4820,0.125
-20,Secure,45,48,45,3,4535,4820,0.001
-20,NoSec,48,48,48,0,4760,4820,0.125
-50,Secure,45,48,45,3,4535,4820,0.001
-50,NoSec,48,48,48,0,4760,4820,0.125

@@ -1,1 +1,0 @@
-Config,Nodes,Mode,Cloud_TotalReceived,GW_Received,GW_Forwarded,GW_Dropped,GW_Dropped_HMAC,GW_Dropped_Stale,GW_Dropped_Duplicate,GW_Battery_mJ,Sensor_AvgBattery_mJ,Cloud_AvgDelay_s,Fake_AttacksSent

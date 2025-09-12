@@ -1,4 +1,0 @@
-CONFIG,Cloud_Received,Gateway_Received,Gateway_Forwarded,Gateway_Dropped,Gateway_Energy_mJ,Sensor_Energy_mJ,Avg_Delay_s
-Secure50,468,471,468,3,305,4800,0.001
-NoSecurity50,471,471,471,0,2645,4800,0.0127389
-ReplayAttackOnSecure50,468,471,468,3,305,4800,0.001
