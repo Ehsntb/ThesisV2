@@ -1,0 +1,107 @@
+file 80960 1757804310                                           
+version 3
+run Secure50_bloom-0-20250914-02:28:30-94711
+attr configname Secure50_bloom
+attr datetime 20250914-02:28:30
+attr datetimef 20250914-022830
+attr experiment Secure50_bloom
+attr inifile run_record.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network ned.LightIoTNetwork
+attr processid 94711
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 123
+config **.gateway.batteryInit_mJ 20000000
+config **.gateway.stageOrder "\"HBF\""
+config **.gateway.stageOrderId 2
+config **.result-recording-modes all
+config **.scalar-recording true
+config **.vector-recording true
+config output-scalar-file results/perms_Secure50_bloom_HBF.sca
+config output-vector-file results/perms_Secure50_bloom_HBF.vec
+config record-eventlog false
+config extends Secure50_record
+config **.gateway.duplicateMethod "\"bloom\""
+config network ned.LightIoTNetwork
+config LightIoTNetwork.numSensorNodes 50
+config **.fakeNode.enabled false
+config **.sensor[*].mode "\"Secure\""
+config **.gateway.securityEnabled true
+config description "Secure Mode Simulation (includes all scenarios)"
+config network ned.LightIoTNetwork
+config ned-path .
+config sim-time-limit 10s
+config record-eventlog true
+config cmdenv-express-mode false
+config network ned.LightIoTNetwork
+config sim-time-limit 10s
+config output-scalar-file results/secure_output.sca
+config output-vector-file results/secure_output.vec
+config network LightIoTNetwork
+config sim-time-limit 10s
+config output-scalar-file results/nosecure_output.sca
+config output-vector-file results/nosecure_output.vec
+config network LightIoTNetwork
+config sim-time-limit 10s
+config output-scalar-file results/attack_output.sca
+config output-vector-file results/attack_output.vec
+config output-scalar-file results/Secure50_bloom-0.sca
+config output-vector-file results/Secure50_bloom-0.vec
+config **.scalar-recording true
+config **.vector-recording true
+config **.statistic-recording true
+config **.result-recording-modes all
+config rng-class cMersenneTwister
+config num-rngs 1
+config seed-set 123
+config output-scalar-file results/Secure50_bloom-0.sca
+config output-vector-file results/Secure50_bloom-0.vec
+config **.scalar-recording true
+config **.vector-recording true
+config **.result-recording-modes all
+config **.sensor[*].aesKeyHex "\"00112233445566778899AABBCCDDEEFF\""
+config **.gateway.aesKeyHex "\"00112233445566778899AABBCCDDEEFF\""
+config **.fakeNode.aesKeyHex "\"00112233445566778899AABBCCDDEEFF\""
+config **.sensor[*].sendInterval 0.5s
+config **.sensor[*].mode "\"Secure\""
+config **.gateway.procDelay 1ms
+config **.gateway.hmacWindow 1s
+config **.gateway.costForward_mJ 5
+config **.gateway.costVerify_mJ 5
+config **.gateway.batteryInit_mJ 5000
+config **.gateway.securityEnabled true
+config **.gateway.checkHmac true
+config **.gateway.checkFreshness true
+config **.gateway.checkDuplicate true
+config **.gateway.duplicateMethod "\"set\""
+config **.gateway.bloomBits 16384
+config **.gateway.bloomHashes 3
+config **.gateway.sbfBits 16384
+config **.gateway.sbfHashes 3
+config **.gateway.sbfDecay 0.02
+config **.fakeNode.enabled false
+config **.fakeNode.attackMode 1
+config **.fakeNode.replayInterval 2.5s
+config **.fakeNode.validMac true
+config **.fakeNode.replayId 100000
+config **.fakeNode.replayTsUs 500000
+config **.fakeNode.dupBurstLen 4
+config **.fakeNode.dupBurstGap 200ms
+config **.fakeNode.outOfOrderJitter 80ms
+config sim-time-limit 10s
+
+vector 0 LightIoTNetwork.gateway q_bloom_calls ETV
+vector 1 LightIoTNetwork.gateway q_bloom_inserts ETV
+vector 2 LightIoTNetwork.cloud e2eDelay_valid ETV
+vector 3 LightIoTNetwork.cloud e2eDelay_debug ETV
+0	3661 21687 2 2771 0.559677898185 9.973524865557 924 1 1 924 924
+1	25348 21687 2 2771 0.559677898185 9.973524865557 924 1 1 924 924
+2	47035 33579 3 2772 0.560677898185 9.974524865557 924 0.000999502879 0.001000498796 0.923996371185 0.00092399281942751
+3	80614 345 3 30 0.560677898185 0.825150895933 10 0.000999732528 0.001000498164 0.010001102708 1.0002206507982e-05
+

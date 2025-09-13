@@ -1,0 +1,185 @@
+version 3
+run NoSec5_record-0-20250914-01:05:41-57574
+attr configname NoSec5_record
+attr datetime 20250914-01:05:41
+attr datetimef 20250914-010541
+attr experiment NoSec5_record
+attr inifile run_record.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network ned.LightIoTNetwork
+attr processid 57574
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 123
+config output-scalar-file results/NoSec5_record.sca
+config output-vector-file results/NoSec5_record.vec
+config **.result-recording-modes all
+config **.scalar-recording true
+config **.vector-recording true
+config network ned.LightIoTNetwork
+config LightIoTNetwork.numSensorNodes 5
+config **.fakeNode.enabled false
+config **.sensor[*].mode "\"NoSecurity\""
+config **.gateway.securityEnabled false
+config **.gateway.procDelay 0s
+config **.gateway.costVerify_mJ 0
+config description "Secure Mode Simulation (includes all scenarios)"
+config network ned.LightIoTNetwork
+config ned-path .
+config sim-time-limit 10s
+config record-eventlog true
+config cmdenv-express-mode false
+config network ned.LightIoTNetwork
+config sim-time-limit 10s
+config output-scalar-file results/secure_output.sca
+config output-vector-file results/secure_output.vec
+config network LightIoTNetwork
+config sim-time-limit 10s
+config output-scalar-file results/nosecure_output.sca
+config output-vector-file results/nosecure_output.vec
+config network LightIoTNetwork
+config sim-time-limit 10s
+config output-scalar-file results/attack_output.sca
+config output-vector-file results/attack_output.vec
+config output-scalar-file results/NoSec5_record-0.sca
+config output-vector-file results/NoSec5_record-0.vec
+config **.scalar-recording true
+config **.vector-recording true
+config **.statistic-recording true
+config **.result-recording-modes all
+config rng-class cMersenneTwister
+config num-rngs 1
+config seed-set 123
+config output-scalar-file results/NoSec5_record-0.sca
+config output-vector-file results/NoSec5_record-0.vec
+config **.scalar-recording true
+config **.vector-recording true
+config **.result-recording-modes all
+config **.sensor[*].aesKeyHex "\"00112233445566778899AABBCCDDEEFF\""
+config **.gateway.aesKeyHex "\"00112233445566778899AABBCCDDEEFF\""
+config **.fakeNode.aesKeyHex "\"00112233445566778899AABBCCDDEEFF\""
+config **.sensor[*].sendInterval 0.5s
+config **.sensor[*].mode "\"Secure\""
+config **.gateway.procDelay 1ms
+config **.gateway.hmacWindow 1s
+config **.gateway.costForward_mJ 5
+config **.gateway.costVerify_mJ 5
+config **.gateway.batteryInit_mJ 5000
+config **.gateway.securityEnabled true
+config **.gateway.checkHmac true
+config **.gateway.checkFreshness true
+config **.gateway.checkDuplicate true
+config **.gateway.duplicateMethod "\"set\""
+config **.gateway.bloomBits 16384
+config **.gateway.bloomHashes 3
+config **.gateway.sbfBits 16384
+config **.gateway.sbfHashes 3
+config **.gateway.sbfDecay 0.02
+config **.fakeNode.enabled false
+config **.fakeNode.attackMode 1
+config **.fakeNode.replayInterval 2.5s
+config **.fakeNode.validMac true
+config **.fakeNode.replayId 100000
+config **.fakeNode.replayTsUs 500000
+config **.fakeNode.dupBurstLen 4
+config **.fakeNode.dupBurstGap 200ms
+config **.fakeNode.outOfOrderJitter 80ms
+config sim-time-limit 10s
+
+par LightIoTNetwork.sensor[0] typename "\"ned.SensorNode\""
+par LightIoTNetwork.sensor[0] sendInterval 0.5s
+attr unit s
+par LightIoTNetwork.sensor[0] mode "\"NoSecurity\""
+par LightIoTNetwork.sensor[0] aesKeyHex "\"00112233445566778899AABBCCDDEEFF\""
+scalar LightIoTNetwork.sensor[0] Sensor_EnergyRemaining_mJ 4640
+par LightIoTNetwork.sensor[1] typename "\"ned.SensorNode\""
+par LightIoTNetwork.sensor[1] sendInterval 0.5s
+attr unit s
+par LightIoTNetwork.sensor[1] mode "\"NoSecurity\""
+par LightIoTNetwork.sensor[1] aesKeyHex "\"00112233445566778899AABBCCDDEEFF\""
+scalar LightIoTNetwork.sensor[1] Sensor_EnergyRemaining_mJ 4640
+par LightIoTNetwork.sensor[2] typename "\"ned.SensorNode\""
+par LightIoTNetwork.sensor[2] sendInterval 0.5s
+attr unit s
+par LightIoTNetwork.sensor[2] mode "\"NoSecurity\""
+par LightIoTNetwork.sensor[2] aesKeyHex "\"00112233445566778899AABBCCDDEEFF\""
+scalar LightIoTNetwork.sensor[2] Sensor_EnergyRemaining_mJ 4620
+par LightIoTNetwork.sensor[3] typename "\"ned.SensorNode\""
+par LightIoTNetwork.sensor[3] sendInterval 0.5s
+attr unit s
+par LightIoTNetwork.sensor[3] mode "\"NoSecurity\""
+par LightIoTNetwork.sensor[3] aesKeyHex "\"00112233445566778899AABBCCDDEEFF\""
+scalar LightIoTNetwork.sensor[3] Sensor_EnergyRemaining_mJ 4620
+par LightIoTNetwork.sensor[4] typename "\"ned.SensorNode\""
+par LightIoTNetwork.sensor[4] sendInterval 0.5s
+attr unit s
+par LightIoTNetwork.sensor[4] mode "\"NoSecurity\""
+par LightIoTNetwork.sensor[4] aesKeyHex "\"00112233445566778899AABBCCDDEEFF\""
+scalar LightIoTNetwork.sensor[4] Sensor_EnergyRemaining_mJ 4620
+par LightIoTNetwork.gateway typename "\"ned.GatewayNode\""
+par LightIoTNetwork.gateway securityEnabled false
+par LightIoTNetwork.gateway checkHmac true
+par LightIoTNetwork.gateway checkFreshness true
+par LightIoTNetwork.gateway checkDuplicate true
+par LightIoTNetwork.gateway stageOrder "\"HFB\""
+par LightIoTNetwork.gateway duplicateMethod "\"set\""
+par LightIoTNetwork.gateway bloomBits 16384
+par LightIoTNetwork.gateway bloomHashes 3
+par LightIoTNetwork.gateway sbfBits 16384
+par LightIoTNetwork.gateway sbfHashes 3
+par LightIoTNetwork.gateway sbfDecay 0.02
+par LightIoTNetwork.gateway costForward_mJ 5
+par LightIoTNetwork.gateway costVerify_mJ 0
+par LightIoTNetwork.gateway batteryInit_mJ 5000
+par LightIoTNetwork.gateway procDelay 0s
+attr unit s
+par LightIoTNetwork.gateway hmacWindow 1s
+attr unit s
+par LightIoTNetwork.gateway aesKeyHex "\"00112233445566778899AABBCCDDEEFF\""
+scalar LightIoTNetwork.gateway totalAccepted 93
+scalar LightIoTNetwork.gateway totalDroppedHmac 0
+scalar LightIoTNetwork.gateway totalDroppedReplay 0
+scalar LightIoTNetwork.gateway totalDroppedDup 0
+scalar LightIoTNetwork.gateway goodput 9.3
+scalar LightIoTNetwork.gateway bloomFP 0
+scalar LightIoTNetwork.gateway bloomCallsPerK 0
+scalar LightIoTNetwork.gateway bloomQueriesTotal 0
+scalar LightIoTNetwork.gateway bloomInsertsTotal 0
+scalar LightIoTNetwork.gateway energyGW_mJ 465
+scalar LightIoTNetwork.gateway energyPerMsg_mJ 5
+scalar LightIoTNetwork.gateway workAvg_units 0
+scalar LightIoTNetwork.gateway workH_count 0
+scalar LightIoTNetwork.gateway workF_count 0
+scalar LightIoTNetwork.gateway workB_count 0
+scalar LightIoTNetwork.gateway stageOrderId 1
+scalar LightIoTNetwork.gateway mismatchCounter 0
+par LightIoTNetwork.cloud typename "\"ned.CloudServer\""
+scalar LightIoTNetwork.cloud Cloud_TotalReceived 93
+scalar LightIoTNetwork.cloud Cloud_AvgDelay_s 2.2784666666667e-08
+par LightIoTNetwork.fakeNode typename "\"ned.FakeNode\""
+par LightIoTNetwork.fakeNode enabled false
+par LightIoTNetwork.fakeNode attackMode 1
+par LightIoTNetwork.fakeNode replayInterval 2.5s
+attr unit s
+par LightIoTNetwork.fakeNode replayId 100000
+par LightIoTNetwork.fakeNode replayTsUs 500000
+par LightIoTNetwork.fakeNode replayTagHex "\"00000000000000000000000000000000\""
+par LightIoTNetwork.fakeNode validMac true
+par LightIoTNetwork.fakeNode aesKeyHex "\"00112233445566778899AABBCCDDEEFF\""
+par LightIoTNetwork.fakeNode dupBurstLen 4
+par LightIoTNetwork.fakeNode dupBurstGap 0.2s
+attr unit s
+par LightIoTNetwork.fakeNode outOfOrderJitter 0.08s
+attr unit s
+scalar LightIoTNetwork.fakeNode Fake_AttacksSent 0
+scalar LightIoTNetwork.fakeNode Fake_ValidReplaysSent 0
+scalar LightIoTNetwork.fakeNode Fake_DupMsgsSent 0
+scalar LightIoTNetwork.fakeNode Fake_Bursts 0
+par LightIoTNetwork typename "\"ned.LightIoTNetwork\""
+par LightIoTNetwork numSensorNodes 5
+

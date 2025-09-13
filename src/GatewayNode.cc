@@ -265,8 +265,28 @@ class GatewayNode : public cSimpleModule {
         procDelay       = par("procDelay");
 
         // ترتیب
-        stageOrder = normalizeOrder(par("stageOrder").stdstringValue());
-        orderId = orderIdFromStr(stageOrder);
+        int idFromPar = (hasPar("stageOrderId") ? par("stageOrderId").intValue() : 0);
+        std::string ordFromPar;
+        if (hasPar("stageOrder")) {
+            ordFromPar = par("stageOrder").stdstringValue();
+        }
+        // نرمال‌سازی رشته ورودی (اجازه می‌دهد H/F/B با ترتیب دلخواه یا کاراکترهای اضافی داده شود)
+        std::string ordNorm = normalizeOrder(ordFromPar);
+
+        if (idFromPar >= 1 && idFromPar <= 6) {
+            // اگر شناسه به‌صورت عددی داده شده باشد، بر رشته مقدم است
+            static const char* LUT[] = {"", "HFB", "HBF", "FHB", "FBH", "BHF", "BFH"};
+            orderId   = idFromPar;
+            stageOrder = LUT[orderId];
+        } else if (!ordNorm.empty()) {
+            // در غیر این صورت از رشته استفاده می‌کنیم
+            stageOrder = ordNorm;
+            orderId    = orderIdFromStr(stageOrder);
+        } else {
+            // پیش‌فرض ایمن
+            stageOrder = "HFB";
+            orderId    = 1;
+        }
 
         // کلید
         aesKeyHex = par("aesKeyHex").stdstringValue();

@@ -1,24 +1,32 @@
 #
-# OMNeT++/OMNEST Makefile for $(LIB_PREFIX)LightIoTSimulation
+# OMNeT++/OMNEST Makefile for LightIoTSimulation
 #
 # This file was generated with the command:
-#  opp_makemake -f --deep -a -O out/clang-release -o LightIoTSimulation -I src -I ned src ned
+#  opp_makemake -f --deep -o LightIoTSimulation -O out -u Cmdenv -l oppscave
 #
 
 # Name of target to be created (-o option)
 TARGET_DIR = .
-TARGET_NAME = $(LIB_PREFIX)LightIoTSimulation$(D)
-TARGET = $(TARGET_NAME)$(A_LIB_SUFFIX)
+TARGET_NAME = LightIoTSimulation$(D)
+TARGET = $(TARGET_NAME)$(EXE_SUFFIX)
 TARGET_FILES = $(TARGET_DIR)/$(TARGET)
 
+# User interface (uncomment one) (-u option)
+#USERIF_LIBS = $(ALL_ENV_LIBS) # that is, $(QTENV_LIBS) $(CMDENV_LIBS)
+USERIF_LIBS = $(CMDENV_LIBS)
+#USERIF_LIBS = $(QTENV_LIBS)
+
 # C++ include paths (with -I)
-INCLUDE_PATH = -Isrc -Ined
+INCLUDE_PATH =
 
 # Additional object and library files to link with
-EXTRA_OBJS = src ned
+EXTRA_OBJS =
+
+# Additional libraries (-L, -l options)
+LIBS =  -loppscave
 
 # Output directory
-PROJECT_OUTPUT_DIR = out/clang-release
+PROJECT_OUTPUT_DIR = out
 PROJECTRELATIVE_PATH =
 O = $(PROJECT_OUTPUT_DIR)/$(CONFIGNAME)/$(PROJECTRELATIVE_PATH)
 
@@ -54,6 +62,9 @@ endif
 
 include $(CONFIGFILE)
 
+# Simulation kernel and user interface libraries
+OMNETPP_LIBS = $(OPPMAIN_LIB) $(USERIF_LIBS) $(KERNEL_LIBS) $(SYS_LIBS)
+
 COPTS = $(CFLAGS) $(IMPORT_DEFINES)  $(INCLUDE_PATH) -I$(OMNETPP_INCL_DIR)
 MSGCOPTS = $(INCLUDE_PATH)
 SMCOPTS =
@@ -85,8 +96,8 @@ endif
 
 $O/$(TARGET): $(OBJS)  $(wildcard $(EXTRA_OBJS)) Makefile $(CONFIGFILE)
 	@$(MKPATH) $O
-	@echo Creating static library: $@
-	$(Q)$(AR_CR) $O/$(TARGET) $(OBJS) $(EXTRA_OBJS)
+	@echo Creating executable: $@
+	$(Q)$(CXX) $(LDFLAGS) -o $O/$(TARGET) $(OBJS) $(EXTRA_OBJS) $(AS_NEEDED_OFF) $(WHOLE_ARCHIVE_ON) $(LIBS) $(WHOLE_ARCHIVE_OFF) $(OMNETPP_LIBS)
 
 .PHONY: all clean cleanall depend msgheaders smheaders
 

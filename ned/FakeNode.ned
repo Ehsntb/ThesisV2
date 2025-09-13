@@ -25,6 +25,8 @@ simple FakeNode
         int    dupBurstLen    = default(0);          // تعداد کپی اضافه (فراتر از اولین پیام)
         double dupBurstGap @unit(s) = default(1s);   // فاصله بین کپی‌ها در برست
         double outOfOrderJitter @unit(s) = default(0s); // تاخیر تصادفی هر کپی برای خارج از ترتیب
+        string stageOrder = default("HFB");
+        int    stageOrderId = default(-1);
     gates:
         output out;
 }
