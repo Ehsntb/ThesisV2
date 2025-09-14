@@ -1,0 +1,16 @@
+scenario,N,sbfBits,sbfHashes,sbfDecay,bloomFP,bloomQueriesTotal,bloomInsertsTotal,file
+Attack50_sbf,50,16384,2,0.0001,0.021956087824351,501.0,490.0,results/sbf_sweep_h2_d0.0001.sca
+Attack50_sbf,50,16384,2,0.0005,0.021956087824351,501.0,490.0,results/sbf_sweep_h2_d0.0005.sca
+Attack50_sbf,50,16384,2,0.001,0.021956087824351,501.0,490.0,results/sbf_sweep_h2_d0.001.sca
+Attack50_sbf,50,16384,2,0.005,0.021956087824351,501.0,490.0,results/sbf_sweep_h2_d0.005.sca
+Attack50_sbf,50,16384,2,0.01,0.021956087824351,501.0,490.0,results/sbf_sweep_h2_d0.010.sca
+Attack50_sbf,50,16384,3,0.0001,0.0,495.0,495.0,results/sbf_sweep_h3_d0.0001.sca
+Attack50_sbf,50,16384,3,0.0005,0.0,495.0,495.0,results/sbf_sweep_h3_d0.0005.sca
+Attack50_sbf,50,16384,3,0.001,0.0,495.0,495.0,results/sbf_sweep_h3_d0.001.sca
+Attack50_sbf,50,16384,3,0.005,0.0,495.0,495.0,results/sbf_sweep_h3_d0.005.sca
+Attack50_sbf,50,16384,3,0.01,0.0,495.0,495.0,results/sbf_sweep_h3_d0.010.sca
+Attack50_sbf,50,16384,4,0.0001,0.0,495.0,495.0,results/sbf_sweep_h4_d0.0001.sca
+Attack50_sbf,50,16384,4,0.0005,0.0,495.0,495.0,results/sbf_sweep_h4_d0.0005.sca
+Attack50_sbf,50,16384,4,0.001,0.0,495.0,495.0,results/sbf_sweep_h4_d0.001.sca
+Attack50_sbf,50,16384,4,0.005,0.0,495.0,495.0,results/sbf_sweep_h4_d0.005.sca
+Attack50_sbf,50,16384,4,0.01,0.0,495.0,495.0,results/sbf_sweep_h4_d0.010.sca
