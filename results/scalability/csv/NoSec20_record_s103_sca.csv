@@ -1,0 +1,5 @@
+run,repetition,module,name,value
+NoSec20_record-0-20250915-22:43:51-99413,0,LightIoTNetwork.gateway,bloomFP,0
+NoSec20_record-0-20250915-22:43:51-99413,0,LightIoTNetwork.gateway,bloomCallsPerK,0
+NoSec20_record-0-20250915-22:43:51-99413,0,LightIoTNetwork.gateway,bloomQueriesTotal,0
+NoSec20_record-0-20250915-22:43:51-99413,0,LightIoTNetwork.gateway,bloomInsertsTotal,0

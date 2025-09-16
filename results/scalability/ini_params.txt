@@ -1,0 +1,108 @@
+./run_matrix_v2.ini:8:**.gateway.hmacWindow = 1s
+./run_matrix_v2.ini:19:**.gateway.hmacWindow = 1s
+./run_matrix_v2.ini:30:**.gateway.hmacWindow = 1s
+./run_matrix_v2.ini:75:**.gateway.hmacWindow = 1s
+./run_matrix_v2.ini:88:**.gateway.hmacWindow = 1s
+./run_matrix_v2.ini:101:**.gateway.hmacWindow = 1s
+./run_metrics.ini:6:**.gateway.hmacWindow = 1s
+./run_sweep_explicit.ini:8:**.gateway.hmacWindow = 1s
+./run_sweep_explicit.ini:19:**.gateway.hmacWindow = 1s
+./run_sweep_explicit.ini:30:**.gateway.hmacWindow = 1s
+./run_sweep.ini:3:# Window sweep on Attack50
+./run_sweep.ini:6:**.gateway.hmacWindow = 0.5s
+./run_sweep.ini:10:**.gateway.hmacWindow = 1s
+./run_sweep.ini:14:**.gateway.hmacWindow = 2s
+./run_sweep.ini:18:**.gateway.hmacWindow = 3s
+./run_sweep.ini:22:**.gateway.hmacWindow = 5s
+./run_matrix.ini:8:**.gateway.hmacWindow = 1s
+./run_matrix.ini:19:**.gateway.hmacWindow = 1s
+./run_matrix.ini:30:**.gateway.hmacWindow = 1s
+./run_matrix.ini:74:**.gateway.hmacWindow = 1s
+./run_matrix.ini:89:**.gateway.hmacWindow = 1s
+./run_matrix.ini:104:**.gateway.hmacWindow = 1s
+./run_record.ini:29:**.gateway.hmacWindow = 1s
+./run_record.ini:41:**.gateway.duplicateMethod = "set"       # set | bloom | sbf
+./run_record.ini:42:**.gateway.bloomBits   = 16384
+./run_record.ini:43:**.gateway.bloomHashes = 3
+./run_record.ini:44:**.gateway.sbfBits   = 16384
+./run_record.ini:125:**.gateway.hmacWindow = 1s
+./run_record.ini:134:**.gateway.hmacWindow = 1s
+./run_record.ini:143:**.gateway.hmacWindow = 3s     # larger window in denser network
+./run_record.ini:216:# Only Duplicate (bloom)
+./run_record.ini:217:[Config Secure50_dupOnly_bloom]
+./run_record.ini:226:**.gateway.duplicateMethod = "bloom"
+./run_record.ini:227:**.gateway.bloomBits = 16384
+./run_record.ini:228:**.gateway.bloomHashes = 3
+./run_record.ini:232:#               Full pipeline with Bloom (all N)
+./run_record.ini:235:[Config Secure5_bloom]    
+./run_record.ini:237:**.gateway.duplicateMethod = "bloom"
+./run_record.ini:239:[Config Secure20_bloom]  
+./run_record.ini:241:**.gateway.duplicateMethod = "bloom"
+./run_record.ini:243:[Config Secure50_bloom]   
+./run_record.ini:245:**.gateway.duplicateMethod = "bloom"
+./run_record.ini:247:[Config Attack5_bloom]    
+./run_record.ini:249:**.gateway.duplicateMethod = "bloom"
+./run_record.ini:251:[Config Attack20_bloom]   
+./run_record.ini:253:**.gateway.duplicateMethod = "bloom"
+./run_record.ini:255:[Config Attack50_bloom]   
+./run_record.ini:257:**.gateway.duplicateMethod = "bloom"
+./run_record.ini:267:**.gateway.sbfBits = 16384
+./run_record.ini:274:**.gateway.sbfBits = 16384
+./run_record.ini:281:**.gateway.sbfBits = 16384
+./run_record.ini:288:**.gateway.sbfBits = 16384
+./run_record.ini:295:**.gateway.sbfBits = 16384
+./run_record.ini:302:**.gateway.sbfBits = 16384
+./run_record.ini:314:**.gateway.hmacWindow = ${W=0.5s,1s,3s,5s}
+./run_record.ini:319:**.gateway.hmacWindow = ${W=0.5s,1s,3s,5s}
+./run_record.ini:323:#                 Bloom m/k sweeps (N=50)
+./run_record.ini:326:[Config N50_Secure_bloom_mk]
+./run_record.ini:327:extends = Secure50_bloom
+./run_record.ini:329:**.gateway.bloomBits   = ${m=8192,16384,32768}
+./run_record.ini:330:**.gateway.bloomHashes = ${k=2,3,4}
+./run_record.ini:332:[Config N50_Attack_bloom_mk]
+./run_record.ini:333:extends = Attack50_bloom
+./run_record.ini:335:**.gateway.bloomBits   = ${m=8192,16384,32768}
+./run_record.ini:336:**.gateway.bloomHashes = ${k=2,3,4}
+./run_record.ini:346:**.gateway.sbfBits   = ${mb=8192,16384}
+./run_record.ini:354:**.gateway.sbfBits   = ${mb=8192,16384}
+./run_record.ini:361:#          Scalability with fixed memory (m const across N)
+./run_record.ini:364:# Secure with Bloom, m fixed
+./run_record.ini:365:[Config Scale_Secure_Bloom_m16384_N5]   
+./run_record.ini:366:extends=Secure5_bloom
+./run_record.ini:367:**.gateway.bloomBits = 16384
+./run_record.ini:368:[Config Scale_Secure_Bloom_m16384_N20]  
+./run_record.ini:369:extends=Secure20_bloom
+./run_record.ini:370:**.gateway.bloomBits = 16384
+./run_record.ini:371:[Config Scale_Secure_Bloom_m16384_N50]  
+./run_record.ini:372:extends=Secure50_bloom
+./run_record.ini:373:**.gateway.bloomBits = 16384
+./run_record.ini:375:# Attack with Bloom, m fixed
+./run_record.ini:376:[Config Scale_Attack_Bloom_m16384_N5]   
+./run_record.ini:377:extends=Attack5_bloom
+./run_record.ini:378:**.gateway.bloomBits = 16384
+./run_record.ini:379:[Config Scale_Attack_Bloom_m16384_N20]  
+./run_record.ini:380:extends=Attack20_bloom
+./run_record.ini:381:**.gateway.bloomBits = 16384
+./run_record.ini:382:[Config Scale_Attack_Bloom_m16384_N50]  
+./run_record.ini:383:extends=Attack50_bloom
+./run_record.ini:384:**.gateway.bloomBits = 16384
+./run_record.ini:429:[Config N50_Secure_dupOnly_bloom]  
+./run_record.ini:430:extends=Secure50_dupOnly_bloom
+./run_record.ini:431:[Config N50_Secure_bloom]          
+./run_record.ini:432:extends=Secure50_bloom
+./run_record.ini:435:[Config N50_Attack_bloom]          
+./run_record.ini:436:extends=Attack50_bloom
+./run_record.ini:442:[Config N50_Secure_bloom_order]
+./run_record.ini:443:extends = N50_Secure_bloom
+./run_record.ini:447:[Config N50_Attack_bloom_order]
+./run_record.ini:448:extends = N50_Attack_bloom
+./run_record.ini:455:[Config Attack50_window05s_record]
+./run_record.ini:459:**.gateway.hmacWindow = 0.5s
+./run_record.ini:469:[Config Attack50_window1s_record]
+./run_record.ini:473:**.gateway.hmacWindow = 1s
+./run_record.ini:483:[Config Attack50_window3s_record]
+./run_record.ini:487:**.gateway.hmacWindow = 3s
+./run_record.ini:497:[Config Attack50_window5s_record]
+./run_record.ini:501:**.gateway.hmacWindow = 5s
+./run_modes_50.ini:7:**.gateway.hmacWindow = 1s
+./run_modes_50.ini:29:**.gateway.hmacWindow = 1s

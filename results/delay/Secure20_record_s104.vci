@@ -1,0 +1,99 @@
+file 17027 1757963631                                           
+version 3
+run Secure20_record-0-20250915-22:43:51-99442
+attr configname Secure20_record
+attr datetime 20250915-22:43:51
+attr datetimef 20250915-224351
+attr experiment Secure20_record
+attr inifile run_record.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network ned.LightIoTNetwork
+attr processid 99442
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 104
+config **.result-recording-modes all
+config **.scalar-recording true
+config **.vector-recording true
+config output-scalar-file results/delay/Secure20_record_s104.sca
+config output-vector-file results/delay/Secure20_record_s104.vec
+config record-eventlog false
+config seed-set 104
+config network ned.LightIoTNetwork
+config LightIoTNetwork.numSensorNodes 20
+config **.fakeNode.enabled false
+config **.sensor[*].mode "\"Secure\""
+config **.gateway.securityEnabled true
+config description "Secure Mode Simulation (includes all scenarios)"
+config network ned.LightIoTNetwork
+config ned-path .
+config sim-time-limit 10s
+config record-eventlog true
+config cmdenv-express-mode false
+config network ned.LightIoTNetwork
+config sim-time-limit 10s
+config output-scalar-file results/secure_output.sca
+config output-vector-file results/secure_output.vec
+config network LightIoTNetwork
+config sim-time-limit 10s
+config output-scalar-file results/nosecure_output.sca
+config output-vector-file results/nosecure_output.vec
+config network LightIoTNetwork
+config sim-time-limit 10s
+config output-scalar-file results/attack_output.sca
+config output-vector-file results/attack_output.vec
+config output-scalar-file results/Secure20_record-0.sca
+config output-vector-file results/Secure20_record-0.vec
+config **.scalar-recording true
+config **.vector-recording true
+config **.statistic-recording true
+config **.result-recording-modes all
+config rng-class cMersenneTwister
+config num-rngs 1
+config seed-set 123
+config output-scalar-file results/Secure20_record-0.sca
+config output-vector-file results/Secure20_record-0.vec
+config **.scalar-recording true
+config **.vector-recording true
+config **.result-recording-modes all
+config **.sensor[*].aesKeyHex "\"00112233445566778899AABBCCDDEEFF\""
+config **.gateway.aesKeyHex "\"00112233445566778899AABBCCDDEEFF\""
+config **.fakeNode.aesKeyHex "\"00112233445566778899AABBCCDDEEFF\""
+config **.sensor[*].sendInterval 0.5s
+config **.sensor[*].mode "\"Secure\""
+config **.gateway.procDelay 1ms
+config **.gateway.hmacWindow 1s
+config **.gateway.costForward_mJ 5
+config **.gateway.costVerify_mJ 5
+config **.gateway.batteryInit_mJ 5000
+config **.gateway.securityEnabled true
+config **.gateway.checkHmac true
+config **.gateway.checkFreshness true
+config **.gateway.checkDuplicate true
+config **.gateway.duplicateMethod "\"set\""
+config **.gateway.bloomBits 16384
+config **.gateway.bloomHashes 3
+config **.gateway.sbfBits 16384
+config **.gateway.sbfHashes 3
+config **.gateway.sbfDecay 0.02
+config **.fakeNode.enabled false
+config **.fakeNode.attackMode 1
+config **.fakeNode.replayInterval 2.5s
+config **.fakeNode.validMac true
+config **.fakeNode.replayId 100000
+config **.fakeNode.replayTsUs 500000
+config **.fakeNode.dupBurstLen 4
+config **.fakeNode.dupBurstGap 200ms
+config **.fakeNode.outOfOrderJitter 80ms
+config sim-time-limit 10s
+
+vector 0 LightIoTNetwork.cloud e2eDelay_valid ETV
+vector 1 LightIoTNetwork.cloud e2eDelay_debug ETV
+0	3397 13286 3 1113 0.59412301199 9.99501465049 371 0.000999501007 0.001000499693 0.371003430867 0.00037100689473195
+1	16683 343 3 30 0.59412301199 0.906439523747 10 0.000999523747 0.001000413612 0.009999526688 9.9990545828582e-06
+

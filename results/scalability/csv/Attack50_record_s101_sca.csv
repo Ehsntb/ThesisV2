@@ -1,0 +1,5 @@
+run,repetition,module,name,value
+Attack50_record-0-20250915-22:43:50-99398,0,LightIoTNetwork.gateway,bloomFP,0
+Attack50_record-0-20250915-22:43:50-99398,0,LightIoTNetwork.gateway,bloomCallsPerK,0
+Attack50_record-0-20250915-22:43:50-99398,0,LightIoTNetwork.gateway,bloomQueriesTotal,0
+Attack50_record-0-20250915-22:43:50-99398,0,LightIoTNetwork.gateway,bloomInsertsTotal,0

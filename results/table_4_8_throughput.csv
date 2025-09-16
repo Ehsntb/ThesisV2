@@ -1,0 +1,10 @@
+N,scenario,MedianThroughput_msg_per_s,CI95_low,CI95_high,runs,RetentionAttack_vs_NoSec_percent,RetentionAttack_vs_Secure_percent
+5,NoSec,9.4,9.1,9.5,5,,
+5,Secure,9.4,9.1,9.5,5,,
+5,Attack,9.4,9.2,9.5,5,100.0,100.0
+20,NoSec,37.1,36.9,37.2,5,,
+20,Secure,37.1,36.9,37.2,5,,
+20,Attack,37.2,37.0,37.4,5,100.26954177897575,100.26954177897575
+50,NoSec,92.4,92.0,93.5,5,,
+50,Secure,50.0,50.0,50.0,5,,
+50,Attack,49.6,49.5,49.6,5,53.679653679653676,99.2

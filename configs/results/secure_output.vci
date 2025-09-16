@@ -1,9 +1,9 @@
-file 21365 1757799071                                           
+file 21525 1757951233                                           
 version 3
-run Attack50_record-0-20250914-01:01:11-55648
+run Attack50_record-0-20250915-19:17:13-44140
 attr configname Attack50_record
-attr datetime 20250914-01:01:11
-attr datetimef 20250914-010111
+attr datetime 20250915-19:17:13
+attr datetimef 20250915-191713
 attr experiment Attack50_record
 attr inifile run_record.ini
 attr iterationvars ""
@@ -11,12 +11,17 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network ned.LightIoTNetwork
-attr processid 55648
+attr processid 44140
 attr repetition 0
 attr replication #0
 attr resultdir results
 attr runnumber 0
-attr seedset 123
+attr seedset 105
+config result-dir results
+config **.result-recording-modes all
+config **.scalar-recording true
+config seed-set 105
+config **.vector-recording true
 config network ned.LightIoTNetwork
 config LightIoTNetwork.numSensorNodes 50
 config **.sensor[*].mode "\"Secure\""
@@ -89,6 +94,6 @@ config sim-time-limit 10s
 
 vector 0 LightIoTNetwork.cloud e2eDelay_valid ETV
 vector 1 LightIoTNetwork.cloud e2eDelay_debug ETV
-0	3181 17838 3 1495 0.560677898185 5.691998446057 495 0.000999500904 1.839412535349 2.333408307006 3.3839324667837
-1	21019 345 3 30 0.560677898185 0.825150895933 10 0.000999732528 0.001000498164 0.010001102708 1.0002206507982e-05
+0	3328 17851 3 1497 0.503245234558 5.664668775534 496 0.000999508836 2.460749361081 2.955760117679 6.0557824396124
+1	21179 345 3 30 0.503245234558 0.674161973944 10 0.000999570175 0.001000473992 0.009999903445 9.9998078089182e-06
 

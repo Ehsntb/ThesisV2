@@ -1,0 +1,202 @@
+version 3
+run Attack5_record-0-20250915-22:43:50-99408
+attr configname Attack5_record
+attr datetime 20250915-22:43:50
+attr datetimef 20250915-224350
+attr experiment Attack5_record
+attr inifile run_record.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network ned.LightIoTNetwork
+attr processid 99408
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 102
+config **.result-recording-modes all
+config **.scalar-recording true
+config **.vector-recording true
+config output-scalar-file results/delay/Attack5_record_s102.sca
+config output-vector-file results/delay/Attack5_record_s102.vec
+config record-eventlog false
+config seed-set 102
+config network ned.LightIoTNetwork
+config LightIoTNetwork.numSensorNodes 5
+config **.sensor[*].mode "\"Secure\""
+config **.fakeNode.enabled true
+config **.fakeNode.validMac true
+config **.gateway.securityEnabled true
+config **.gateway.hmacWindow 1s
+config description "Secure Mode Simulation (includes all scenarios)"
+config network ned.LightIoTNetwork
+config ned-path .
+config sim-time-limit 10s
+config record-eventlog true
+config cmdenv-express-mode false
+config network ned.LightIoTNetwork
+config sim-time-limit 10s
+config output-scalar-file results/secure_output.sca
+config output-vector-file results/secure_output.vec
+config network LightIoTNetwork
+config sim-time-limit 10s
+config output-scalar-file results/nosecure_output.sca
+config output-vector-file results/nosecure_output.vec
+config network LightIoTNetwork
+config sim-time-limit 10s
+config output-scalar-file results/attack_output.sca
+config output-vector-file results/attack_output.vec
+config output-scalar-file results/Attack5_record-0.sca
+config output-vector-file results/Attack5_record-0.vec
+config **.scalar-recording true
+config **.vector-recording true
+config **.statistic-recording true
+config **.result-recording-modes all
+config rng-class cMersenneTwister
+config num-rngs 1
+config seed-set 123
+config output-scalar-file results/Attack5_record-0.sca
+config output-vector-file results/Attack5_record-0.vec
+config **.scalar-recording true
+config **.vector-recording true
+config **.result-recording-modes all
+config **.sensor[*].aesKeyHex "\"00112233445566778899AABBCCDDEEFF\""
+config **.gateway.aesKeyHex "\"00112233445566778899AABBCCDDEEFF\""
+config **.fakeNode.aesKeyHex "\"00112233445566778899AABBCCDDEEFF\""
+config **.sensor[*].sendInterval 0.5s
+config **.sensor[*].mode "\"Secure\""
+config **.gateway.procDelay 1ms
+config **.gateway.hmacWindow 1s
+config **.gateway.costForward_mJ 5
+config **.gateway.costVerify_mJ 5
+config **.gateway.batteryInit_mJ 5000
+config **.gateway.securityEnabled true
+config **.gateway.checkHmac true
+config **.gateway.checkFreshness true
+config **.gateway.checkDuplicate true
+config **.gateway.duplicateMethod "\"set\""
+config **.gateway.bloomBits 16384
+config **.gateway.bloomHashes 3
+config **.gateway.sbfBits 16384
+config **.gateway.sbfHashes 3
+config **.gateway.sbfDecay 0.02
+config **.fakeNode.enabled false
+config **.fakeNode.attackMode 1
+config **.fakeNode.replayInterval 2.5s
+config **.fakeNode.validMac true
+config **.fakeNode.replayId 100000
+config **.fakeNode.replayTsUs 500000
+config **.fakeNode.dupBurstLen 4
+config **.fakeNode.dupBurstGap 200ms
+config **.fakeNode.outOfOrderJitter 80ms
+config sim-time-limit 10s
+
+vector 0 LightIoTNetwork.cloud e2eDelay_valid ETV
+vector 1 LightIoTNetwork.cloud e2eDelay_debug ETV
+0	3	0.800281742889	0.000999742889
+0	6	0.898557434393	0.001000434393
+0	9	0.96360124119	0.00100024119
+0	12	1.098681581974	0.000999581974
+0	15	1.176986904185	0.000999904185
+0	18	1.323355769341	0.000999769341
+0	21	1.400243625463	0.000999625463
+0	24	1.471475180377	0.001000180377
+0	27	1.565912258275	0.001000258275
+0	30	1.707888671056	0.000999671056
+0	33	1.82619014473	0.00100014473
+0	36	1.86696847591	0.00100047591
+0	39	1.945301781337	0.000999781337
+0	42	2.047126754931	0.000999754931
+0	45	2.206790962209	0.000999962209
+0	49	2.311983299952	0.001000299952
+0	51	2.390163477095	1.890163477095
+0	55	2.412285448866	0.001000448866
+0	59	2.444476511211	0.000999511211
+0	63	2.520274134212	0.001000134212
+0	67	2.705810785968	0.000999785968
+0	70	2.798099508251	0.000999508251
+0	73	2.912846862617	0.000999862617
+0	76	2.97553565779	0.00099965779
+0	79	2.984786742296	0.000999742296
+0	82	3.189155468973	0.001000468973
+0	85	3.335999385545	0.001000385545
+0	88	3.41474191253	0.00099991253
+0	91	3.460948764741	0.000999764741
+0	94	3.480367343987	0.001000343987
+0	97	3.643904324108	0.001000324108
+0	100	3.799092194553	0.001000194553
+0	103	3.923190482961	0.001000482961
+0	106	3.950598850217	0.000999850217
+0	109	4.009851998461	0.000999998461
+0	112	4.149070058972	0.001000058972
+0	115	4.286967162298	0.001000162298
+0	118	4.376128853624	0.000999853624
+0	121	4.436181081319	0.001000081319
+0	124	4.520129510572	0.000999510572
+0	127	4.621563127264	0.001000127264
+0	131	4.812055395217	0.001000395217
+0	136	4.907327537284	0.000999537284
+0	139	4.911088152695	0.001000152695
+0	144	5.062485935793	0.000999935793
+0	148	5.091330901649	0.000999901649
+0	151	5.313677038927	0.001000038927
+0	154	5.394396905972	0.000999905972
+0	157	5.401208017137	0.001000017137
+0	160	5.527166557403	0.000999557403
+0	163	5.593079876992	0.000999876992
+0	166	5.811897458741	0.001000458741
+0	169	5.86059907216	0.00100007216
+0	172	5.938136013526	0.001000013526
+0	175	6.059716984373	0.000999984373
+0	178	6.062207379283	0.001000379283
+0	181	6.279447754961	0.000999754961
+0	184	6.341235375985	0.001000375985
+0	187	6.440117928291	0.000999928291
+0	190	6.524438789649	0.000999789649
+0	193	6.562783814638	0.000999814638
+0	196	6.751738780387	0.000999780387
+0	199	6.826091411662	0.001000411662
+0	202	6.944069644109	0.000999644109
+0	205	6.981523065711	0.001000065711
+0	208	7.087676465741	0.001000465741
+0	211	7.259336980967	0.000999980967
+0	215	7.318922605946	0.000999605946
+0	221	7.434240914251	0.000999914251
+0	224	7.441990976175	0.000999976175
+0	229	7.628817971909	0.000999971909
+0	232	7.784673998527	0.000999998527
+0	235	7.86645289196	0.00099989196
+0	238	7.918907205433	0.001000205433
+0	241	7.972221253672	0.001000253672
+0	244	8.140259121029	0.001000121029
+0	247	8.267975477617	0.001000477617
+0	250	8.345201855058	0.000999855058
+0	253	8.42376222289	0.00100022289
+0	256	8.520778225199	0.001000225199
+0	259	8.621439719709	0.000999719709
+0	262	8.745196795579	0.000999795579
+0	265	8.801432842899	0.000999842899
+0	268	8.955701374727	0.001000374727
+0	271	9.0610920812	0.0010000812
+0	274	9.131391303843	0.001000303843
+0	277	9.281251555005	0.000999555005
+0	280	9.323478320099	0.001000320099
+0	283	9.468670524423	0.000999524423
+0	286	9.603046947365	0.000999947365
+0	289	9.607079597469	0.000999597469
+0	292	9.740537274931	0.001000274931
+0	296	9.829050009765	0.001000009765
+0	302	9.964221551967	0.000999551967
+1	3	0.800281742889	0.000999742889
+1	6	0.898557434393	0.001000434393
+1	9	0.96360124119	0.00100024119
+1	12	1.098681581974	0.000999581974
+1	15	1.176986904185	0.000999904185
+1	18	1.323355769341	0.000999769341
+1	21	1.400243625463	0.000999625463
+1	24	1.471475180377	0.001000180377
+1	27	1.565912258275	0.001000258275
+1	30	1.707888671056	0.000999671056
+
